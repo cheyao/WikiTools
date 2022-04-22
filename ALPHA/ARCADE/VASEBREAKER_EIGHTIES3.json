@@ -1,0 +1,103 @@
+{
+	"#comment": "V10-3",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V10-3: Charmer Chamber",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstRewardParam": "big_moneybag",
+				"StageModule": "RTID(EightiesStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(FreeCooldown@CurrentLevel)" ]
+			}
+		}, {
+			"objclass": "PlantCooldownModifierProperties",
+			"aliases": [ "FreeCooldown" ],
+			"objdata": {
+				"CooldownMultiplier": 0.05
+			}
+		}, {
+			"aliases": [ "Jam" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"NotificationEvents": [ "jam_punk" ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "hypnoshroom",
+						"Level": 1
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 3,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 4,
+						"mY": 3
+					}, {
+						"mX": 5,
+						"mY": 2
+					}, {
+						"mX": 6,
+						"mY": 1
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "eighties_boombox",
+						"Count": 4
+					}, {
+						"ZombieTypeName": "eighties_armor2",
+						"Count": 4
+					}, {
+						"ZombieTypeName": "eighties_punk",
+						"Count": 4
+					}, {
+						"ZombieTypeName": "eighties_gargantuar",
+						"Count": 1
+					}, {
+						"PlantTypeName": "bloominghearts",
+						"Count": 6
+					}, {
+						"PlantTypeName": "sunbean",
+						"Count": 4
+					}, {
+						"PlantTypeName": "stunion",
+						"Count": 3
+					}, {
+						"PlantTypeName": "coldsnapdragon",
+						"Count": 1
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 14,
+				"NumColoredZombieVases": 0
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownFirstWaveSecs": 0.0,
+				"ZombieCountdownHugeWaveDelay": 0.0,
+				"SuppressFlagZombie": true,
+				"Waves": [ [ "RTID(Jam@CurrentLevel)" ] ]
+			}
+		} ]
+}

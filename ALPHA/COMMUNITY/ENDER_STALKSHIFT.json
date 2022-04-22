@@ -1,0 +1,349 @@
+{
+	"#comment": "Shortened Ver",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  E  L  E  R  Y  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(WestMowers@LevelModules)", "RTID(CowboyRails@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(NewWaves@CurrentLevel)" ],
+				"MusicType": "MiniGame_B",
+				"Name": "Stalk Shift - EnderallyGolem",
+				"StageModule": "RTID(WestStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 10,
+						"MaxPackets": 0
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "celerystalker",
+						"Level": 666,
+						"Weight": 999999,
+						"MaxWeightFactor": 1,
+						"MaxCount": 1,
+						"MaxCountCooldownSeconds": 37.5
+					}, {
+						"PlantType": "iceburg",
+						"Level": 2,
+						"Weight": 1,
+						"MaxWeightFactor": 1,
+						"MaxCount": 1,
+						"MaxCountCooldownSeconds": 30
+					}, {
+						"PlantType": "sapfling",
+						"Level": 0,
+						"Weight": 9999,
+						"MaxCountCooldownSeconds": 170,
+						"MaxWeightFactor": 1,
+						"MaxCount": 1
+					}, {
+						"PlantType": "springbean",
+						"Level": 1,
+						"Weight": 99,
+						"MaxWeightFactor": 1,
+						"MaxCount": 2,
+						"MaxCountCooldownSeconds": 150
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 80
+					} ]
+			}
+		}, {
+			"aliases": [ "CowboyRails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_cowboy",
+				"Railcarts": [ {
+						"Column": 3,
+						"Row": 2
+					}, {
+						"Column": 4,
+						"Row": 3
+					}, {
+						"Column": 6,
+						"Row": 1
+					}, {
+						"Column": 7,
+						"Row": 3
+					}, {
+						"Column": 0,
+						"Row": 1
+					}, {
+						"Column": 0,
+						"Row": 4
+					} ],
+				"Rails": [ {
+						"Column": 3,
+						"RowEnd": 4,
+						"RowStart": 0
+					}, {
+						"Column": 4,
+						"RowEnd": 4,
+						"RowStart": 0
+					}, {
+						"Column": 6,
+						"RowEnd": 1,
+						"RowStart": 0
+					}, {
+						"Column": 7,
+						"RowEnd": 4,
+						"RowStart": 3
+					}, {
+						"Column": 0,
+						"RowEnd": 4,
+						"RowStart": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 12,
+				"WaveCount": 12,
+				"MinNextWaveHealthPercentage": 0.0,
+				"MaxNextWaveHealthPercentage": 0.0,
+				"SuppressFlagZombie": true,
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(vegan@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(west_bull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(piano@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(piano@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(piano@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(piano@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(west_bullrider@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(vegan@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

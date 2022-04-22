@@ -1,0 +1,10 @@
+{
+	"#comment": "Future Endless",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "future_dangerroom_A", "future_dangerroom_A", "future_dangerroom_A", "future_dangerroom_B" ]
+			}
+		} ],
+	"version": 1
+}

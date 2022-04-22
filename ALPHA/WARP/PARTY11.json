@@ -1,0 +1,88 @@
+{
+	"#comment": "P05",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Warp Party!",
+				"## ZombieLevel": 4,
+				"GridItemLevel": 10,
+				"StartingSun": 50,
+				"IsLevelOfTheDay": true,
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(IPP@CurrentLevel)", "RTID(NewWaves@CurrentLevel)" ],
+				"Name": "WP-11: Inevitable Wall",
+				"StageModule": "RTID(EgyptStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "IPP" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 6,
+						"GridY": 0,
+						"Level": 2,
+						"TypeName": "endurian"
+					}, {
+						"GridX": 6,
+						"GridY": 1,
+						"Level": 2,
+						"TypeName": "endurian"
+					}, {
+						"GridX": 6,
+						"GridY": 2,
+						"Level": 2,
+						"TypeName": "endurian"
+					}, {
+						"GridX": 6,
+						"GridY": 3,
+						"Level": 2,
+						"TypeName": "endurian"
+					}, {
+						"GridX": 6,
+						"GridY": 4,
+						"Level": 2,
+						"TypeName": "endurian"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"WavesPerFlag": 5,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 800,
+				"PointIncrementPerWave": 150,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(mech_cone@ZombieTypes)", "RTID(mummy_armor1@ZombieTypes)", "RTID(mummy@ZombieTypes)", "RTID(tomb_raiser@ZombieTypes)", "RTID(west_bull@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"### ZombieCountdownHugeWaveDelay": 0,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

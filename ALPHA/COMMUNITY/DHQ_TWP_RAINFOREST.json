@@ -1,0 +1,1301 @@
+{
+	"#comment": "O",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "uwu",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(LostCityMowers@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(LootOverride@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ChallengeModule@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ZombiePotions@CurrentLevel)" ],
+				"MusicType": "MiniGame_A",
+				"Name": "The Weather Pack: Rainforest - DHQ",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(LostCityNightStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 0,
+						"GridY": 6,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 0,
+						"GridY": 6,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 0,
+						"GridY": 6,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 0,
+						"GridY": 6,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 0,
+						"GridY": 6,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 0,
+						"GridY": 6,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 0,
+						"GridY": 6,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 0,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombiePotions" ],
+			"objclass": "ZombiePotionModuleProperties",
+			"objdata": {
+				"InitialPotionCount": 0,
+				"MaxPotionCount": 45,
+				"PotionSpawnTimer": {
+					"Max": 21,
+					"Min": 21
+				},
+				"PotionTypes": [ "crater" ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_1" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_BACKGROUNDS_BOULDERTILE",
+				"PopAnimRenderOffset": {
+					"x": 15000,
+					"y": 15000
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": -450,
+					"y": 0,
+					"z": 1150
+				},
+				"ProjectileTypeToSpawn": "RTID(PeaDefault@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0.25,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 30,
+					"mX": -15015,
+					"mY": -15060
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "PeaDefault" ],
+			"objdata": {
+				"BaseDamage": 0,
+				"RotateToMatchVelocity": true,
+				"DiesOnImpact": true,
+				"DamageFlags": [ "lobbed", "catapult" ],
+				"CollisionFlags": [ "ground" ],
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 605
+					}, {
+						"Min": -400,
+						"Max": -45
+					}, {
+						"Min": -500,
+						"Max": -600
+					} ],
+				"InitialAcceleration": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialScale": {
+					"Min": 0.1,
+					"Max": 0.3
+				},
+				"RenderImage": "IMAGE_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_PROJECTILE",
+				"CollisionRect": {
+					"mX": -15,
+					"mY": -15,
+					"mWidth": 30,
+					"mHeight": 30
+				},
+				"ImpactSoundEvent": "",
+				"ImpactSoundThrottleTimer": 0.075,
+				"ImpactPAM": "POPANIM_EFFECTS_T_SPLAT_SNOW_PEA",
+				"ImpactPAMAnimationToPlay": [ "animation" ],
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_2" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_BACKGROUNDS_BOULDERTILE",
+				"PopAnimRenderOffset": {
+					"x": 15000,
+					"y": 15000
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": -450,
+					"y": 0,
+					"z": 1150
+				},
+				"ProjectileTypeToSpawn": "RTID(PeaDefault1@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 30,
+					"mX": -15015,
+					"mY": -15060
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "PeaDefault1" ],
+			"objdata": {
+				"BaseDamage": "0",
+				"RotateToMatchVelocity": true,
+				"DiesOnImpact": true,
+				"DamageFlags": [ "lobbed", "catapult" ],
+				"CollisionFlags": [ "ground" ],
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 605
+					}, {
+						"Min": -400,
+						"Max": -45
+					}, {
+						"Min": -500,
+						"Max": -600
+					} ],
+				"InitialAcceleration": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialScale": {
+					"Min": 0.1,
+					"Max": 0.25
+				},
+				"RenderImage": "IMAGE_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_PROJECTILE",
+				"CollisionRect": {
+					"mX": -15,
+					"mY": -15,
+					"mWidth": 30,
+					"mHeight": 30
+				},
+				"ImpactSoundEvent": "",
+				"ImpactSoundThrottleTimer": 0.075,
+				"ImpactPAM": "",
+				"ImpactPAMAnimationToPlay": [ "" ],
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "lilypad", "thymewarp", "electricpeashooter" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "The rain will slowly make your lawn from column 4 to column 9 too soggy to plant on and greatly decrease fire damage.",
+				"DescriptiveName": ""
+			}
+		}, {
+			"aliases": [ "WaveGraveSpawnEvent1" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(traptile_1@GridItemTypes)" ],
+				"WaveStartMessage": "",
+				"ZombieSpawnWaitTime": 0,
+				"Zombies": [ {
+						"Type": "RTID(mummy@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "mummy" ],
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieFutureDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_FutureBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FUTURE_BASIC_BRICK",
+				"HomeWorld": "future",
+				"IsBasicZombie": true
+			}
+		}, {
+			"aliases": [ "ZombieFutureDefault" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 10000,
+					"y": 13000
+				},
+				"AttackRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 15000,
+					"mY": 15000
+				},
+				"FireDamageMultiplier": 0,
+				"CanSpawnPlantFood": false,
+				"CanBeFlicked": false,
+				"CanBePlantTossedStrong": false,
+				"CanSurrender": true,
+				"CanBePlantTossedWeak": false,
+				"Cost": 150,
+				"EatDPS": 0,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 80,
+					"mWidth": 20,
+					"mX": -15005,
+					"mY": -15010
+				},
+				"Hitpoints": 0.001,
+				"ScoreOverride": 10,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 9999,
+					"y": 9999,
+					"z": 1.2
+				},
+				"Speed": 0,
+				"WavePointCost": 100,
+				"Weight": 1000,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness1"
+					}, {
+						"Type": "speed",
+						"Value": "speed1"
+					} ]
+			}
+		}, {
+			"objclass": "LootOverrideModuleProperties",
+			"aliases": [ "LootOverride" ],
+			"objdata": {
+				"Overrides": [ {
+						"ZombieType": "RTID(mummy@CurrentLevel)",
+						"LootOverride": ""
+					} ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "WaveGraveSpawnEvent2" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_dark@GridItemTypes)" ],
+				"WaveStartMessage": "",
+				"ZombieSpawnWaitTime": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(lostcity@ZombieTypes)"
+					}, {
+						"Type": "RTID(lostcity_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(lostcity_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(lostcity_excavator@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 8,
+				"WaveCount": 16,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(WaveGraveSpawnEvent1@CurrentLevel)", "RTID(WaveGraveSpawnEvent2@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_armor4@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_excavator@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "iceage_hunter" ],
+			"objdata": {
+				"TypeName": "iceage_hunter",
+				"ZombieClass": "ZombieIceAgeHunter",
+				"Properties": "RTID(ZombieIceAgeHunter@CurrentLevel)",
+				"ResourceGroups": [ "ZombieIceAgeHunterGroup", "FrostbiteIceBlockPlantGroup" ],
+				"AudioGroups": [ "ZombieIceAgeHunterAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Hunter",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER",
+				"HomeWorld": "iceage",
+				"Placeable": true
+			}
+		}, {
+			"aliases": [ "ZombieIceAgeHunter" ],
+			"objclass": "ZombieIceAgeHunterProps",
+			"objdata": {
+				"Actions": [ "RTID(ZombieIceAgeProjectileAction@ZombieActions)" ],
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 60,
+					"mWidth": 10,
+					"mX": 10,
+					"mY": 0
+				},
+				"FireDamageMultiplier": 0.1,
+				"CanSpawnPlantFood": true,
+				"ChillInsteadOfFreeze": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"FarAttackRange": 4,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 30,
+					"mX": 7,
+					"mY": 10
+				},
+				"Hitpoints": 700,
+				"NearAttackRange": 1,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Formula": "constant",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.2
+				},
+				"SnowballsPerBarrage": 3,
+				"Speed": 0.12,
+				"WavePointCost": 500,
+				"Weight": 3500,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness4"
+					}, {
+						"Type": "speed",
+						"Value": "speed0"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "lostcity_excavator" ],
+			"objdata": {
+				"TypeName": "lostcity_excavator",
+				"ZombieClass": "ZombieExcavator",
+				"Properties": "RTID(ZombieExcavator@CurrentLevel)",
+				"ResourceGroups": [ "ZombieExcavatorGroup" ],
+				"AudioGroups": [ "ZombieLostCityExcavatorAudio" ],
+				"AnimRigClass": "ZombieAnimRig_LostCityExcavator",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_LOSTCITY_EXCAVATOR",
+				"HomeWorld": "lostcity",
+				"IsBasicZombie": false
+			}
+		}, {
+			"aliases": [ "ZombieExcavator" ],
+			"objclass": "ZombieExcavatorProps",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"FireDamageMultiplier": 0.1,
+				"CatchArcDegrees": 120,
+				"Cost": 150,
+				"EatDPS": 150,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 46,
+					"mX": -2,
+					"mY": 10
+				},
+				"Hitpoints": 350,
+				"ProjectileClassesToNeverBlock": {
+					"List": [ "GuacodileProjectile", "ParsnipProjectile", "CactusProjectile", "AppleMortarProjectile", "ElectricPeaPlantfoodSubProjectile", "ReincarnationPuffProjectile", "PokraProjectile" ],
+					"ListType": "includelist"
+				},
+				"PlantsShovelableWhileInvincible": {
+					"List": [ "bowlingbulb", "springbean", "chardguard" ],
+					"ListType": "includelist"
+				},
+				"PlantsToBashInsteadOfShovel": {
+					"List": [ "gravebuster", "tallnut" ],
+					"ListType": "includelist"
+				},
+				"PreferredDistanceToThrowPlant": 3,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Formula": "constant",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.2
+				},
+				"ShadowScaling": {
+					"x": 1,
+					"y": 1
+				},
+				"ShovelAttackRectOffsetX": 0,
+				"ShovelRect": {
+					"mHeight": 95,
+					"mWidth": 20,
+					"mX": -30,
+					"mY": 10
+				},
+				"Speed": 0.3,
+				"WavePointCost": 300,
+				"Weight": 3000,
+				"ZombieArmorProps": [ "RTID(ShovelDefault@ArmorTypes)" ],
+				"ZombieStats": [ {
+						"Type": "armor",
+						"Value": "toughness3"
+					}, {
+						"Type": "speed",
+						"Value": "speed4"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "lostcity" ],
+			"objdata": {
+				"TypeName": "lostcity",
+				"ZombieClass": "ZombieLostCityBasic",
+				"Properties": "RTID(ZombieLostCityDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieLostCityBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_LostCityBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_LOSTCITY_BASIC",
+				"HomeWorld": "lostcity",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "lostcity_armor1" ],
+			"objdata": {
+				"TypeName": "lostcity_armor1",
+				"ZombieClass": "ZombieLostCityBasic",
+				"Properties": "RTID(ZombieLostCityArmor1Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombieLostCityBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_LostCityBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_LOSTCITY_BASIC",
+				"HomeWorld": "lostcity",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "lostcity_armor2" ],
+			"objdata": {
+				"TypeName": "lostcity_armor2",
+				"ZombieClass": "ZombieLostCityBasic",
+				"Properties": "RTID(ZombieLostCityArmor2Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombieLostCityBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_LostCityBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_LOSTCITY_BASIC",
+				"HomeWorld": "lostcity",
+				"IsBasicZombie": true
+			}
+		}, {
+			"aliases": [ "ZombieLostCityDefault" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"FireDamageMultiplier": 0.1,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 36,
+					"mX": 14,
+					"mY": 10
+				},
+				"Hitpoints": 190,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Formula": "constant",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.185,
+				"WavePointCost": 100,
+				"Weight": 1000,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness1"
+					}, {
+						"Type": "speed",
+						"Value": "speed2"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombieLostCityArmor1Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"FireDamageMultiplier": 0.1,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 36,
+					"mX": 14,
+					"mY": 10
+				},
+				"Hitpoints": 190,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Formula": "constant",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.185,
+				"WavePointCost": 200,
+				"Weight": 3000,
+				"ZombieArmorProps": [ "RTID(ConeDefault@ArmorTypes)" ],
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness3"
+					}, {
+						"Type": "speed",
+						"Value": "speed2"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombieLostCityArmor2Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"FireDamageMultiplier": 0.1,
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 36,
+					"mX": 14,
+					"mY": 10
+				},
+				"Hitpoints": 190,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Formula": "constant",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.185,
+				"WavePointCost": 400,
+				"Weight": 4000,
+				"ZombieArmorProps": [ "RTID(BucketDefault@ArmorTypes)" ],
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness5"
+					}, {
+						"Type": "speed",
+						"Value": "speed2"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "beach_armor4" ],
+			"objdata": {
+				"TypeName": "beach_armor4",
+				"ZombieClass": "ZombiePharaoh",
+				"Properties": "RTID(ZombieBeachCageDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieCustomPharaohGroup", "ZombieEgyptPharaohEffectsGroup" ],
+				"AudioGroups": [ "ZombieEgyptPharaohAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Sarcophagus",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_CUSTOM_PHARAOH_DT",
+				"HomeWorld": "beach"
+			}
+		}, {
+			"aliases": [ "ZombieBeachCageDefault" ],
+			"objclass": "ZombieSarcophagusProps",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"FireDamageMultiplier": 0.1,
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 36,
+					"mX": 2,
+					"mY": 10
+				},
+				"ConditionImmunities": [ {
+						"Condition": "chill",
+						"Percent": 0.75
+					}, {
+						"Condition": "freeze",
+						"Percent": 0.75
+					}, {
+						"Condition": "stalled",
+						"Percent": 0.5
+					}, {
+						"Condition": "butter",
+						"Percent": 0.5
+					} ],
+				"Hitpoints": 3200,
+				"ScoreOverride": 150,
+				"############## THIS IS FOR CHERRY BOMB": 0,
+				"RunSpeed": 0.25,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.4
+				},
+				"Speed": 0.135,
+				"WavePointCost": 800,
+				"Weight": 2500,
+				"ZombieArmorProps": [ "RTID(CoralCageDefault@ArmorTypes)" ],
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness6"
+					}, {
+						"Type": "speed",
+						"Value": "speed0"
+					} ]
+			}
+		} ],
+	"version": 1
+}

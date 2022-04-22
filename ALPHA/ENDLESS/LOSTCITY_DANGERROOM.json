@@ -1,0 +1,10 @@
+{
+	"#comment": "Modern Endless",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "lostcity_dangerroom_A", "lostcity_dangerroom_B" ]
+			}
+		} ],
+	"version": 1
+}

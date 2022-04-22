@@ -1,0 +1,10 @@
+{
+	"#comment": "Dark Training Mode",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "training/darkA0_extreme", "training/darkA1_extreme", "training/darkB0_extreme", "training/darkB1_extreme", "training/darkC0_extreme", "training/darkC1_extreme", "training/darkD1_extreme", "training/darkD1_extreme", "training/darkE0_extreme", "training/darkE1_extreme", "training/darkF0_extreme", "training/darkF1_extreme", "training/darkG1_extreme", "training/darkG1_extreme" ]
+			}
+		} ],
+	"version": 1
+}

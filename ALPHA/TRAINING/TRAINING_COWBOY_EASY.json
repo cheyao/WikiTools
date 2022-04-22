@@ -1,0 +1,10 @@
+{
+	"#comment": "Cowboy Training Mode",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "training/cowboyA0_easy", "training/cowboyA1_easy", "training/cowboyB0_easy", "training/cowboyB1_easy", "training/cowboyC0_easy", "training/cowboyC1_easy", "training/cowboyD1_easy", "training/cowboyD1_easy", "training/cowboyE0_easy", "training/cowboyE1_easy", "training/cowboyF0_easy", "training/cowboyF1_easy", "training/cowboyG1_easy", "training/cowboyG1_easy" ]
+			}
+		} ],
+	"version": 1
+}

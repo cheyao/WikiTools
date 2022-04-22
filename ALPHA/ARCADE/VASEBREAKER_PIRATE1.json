@@ -1,0 +1,70 @@
+{
+	"#comment": "V4-1",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V4-1: Off-ground",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstRewardParam": "moneybag",
+				"StageModule": "RTID(PirateStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(PiratePlanks@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "PiratePlanks" ],
+			"objclass": "PiratePlankProperties",
+			"objdata": {
+				"PlankRows": [ 0, 2, 4 ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "thymewarp",
+						"Level": 2
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 4,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 0,
+						"mY": 0
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "swashbuckler",
+						"Count": 8
+					}, {
+						"ZombieTypeName": "barrelroller",
+						"Count": 6
+					}, {
+						"PlantTypeName": "snowpea",
+						"Count": 3
+					}, {
+						"PlantTypeName": "springbean",
+						"Count": 3
+					}, {
+						"PlantTypeName": "garlic",
+						"Count": 2
+					}, {
+						"PlantTypeName": "potatomine",
+						"Count": 3
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 11,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

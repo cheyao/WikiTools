@@ -1,0 +1,10 @@
+{
+	"#comment": "Iceage Training Mode",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "training/iceageA1_hard", "training/iceageB1_hard", "training/iceageC1_hard", "training/iceageD1_hard", "training/iceageE1_hard", "training/iceageF1_hard", "training/iceageG1_hard" ]
+			}
+		} ],
+	"version": 1
+}

@@ -1,0 +1,619 @@
+{
+	"#comment": "test",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Good Luck",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(ModernMowers@LevelModules)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(SimultaneousPlants@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(NewWaves@CurrentLevel)" ],
+				"MusicType": "MiniGame_A",
+				"Name": "Electrical Fried Management - Imagination",
+				"StageModule": "RTID(ModernStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 1.5,
+						"MaxPackets": 0
+					} ],
+				"InitialPlantList": [ {
+						"MaxCount": 2,
+						"Level": 0,
+						"PlantType": "lightningreed",
+						"Weight": 1
+					}, {
+						"MaxCount": 1,
+						"Level": 1,
+						"PlantType": "electricblueberry",
+						"Weight": 2
+					}, {
+						"MaxCount": 1,
+						"Level": 1,
+						"PlantType": "electricpeashooter",
+						"Weight": 2
+					}, {
+						"Level": 1,
+						"MaxCount": 2,
+						"PlantType": "electriccurrant",
+						"Weight": 1
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 150
+					} ]
+			}
+		}, {
+			"aliases": [ "SimultaneousPlants" ],
+			"objclass": "StarChallengeSimultaneousPlantsProps",
+			"objdata": {
+				"MaximumPlants": 4
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "Prepare your micromanaging skills.",
+				"DescriptiveName": "i hate this challenge"
+			}
+		}, {
+			"aliases": [ "Cock-A-Doodle-Doo" ],
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 0,
+				"ColumnStart": 0,
+				"GroupSize": 0,
+				"TimeBeforeFullSpawn": "0.5",
+				"TimeBetweenGroups": "0.25",
+				"WaveStartMessage": "UNDEAD CHICKENS!",
+				"ZombieCount": 0,
+				"ZombieName": ""
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": -1,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 15,
+				"ZombiePool": [ "RTID(egypt_imp@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)", "RTID(Cock-A-Doodle-Doo@CurrentLevel)", "RTID(why@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(chicken@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor4@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor4@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "why" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 5,
+				"ColumnEnd": 6,
+				"Zombies": [ {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

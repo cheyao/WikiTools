@@ -1,0 +1,63 @@
+{
+	"#comment": "V0-1",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V0-1: Tutorial",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstIntroNarrative": "VASEBREAKER_0-1_INTRO",
+				"ReplayIntroNarrative": "VASEBREAKER_0-1_INTRO",
+				"FirstRewardParam": "moneybag",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "thymewarp",
+						"Level": 2
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 5,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 0,
+						"mY": 0
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "tutorial",
+						"Count": 11
+					}, {
+						"ZombieTypeName": "tutorial_armor2",
+						"Count": 2
+					}, {
+						"PlantTypeName": "peashooter",
+						"Count": 4
+					}, {
+						"PlantTypeName": "wallnut",
+						"Count": 1
+					}, {
+						"PlantTypeName": "potatomine",
+						"Count": 2
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 7,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

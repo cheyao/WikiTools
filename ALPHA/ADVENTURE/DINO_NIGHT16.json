@@ -1,0 +1,263 @@
+{
+	"#comment": "JM-16",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"FirstIntroNarrative": "DINO_NIGHT16_INTRO",
+				"ReplayIntroNarrative": "DINO_NIGHT16_INTRO",
+				"StartingSun": 50,
+				"LevelNumber": 16,
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "PlantAppleMortarAudio", "PlantPuffshroom" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DinoMowers@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)" ],
+				"Name": "JM-16: Raise And Fold",
+				"MusicType": "MiniGame_B",
+				"StageModule": "RTID(DinoNightStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "Mold" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 1, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 1, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "MoldColonies" ],
+			"objclass": "MoldColonyChallengeProps",
+			"objdata": {
+				"Locations": "RTID(Mold@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "perfumeshroom" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(MoldColonies@CurrentLevel)", "RTID(FlowerLine@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "FlowerLine" ],
+			"objclass": "StarChallengeZombieDistanceProps",
+			"objdata": {
+				"TargetDistance": 9
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": -1,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 8,
+				"ZombiePool": [ "RTID(dino@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"SuppressFlagZombie": true,
+				"Waves": [ [ "RTID(Co1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Co2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Co1@CurrentLevel)", "RTID(Co1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Im1@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Co1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(R1@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(RM@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Im2@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Co1@CurrentLevel)", "RTID(Co1@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Fo1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Bu1@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Co1@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(R2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(RM@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Fo1@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Co1@CurrentLevel)", "RTID(Co1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Im1@CurrentLevel)", "RTID(Im1@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Bu1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(R1@CurrentLevel)", "RTID(R2@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(RM@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Fo2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Bu2@CurrentLevel)", "RTID(Im1@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Am1@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Co2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Am2@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(R1@CurrentLevel)", "RTID(R1@CurrentLevel)", "RTID(R2@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Co1@CurrentLevel)", "RTID(Co1@CurrentLevel)", "RTID(RM@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Fo2@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Im1@CurrentLevel)", "RTID(Im1@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Am1@CurrentLevel)", "RTID(Am1@CurrentLevel)", "RTID(Am1@CurrentLevel)", "RTID(R2@CurrentLevel)", "RTID(R2@CurrentLevel)", "RTID(R2@CurrentLevel)", "RTID(RM@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Bu1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Bu1@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Im2@CurrentLevel)", "RTID(Am2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Am1@CurrentLevel)", "RTID(Am2@CurrentLevel)", "RTID(Am2@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ], [ "RTID(Am1@CurrentLevel)", "RTID(Am1@CurrentLevel)", "RTID(Am1@CurrentLevel)", "RTID(Am1@CurrentLevel)", "RTID(Am2@CurrentLevel)", "RTID(Am2@CurrentLevel)", "RTID(Am2@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo1@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(Fo2@CurrentLevel)", "RTID(R1@CurrentLevel)", "RTID(R1@CurrentLevel)", "RTID(R1@CurrentLevel)", "RTID(R2@CurrentLevel)", "RTID(Ptero1@CurrentLevel)", "RTID(Ptero3@CurrentLevel)", "RTID(Stego2@CurrentLevel)", "RTID(Stego4@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		}, {
+			"aliases": [ "Ptero1" ],
+			"objclass": "DinoWaveActionProps",
+			"objdata": {
+				"DinoRow": 1,
+				"DinoType": "ptero"
+			}
+		}, {
+			"aliases": [ "Ptero3" ],
+			"objclass": "DinoWaveActionProps",
+			"objdata": {
+				"DinoRow": 3,
+				"DinoType": "ptero"
+			}
+		}, {
+			"aliases": [ "Stego2" ],
+			"objclass": "DinoWaveActionProps",
+			"objdata": {
+				"DinoRow": 1,
+				"DinoType": "stego"
+			}
+		}, {
+			"aliases": [ "Stego4" ],
+			"objclass": "DinoWaveActionProps",
+			"objdata": {
+				"DinoRow": 3,
+				"DinoType": "stego"
+			}
+		}, {
+			"aliases": [ "RM" ],
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"WaveStartMessage": "Rapscallions!",
+				"ZombieCount": 0,
+				"ZombieName": "prospector"
+			}
+		}, {
+			"aliases": [ "Co1" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 2,
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Co2" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 4,
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Bu1" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 2,
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Bu2" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 4,
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Fo1" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 2,
+						"Type": "RTID(dino_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Fo2" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 4,
+						"Type": "RTID(dino_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Am1" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 2,
+						"Type": "RTID(dino_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Am2" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 4,
+						"Type": "RTID(dino_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "R1" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 2,
+						"Type": "RTID(rascal_imp@ZombieTypes)"
+					}, {
+						"Row": 2,
+						"Type": "RTID(rascal_imp@ZombieTypes)"
+					}, {
+						"Row": 2,
+						"Type": "RTID(rascal_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "R2" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 8,
+				"ColumnEnd": 9,
+				"Zombies": [ {
+						"Row": 4,
+						"Type": "RTID(rascal_imp@ZombieTypes)"
+					}, {
+						"Row": 4,
+						"Type": "RTID(rascal_imp@ZombieTypes)"
+					}, {
+						"Row": 4,
+						"Type": "RTID(rascal_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Im1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternNJM16",
+				"Zombies": [ {
+						"Row": 2,
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Im2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternNJM16",
+				"Zombies": [ {
+						"Row": 4,
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

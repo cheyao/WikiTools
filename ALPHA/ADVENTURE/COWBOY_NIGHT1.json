@@ -1,0 +1,309 @@
+{
+	"#comment": "WW-1",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"FirstIntroNarrative": "COWBOY_NIGHT1_INTRO",
+				"ReplayIntroNarrative": "COWBOY_NIGHT1_INTRO",
+				"StartingSun": 50,
+				"LevelNumber": 1,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(WestMowers@LevelModules)", "RTID(CowboyRails@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(LootOverride@CurrentLevel)" ],
+				"Name": "WW-1: Western Darkland",
+				"StageModule": "RTID(WestNightStage@LevelModules)"
+			}
+		}, {
+			"objclass": "LootOverrideModuleProperties",
+			"aliases": [ "LootOverride" ],
+			"objdata": {
+				"Overrides": [ {
+						"ZombieType": "RTID(doublewave@ZombieTypes)",
+						"LootOverride": ""
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "CowboyRails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_cowboy",
+				"Railcarts": [ {
+						"Column": 3,
+						"Row": 2
+					} ],
+				"Rails": [ {
+						"Column": 3,
+						"RowEnd": 3,
+						"RowStart": 1
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": -1,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 12,
+				"ZombiePool": [ "RTID(dino@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)", "RTID(DoubleWaveMessage@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)", "RTID(DoubleWaveMessage@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(doublewave@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(doublewave@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(cowboy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "DoubleWaveMessage" ],
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 0,
+				"ColumnStart": 0,
+				"GroupSize": 0,
+				"TimeBeforeFullSpawn": "0.5",
+				"TimeBetweenGroups": "0.25",
+				"WaveStartMessage": "Double Wave!",
+				"ZombieCount": 0,
+				"ZombieName": "prospector"
+			}
+		} ],
+	"version": 1
+}

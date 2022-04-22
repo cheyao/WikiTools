@@ -1,0 +1,10 @@
+{
+	"#comment": "Lostcity Training Mode",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "training/lostcityA0_extreme", "training/lostcityA1_extreme", "training/lostcityB0_extreme", "training/lostcityB1_extreme", "training/lostcityC0_extreme", "training/lostcityC1_extreme", "training/lostcityD1_extreme", "training/lostcityD1_extreme", "training/lostcityE0_extreme", "training/lostcityE1_extreme", "training/lostcityF0_extreme", "training/lostcityF1_extreme", "training/lostcityG1_extreme", "training/lostcityG1_extreme" ]
+			}
+		} ],
+	"version": 1
+}

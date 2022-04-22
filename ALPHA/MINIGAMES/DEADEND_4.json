@@ -1,0 +1,440 @@
+{
+	"#comment": "Dead End 4",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "MarkerTileModule_1" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(ModernMowers@LevelModules)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(LevelScoring@CurrentLevel)", "RTID(GI@CurrentLevel)", "RTID(Tide@CurrentLevel)", "RTID(IZP@CurrentLevel)", "RTID(BowlingMinigame@CurrentLevel)" ],
+				"MusicType": "MiniGame_A",
+				"Name": "Dead End: Drag Party",
+				"StageModule": "RTID(ModernStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "BowlingMinigame" ],
+			"objclass": "BowlingMinigameProperties",
+			"objdata": {
+				"BowlingFoulLine": 9
+			}
+		}, {
+			"aliases": [ "Tide" ],
+			"objclass": "TideProperties",
+			"objdata": {
+				"StartingWaveLocation": 1
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 2,
+						"GridY": 1,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 2,
+						"GridY": 3,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 4,
+						"GridY": 0,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 4,
+						"GridY": 4,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 5,
+						"GridY": 0,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 5,
+						"GridY": 2,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 5,
+						"GridY": 4,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 6,
+						"GridY": 1,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 6,
+						"GridY": 3,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 7,
+						"GridY": 1,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 7,
+						"GridY": 3,
+						"TypeName": "score_100"
+					}, {
+						"GridX": 2,
+						"GridY": 1,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 2,
+						"GridY": 3,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 0,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 4,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 5,
+						"GridY": 0,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 5,
+						"GridY": 2,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 5,
+						"GridY": 4,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 6,
+						"GridY": 1,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 6,
+						"GridY": 3,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 7,
+						"GridY": 1,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 7,
+						"GridY": 3,
+						"TypeName": "markertile_1"
+					} ]
+			}
+		}, {
+			"aliases": [ "IZP" ],
+			"objclass": "InitialZombieProperties",
+			"objdata": {
+				"InitialZombiePlacements": [ {
+						"GridX": 8,
+						"GridY": 0,
+						"TypeName": "beach_fisherman_deadend4"
+					}, {
+						"GridX": 8,
+						"GridY": 1,
+						"TypeName": "beach_fisherman_deadend4"
+					}, {
+						"GridX": 8,
+						"GridY": 2,
+						"TypeName": "beach_fisherman_deadend4"
+					}, {
+						"GridX": 8,
+						"GridY": 3,
+						"TypeName": "beach_fisherman_deadend4"
+					}, {
+						"GridX": 8,
+						"GridY": 4,
+						"TypeName": "beach_fisherman_deadend4"
+					} ]
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)", "RTID(ReachTheScore@CurrentLevel)", "RTID(MoldColonies@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "Play without the shovel.",
+				"DescriptiveName": ""
+			}
+		}, {
+			"aliases": [ "LevelScoring" ],
+			"objclass": "LevelScoringModuleProperties",
+			"objdata": {
+				"PlantBonusMultiplier": 0.0,
+				"PlantBonuses": [],
+				"ScoringRulesType": "NoMultiplier",
+				"StartingPlantfood": 0
+			}
+		}, {
+			"aliases": [ "ReachTheScore" ],
+			"objclass": "StarChallengeTargetScoreProps",
+			"objdata": {
+				"TargetScore": 1300,
+				"Description": "Kill ALL zombies, on ONLY the marked tiles.",
+				"DescriptionFailure": "[STARCHALLENGE_TARGET_SCORE_FAILURE]"
+			}
+		}, {
+			"aliases": [ "MoldColonies" ],
+			"objclass": "MoldColonyChallengeProps",
+			"objdata": {
+				"Locations": "RTID(Mold@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "Mold" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 4,
+						"MaxPackets": 0
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "bonkchoy",
+						"MaxCount": 3,
+						"MaxWeightFactor": 0,
+						"Level": 0,
+						"Weight": 10
+					}, {
+						"PlantType": "wallnut",
+						"Level": 0,
+						"Weight": 1
+					}, {
+						"PlantType": "sweetpotato",
+						"Level": 0,
+						"Weight": 1
+					}, {
+						"PlantType": "stallia",
+						"Level": 0,
+						"Weight": 1
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 80
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": -1,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 11,
+				"ZombiePool": [ "RTID(mummy@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)", "RTID(ModConveyor@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(seagull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(seagull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(night_camel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(seagull@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(seagull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(night_camel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(seagull@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(night_camel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(seagull@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "ModConveyor" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(tanglekelp@PlantTypes)",
+						"MaxDelivered": 2,
+						"Weight": 10
+					} ],
+				"Remove": []
+			}
+		} ],
+	"version": 1
+}

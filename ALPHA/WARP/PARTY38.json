@@ -1,0 +1,476 @@
+{
+	"#comment": "P01",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Warp Party!",
+				"IsLevelOfTheDay": true,
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"StartingSun": 50,
+				"FirstRewardParam": "moneybag",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "Tombstone_Dark_Special", "Tombstone_Dark_Effects", "MarkerTileModule_1" ],
+				"Modules": [ "RTID(ConveyorBelt@CurrentLevel)", "RTID(IPP@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(StandardIntro@LevelModules)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "WP-38: The Freezer II - Lock O",
+				"MusicType": "MiniGame_B",
+				"StageModule": "RTID(EgyptStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 7,
+						"MaxPackets": 0
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "thymewarp",
+						"MaxCount": 1,
+						"Level": 0,
+						"MaxCountCooldownSeconds": 40,
+						"Weight": 10
+					}, {
+						"PlantType": "squash",
+						"MaxCount": 5,
+						"Level": 1,
+						"Weight": 1
+					}, {
+						"PlantType": "gravebuster",
+						"Level": 2,
+						"Weight": 4
+					}, {
+						"PlantType": "wallnut",
+						"Weight": 2
+					}, {
+						"PlantType": "springbean",
+						"MaxCount": 1,
+						"Level": 2,
+						"MaxCountCooldownSeconds": 20,
+						"Weight": 10
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		}, {
+			"aliases": [ "IPP" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 0,
+						"GridY": 0,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 0,
+						"GridY": 1,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 0,
+						"GridY": 2,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 0,
+						"GridY": 4,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 1,
+						"GridY": 0,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 1,
+						"GridY": 2,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 1,
+						"GridY": 3,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 1,
+						"GridY": 4,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 2,
+						"GridY": 0,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 2,
+						"GridY": 1,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 2,
+						"GridY": 2,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 2,
+						"GridY": 3,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 3,
+						"GridY": 0,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 3,
+						"GridY": 2,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 3,
+						"GridY": 4,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 0,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 1,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 4,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 5,
+						"GridY": 0,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 5,
+						"GridY": 1,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 5,
+						"GridY": 2,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 5,
+						"GridY": 4,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 6,
+						"GridY": 0,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 6,
+						"GridY": 1,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 6,
+						"GridY": 2,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 6,
+						"GridY": 3,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 6,
+						"GridY": 4,
+						"Level": 0,
+						"Condition": "icecubed",
+						"TypeName": "spikeweed"
+					} ]
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(DestroyGridItems@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "DestroyGridItems" ],
+			"objclass": "DestroyGridItemsChallengeProps",
+			"objdata": {
+				"GridItemType": "planttarget_iceblock",
+				"GridItemsToDestroy": 27,
+				"ChallengeDescription": "Destroy 27 Iceblocks"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"WavesPerFlag": 9,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0.0,
+				"StartingPoints": -100.0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": []
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 9,
+				"WaveCount": 9,
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {} ],
+	"version": 1
+}

@@ -1,0 +1,67 @@
+{
+	"#comment": "V2-3",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V2-3: Butter & Knife",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstRewardParam": "big_moneybag",
+				"StageModule": "RTID(LostCityStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "thymewarp",
+						"Level": 2
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 4,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 0,
+						"mY": 0
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "lostcity_armor2",
+						"Count": 2
+					}, {
+						"ZombieTypeName": "lostcity_bug",
+						"Count": 6
+					}, {
+						"ZombieTypeName": "lostcity_crystalskull",
+						"Count": 4
+					}, {
+						"PlantTypeName": "kernelpult",
+						"Count": 6
+					}, {
+						"PlantTypeName": "guacodile",
+						"Count": 3
+					}, {
+						"PlantTypeName": "hypnoshroom",
+						"Count": 2
+					}, {
+						"PlantTypeName": "stallia",
+						"Count": 2
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 13,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

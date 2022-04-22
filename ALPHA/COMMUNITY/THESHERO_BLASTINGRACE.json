@@ -1,0 +1,855 @@
+{
+	"#comment": "Blasting Race - TheShero",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"StartingSun": 50,
+				"Description": "pls no magni",
+				"FirstRewardParam": "moneybag",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "Tombstone_Dark_Special", "Tombstone_Dark_Effects" ],
+				"Modules": [ "RTID(DefaultSunDropper@LevelModules)", "RTID(DinoMowers@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "Blasting Race - TheShero",
+				"StageModule": "RTID(DinoStage@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"WavesPerFlag": 8,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0.0,
+				"StartingPoints": -100.0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(mummy@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 8,
+				"WaveCount": 24,
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)", "RTID(jam_punk@CurrentLevel)" ], [ "RTID(Wave17@CurrentLevel)" ], [ "RTID(Wave18@CurrentLevel)" ], [ "RTID(Wave19@CurrentLevel)" ], [ "RTID(Wave20@CurrentLevel)" ], [ "RTID(Wave21@CurrentLevel)" ], [ "RTID(Wave22@CurrentLevel)", "RTID(GroundSpawn1A@CurrentLevel)" ], [ "RTID(Wave23@CurrentLevel)" ], [ "RTID(Wave24@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "jam_punk" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"NotificationEvents": [ "jam_punk" ]
+			}
+		}, {
+			"aliases": [ "Wave17" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave18" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave19" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave20" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave21" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave22" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "GroundSpawn1A" ],
+			"#comment": "Autopoints-15",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 5,
+				"ColumnEnd": 7,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave23" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave24" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer_veteran@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(football@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"objclass": "EightiesStageProperties",
+			"aliases": [ "DinoStage" ],
+			"objdata": {
+				"ResourceGroupNames": [ "DelayLoad_Background_Dino_Compressed", "Dirt_Spawn_Dirt", "AudioDino", "DinoGroansAudio", "Eighties_Background_Effects" ],
+				"GroupsToUnloadForAds": [ "DelayLoad_Background_Dino_Compressed" ],
+				"StagePrefix": "Dino",
+				"BackgroundResourceGroup": "DelayLoad_Background_Dino_Compressed",
+				"BackgroundImagePrefix": "IMAGE_BACKGROUNDS_DINO",
+				"LevelPowerupSet": "LevelPowerupsDefault",
+				"BasicZombieTypeName": "dino",
+				"FlagZombieTypeName": "dino_flag",
+				"FlagVeteranZombieTypeNames": [ "mummy_flag_veteran" ],
+				"Armor1ZombieTypeName": "dino_armor1",
+				"Armor2ZombieTypeName": "dino_armor2",
+				"MusicSuffix": "Dino",
+				"AmbientAudioSuffix": "Egypt_Wind_BG",
+				"RailcartDefaultTypeName": "railcart_egypt",
+				"GravestoneDefaultTypeName": "gravestone_egypt",
+				"DirtSpawnEffectName": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT"
+			}
+		}, {} ],
+	"version": 1
+}

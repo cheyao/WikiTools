@@ -1,0 +1,711 @@
+{
+	"#comment": "Nether's Gate -Vin | ELM: Ver-1.5.1 [ECL]",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"StartingSun": 50,
+				"Description": "succ",
+				"FirstRewardParam": "moneybag",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "Tombstone_Dark_Special", "Tombstone_Dark_Effects", "MarkerTileModule_1" ],
+				"Modules": [ "RTID(DarkMowers@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "Nether's Gate - Vin",
+				"StageModule": "RTID(DarkStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"WavesPerFlag": 8,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 0,
+				"PointIncrementPerWave": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": []
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 8,
+				"WaveCount": 16,
+				"SuppressFlagZombie": false,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(ZombieShown@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)", "RTID(Portal6_756769_71@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)", "RTID(Portal8_477426_62@CurrentLevel)", "RTID(Portal8_477426_64@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)", "RTID(Portal10_279388_33@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)", "RTID(Portal12_338418_44@CurrentLevel)", "RTID(Portal12_338418_50@CurrentLevel)", "RTID(text@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)", "RTID(Portal14_069351_30@CurrentLevel)", "RTID(Portal14_069351_31@CurrentLevel)", "RTID(Portal14_069351_32@CurrentLevel)", "RTID(Portal14_069351_33@CurrentLevel)", "RTID(Portal14_069351_34@CurrentLevel)", "RTID(Portal14_069351_72@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)", "RTID(Portal16_653235_52@CurrentLevel)", "RTID(Portal16_653235_61@CurrentLevel)", "RTID(Portal16_653235_70@CurrentLevel)", "RTID(Portal16_330242_63@CurrentLevel)", "RTID(Portal16_330242_72@CurrentLevel)", "RTID(Portal16_330242_74@CurrentLevel)", "RTID(Portal16_425589_21@CurrentLevel)", "RTID(Portal16_425589_50@CurrentLevel)", "RTID(Portal16_425589_53@CurrentLevel)", "RTID(Portal16_425589_64@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 2,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(doublewave@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombieShown" ],
+			"#comment": "Autopoints-11",
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"WaveStartMessage": "",
+				"ZombieSpawnWaitTime": 0,
+				"SuppressActionIfNoGridItemsFound": false,
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(night_camel@ZombieTypes)"
+					}, {
+						"Type": "RTID(hellbird@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Portal6_756769_71" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 7,
+				"PortalRow": 1,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal8_477426_62" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 6,
+				"PortalRow": 2,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal8_477426_64" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 6,
+				"PortalRow": 4,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal10_279388_33" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 3,
+				"PortalRow": 3,
+				"PortalType": "2"
+			}
+		}, {
+			"aliases": [ "Portal12_338418_44" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 4,
+				"PortalRow": 4,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal12_338418_50" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 5,
+				"PortalRow": 0,
+				"PortalType": "2"
+			}
+		}, {
+			"aliases": [ "text" ],
+			"#comment": "Autopoints-0",
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"WaveStartMessage": "Double Wave!",
+				"ZombieSpawnWaitTime": 0,
+				"SuppressActionIfNoGridItemsFound": false,
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)" ],
+				"Zombies": []
+			}
+		}, {
+			"aliases": [ "Portal14_069351_30" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 3,
+				"PortalRow": 0,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal14_069351_31" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 3,
+				"PortalRow": 1,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal14_069351_32" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 3,
+				"PortalRow": 2,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal14_069351_33" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 3,
+				"PortalRow": 3,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal14_069351_34" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 3,
+				"PortalRow": 4,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal14_069351_72" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 7,
+				"PortalRow": 2,
+				"PortalType": "2"
+			}
+		}, {
+			"aliases": [ "Portal16_653235_52" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 5,
+				"PortalRow": 2,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal16_653235_61" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 6,
+				"PortalRow": 1,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal16_653235_70" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 7,
+				"PortalRow": 0,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal16_330242_63" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 6,
+				"PortalRow": 3,
+				"PortalType": "2"
+			}
+		}, {
+			"aliases": [ "Portal16_330242_72" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 7,
+				"PortalRow": 2,
+				"PortalType": "2"
+			}
+		}, {
+			"aliases": [ "Portal16_330242_74" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 7,
+				"PortalRow": 4,
+				"PortalType": "2"
+			}
+		}, {
+			"aliases": [ "Portal16_425589_21" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 2,
+				"PortalRow": 1,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal16_425589_50" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 5,
+				"PortalRow": 0,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal16_425589_53" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 5,
+				"PortalRow": 3,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "Portal16_425589_64" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 6,
+				"PortalRow": 4,
+				"PortalType": "1"
+			}
+		}, {
+			"aliases": [ "TrapTileProps_2" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE",
+				"PopAnimRenderOffset": {
+					"x": 10000.0,
+					"y": 10000.0
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": -270.0,
+					"z": 100.0
+				},
+				"ProjectileTypeToSpawn": "RTID(Magmacream@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0.1,
+				"TriggerRect": {
+					"mHeight": 60.0,
+					"mWidth": 100000.0,
+					"mX": -50000.0,
+					"mY": -119.0
+				},
+				"TriggeringEntityTypes": [ "griditem" ]
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "Magmacream" ],
+			"objdata": {
+				"BaseDamage": 0.01,
+				"SplashDamage": 0.01,
+				"SplashRadius": 8000.0,
+				"CollisionFlags": [ "all_plants", "all_zombies", "ground" ],
+				"DamageFlags": [ "fire", "no_flash" ],
+				"DiesOnImpact": true,
+				"HasShadow": false,
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": -100.0,
+						"Max": -100.0
+					} ],
+				"InitialAcceleration": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialScale": {
+					"Min": 0,
+					"Max": 0
+				},
+				"RenderImage": "IMAGE_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_PROJECTILE",
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactSoundEvent": "",
+				"ImpactSoundThrottleTimer": 0.075,
+				"ImpactPAM": "",
+				"ImpactPAMAnimationToPlay": [ "" ],
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombiePortal_1" ],
+			"objclass": "GridItemZombiePortalProps",
+			"objdata": {
+				"CanBeMowed": false,
+				"CloseAnimation": "end",
+				"Height": "ground",
+				"Hitpoints": 600,
+				"PopAnim": "POPANIM_EFFECTS_MODERN_PORTAL",
+				"PopAnimRenderOffset": {
+					"x": 96,
+					"y": 125
+				},
+				"PopAnimRigClass": "GridItemZombiePortal_AnimRig",
+				"SpawnAnimation": "spawn",
+				"World": "modern",
+				"ZombieSpawnMethod": "NonRandomShuffled",
+				"ZombieSpawnPointOffset": 15,
+				"ZombieTypesToSpawn": [ {
+						"Weight": 1,
+						"ZombieTypeName": "night_camel"
+					}, {
+						"Weight": 1,
+						"ZombieTypeName": "night_camel"
+					}, {
+						"Weight": 1,
+						"ZombieTypeName": "dark"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombiePortal_2" ],
+			"objclass": "GridItemZombiePortalProps",
+			"objdata": {
+				"CanBeMowed": false,
+				"CloseAnimation": "end",
+				"Height": "ground",
+				"Hitpoints": 600,
+				"PopAnim": "POPANIM_EFFECTS_MODERN_PORTAL",
+				"PopAnimRenderOffset": {
+					"x": 96,
+					"y": 125
+				},
+				"PopAnimRigClass": "GridItemZombiePortal_AnimRig",
+				"SpawnAnimation": "spawn",
+				"World": "modern",
+				"ZombieSpawnMethod": "NonRandomShuffled",
+				"ZombieSpawnPointOffset": 15,
+				"ZombieTypesToSpawn": [ {
+						"Weight": 1,
+						"ZombieTypeName": "hellbird"
+					}, {
+						"Weight": 1,
+						"ZombieTypeName": "dark_wizard"
+					}, {
+						"Weight": 1,
+						"ZombieTypeName": "dark"
+					} ]
+			}
+		}, {} ],
+	"version": 1
+}

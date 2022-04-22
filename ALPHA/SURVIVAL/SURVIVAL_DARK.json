@@ -1,0 +1,62 @@
+{
+	"#comment": "Dark Endless",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E   sandbox",
+				"LevelNumber": 1,
+				"LevelPowerupSet": "LevelPowerupsDisabled",
+				"SuppressPlantfoodPurchase": true,
+				"DisablePlantBoosts": true,
+				"Loot": "RTID(DangerRoomLoot@LevelModules)",
+				"Modules": [ "RTID(NewWaves@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(LevelDifficultyScaling@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ],
+				"Name": "Survival: Dark Ages",
+				"SuppressAwardScreen": true,
+				"StageModule": "RTID(DarkStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "goldleaf", "caulipower" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "LevelDifficultyScaling" ],
+			"objclass": "LevelDifficultyScalingModuleProperties",
+			"objdata": {
+				"DifficultyRulesType": "SurvivalScaling"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 30,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 110,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 7,
+				"ZombiePool": [ "RTID(dark@ZombieTypes)", "RTID(dark_armor1@ZombieTypes)", "RTID(dark_armor2@ZombieTypes)", "RTID(dark_armor3@ZombieTypes)", "RTID(dark_wizard@ZombieTypes)", "RTID(dark_juggler@ZombieTypes)", "RTID(dark_king@ZombieTypes)", "RTID(dark_imp_dragon@ZombieTypes)", "RTID(dark_gargantuar@ZombieTypes)", "RTID(night_camel@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 10,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

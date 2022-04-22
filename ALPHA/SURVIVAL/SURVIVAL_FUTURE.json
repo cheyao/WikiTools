@@ -1,0 +1,62 @@
+{
+	"#comment": "Egypt Endless",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E   sandbox",
+				"LevelNumber": 1,
+				"LevelPowerupSet": "LevelPowerupsDisabled",
+				"SuppressPlantfoodPurchase": true,
+				"DisablePlantBoosts": true,
+				"Loot": "RTID(DangerRoomLoot@LevelModules)",
+				"Modules": [ "RTID(DefaultSunDropper@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(LevelDifficultyScaling@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ],
+				"Name": "Survival: Far Future",
+				"SuppressAwardScreen": true,
+				"StageModule": "RTID(FutureStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "goldleaf", "caulipower" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "LevelDifficultyScaling" ],
+			"objclass": "LevelDifficultyScalingModuleProperties",
+			"objdata": {
+				"DifficultyRulesType": "SurvivalScaling"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 30,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 150,
+				"StartingPoints": 200,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 7,
+				"ZombiePool": [ "RTID(future_imp@ZombieTypes)", "RTID(future_armor1@ZombieTypes)", "RTID(future_armor2@ZombieTypes)", "RTID(future_protector@ZombieTypes)", "RTID(mech_cone@ZombieTypes)", "RTID(future_jetpack@ZombieTypes)", "RTID(disco_mech@ZombieTypes)", "RTID(football_mech@ZombieTypes)", "RTID(future_gargantuar@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 10,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

@@ -1,0 +1,563 @@
+{
+	"#comment": "BB2",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ChallengeModule@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)" ],
+				"Name": "Botanical Battle II: Tiny Army - DT",
+				"StageModule": "RTID(EgyptStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(ChallengeText@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "ChallengeText" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "Survive while special MCs attack with grapes!",
+				"DescriptiveName": ""
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "caulipower", "chomper", "electricblueberry", "shrinkingviolet", "lavaguava", "thymewarp", "grimrose", "toadstool", "witchhazel" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 13,
+				"ZombiePool": [ "RTID(dummy@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 13,
+				"WaveCount": 13,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(BossSpawn1@CurrentLevel)", "RTID(BossWarning@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)", "RTID(BossSpawn2@CurrentLevel)", "RTID(BossWarning@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)", "RTID(BossSpawn3@CurrentLevel)", "RTID(BossWarning@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@.)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@.)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@.)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@.)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@.)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@.)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(egypt_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossWarning" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(plank@GridItemTypes)" ],
+				"WaveStartMessage": "Boss Spawn!",
+				"SuppressActionIfNoGridItemsFound": false,
+				"Zombies": [ {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossSpawn1" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 4,
+				"ColumnEnd": 5,
+				"Zombies": [ {
+						"Row": 2,
+						"Type": "RTID(boss@.)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossSpawn2" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 3,
+				"ColumnEnd": 4,
+				"Zombies": [ {
+						"Row": 4,
+						"Type": "RTID(boss@.)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossSpawn3" ],
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"ColumnStart": 2,
+				"ColumnEnd": 3,
+				"Zombies": [ {
+						"Row": 3,
+						"Type": "RTID(boss@.)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "boss" ],
+			"objdata": {
+				"TypeName": "iceage_hunter",
+				"ZombieClass": "ZombieIceAgeHunter",
+				"Properties": "RTID(ZombieBoss@.)",
+				"ResourceGroups": [ "PlantGrapeshot", "ZombieEightiesMCGroup" ],
+				"AudioGroups": [ "ZombieEightiesMCZombieAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Hunter",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_80S_GRAPESHOT",
+				"HomeWorld": "iceage",
+				"Placeable": true
+			}
+		}, {
+			"objclass": "ZombieIceAgeHunterProps",
+			"aliases": [ "ZombieBoss" ],
+			"objdata": {
+				"Speed": 0.18,
+				"Hitpoints": 5400,
+				"EatDPS": 400,
+				"CanSpawnPlantFood": false,
+				"CanBePlantTossedStrong": false,
+				"CanBePlantTossedWeak": false,
+				"ChillInsteadOfFreeze": true,
+				"CanSurrender": true,
+				"Actions": [ "RTID(ZombieBossAction@CurrentLevel)" ],
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 26,
+					"mX": 13,
+					"mY": 10
+				},
+				"AttackRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 80000,
+					"mY": 80000
+				},
+				"NearAttackRange": 0,
+				"FarAttackRange": 9,
+				"SnowballsPerBarrage": 1,
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.4
+				},
+				"GroundTrackName": "ground_swatch"
+			}
+		}, {
+			"objclass": "ZombieProjectileActionDefinition",
+			"aliases": [ "ZombieBossAction" ],
+			"objdata": {
+				"TimeBeforeFirst": {
+					"Min": 5.0,
+					"Max": 10.0
+				},
+				"TimeBetween": {
+					"Min": 0.0,
+					"Max": 0.0
+				},
+				"TimeBetweenBarrages": {
+					"Min": 5.0,
+					"Max": 10.0
+				},
+				"Projectile": "RTID(ZombieBossProjectile@CurrentLevel)",
+				"ProjectileSound": "",
+				"SpawnOffset": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 35.0
+				},
+				"ApexHeight": 100,
+				"TimeUntilHit": 0.75
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "ZombieBossProjectile" ],
+			"objdata": {
+				"BaseDamage": 30,
+				"CollisionFlags": [ "griditems", "zombies", "ground_zombies", "ground_plants", "off_ground_zombies", "normal_plants", "tall_plants" ],
+				"InitialVelocity": [ {
+						"Min": -250.0,
+						"Max": 250.0
+					}, {
+						"Min": -250.0,
+						"Max": 250.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ],
+				"InitialScale": {
+					"Min": 0.8,
+					"Max": 0.8
+				},
+				"InitialAngularVelocity": {
+					"Min": 1.57,
+					"Max": 1.57
+				},
+				"AttachedPAM": "POPANIM_EFFECTS_GRAPESHOT_PROJECTILE",
+				"AttachedPAMOffset": {
+					"x": -100,
+					"y": -97
+				},
+				"AttachedPAMAnimationToPlay": [ "animation" ],
+				"CollisionRect": {
+					"mX": -10,
+					"mY": -5,
+					"mWidth": 20,
+					"mHeight": 10
+				},
+				"ImpactSoundEvent": "Play_Plant_GrapeShot_Impact",
+				"ImpactPAM": "POPANIM_EFFECTS_GRAPESHOT_HIT",
+				"ImpactPAMAnimationToPlay": [ "animation" ],
+				"ImpactOffset": [ {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "iceage_weaselhoarder" ],
+			"objdata": {
+				"TypeName": "iceage_weaselhoarder",
+				"ZombieClass": "ZombieWeaselHoarder",
+				"Properties": "RTID(ZombieWeaselHoarderDefault@.)",
+				"ResourceGroups": [ "ZombieIceageWeaselHoarderGroup" ],
+				"AudioGroups": [ "ZombieIceAgeWeaselHoarderAudio" ],
+				"AnimRigClass": "ZombieAnimRig_WeaselHoarder",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_WEASELHOARDER",
+				"HomeWorld": "iceage",
+				"IsBasicZombie": false
+			}
+		}, {
+			"aliases": [ "ZombieWeaselHoarderDefault" ],
+			"objclass": "ZombieChickenFarmerProps",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 60,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"ChickenTypeName": "iceage_weaselhoarder",
+				"ChickeningDuration": 0.1,
+				"ChickeningDurationVariance": 0,
+				"ChickeningHealthPercentage": 0.3,
+				"ChickeningInterval": 0.05,
+				"ChickeningIntervalVariance": 0,
+				"ChickeningSound": "Play_WeaselAction",
+				"ChillInsteadOfFreeze": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 110,
+					"mWidth": 20,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 600,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.18
+			}
+		} ],
+	"version": 1
+}

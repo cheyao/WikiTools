@@ -1,0 +1,1091 @@
+{
+	"#comment": "Bowling 8",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"ForceNextLevel": "",
+				"FirstIntroNarrative": "EPICQUEST_BOWLING_8_INTRO",
+				"ReplayIntroNarrative": "EPICQUEST_BOWLING_8_INTRO",
+				"StartingSun": 2000,
+				"LevelNumber": 8,
+				"Loot": "RTID(NoLoot@LevelModules)",
+				"ReplayRewardParam": "none",
+				"ReplayRewardType": "none",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "LevelCommon", "PrizeEffectsCommon", "PlantExplodeONut", "PlantAppleMortarAudio", "PlantMissileToeAudio", "PlantCherryBomb", "PlantCherryBombAudio", "PlantCoconutCannonAudio" ],
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(PirateMowers@LevelModules)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(BowlingMinigame@CurrentLevel)", "RTID(ProtectThePlant@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(PiratePlanks@CurrentLevel)" ],
+				"Name": "Bowling Party 8: Endangered",
+				"MusicType": "Minigame_A",
+				"StageModule": "RTID(PirateStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "BowlingMinigame" ],
+			"objclass": "BowlingMinigameProperties",
+			"objdata": {
+				"BowlingFoulLine": 3
+			}
+		}, {
+			"aliases": [ "PiratePlanks" ],
+			"objclass": "PiratePlankProperties",
+			"objdata": {
+				"PlankRows": [ 0, 1, 2, 3, 4 ]
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3.5,
+						"MaxPackets": 0
+					}, {
+						"Delay": 4.5,
+						"MaxPackets": 5
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "tool_bowling_200",
+						"Weight": 10
+					}, {
+						"PlantType": "tool_bowling_splash",
+						"Weight": 0
+					}, {
+						"PlantType": "tool_bowling_freeze",
+						"Weight": 5
+					}, {
+						"PlantType": "tool_bowling_giant",
+						"Weight": 2
+					}, {
+						"PlantType": "tool_bowling_explode",
+						"Weight": 1
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 80
+					} ]
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "[STARCHALLENGE_PROTECT_THE_PLANT]",
+				"DescriptiveName": "[STARCHALLENGE_PROTECT_THE_PLANT_NAME]"
+			}
+		}, {
+			"aliases": [ "ProtectThePlant" ],
+			"objclass": "ProtectThePlantChallengeProperties",
+			"objdata": {
+				"MustProtectCount": 5,
+				"Plants": [ {
+						"GridX": 0,
+						"GridY": 0,
+						"Level": 3,
+						"PlantType": "wallnut"
+					}, {
+						"GridX": 0,
+						"GridY": 1,
+						"Level": 3,
+						"PlantType": "wallnut"
+					}, {
+						"GridX": 0,
+						"GridY": 2,
+						"Level": 3,
+						"PlantType": "wallnut"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"Level": 3,
+						"PlantType": "wallnut"
+					}, {
+						"GridX": 0,
+						"GridY": 4,
+						"Level": 3,
+						"PlantType": "wallnut"
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 10,
+				"ZombiePool": [ "RTID(tutorial_armor4@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"ZombieCountdownHugeWaveDelay": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(ZombieShown@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ], [ "RTID(Wave17@CurrentLevel)" ], [ "RTID(Wave18@CurrentLevel)" ], [ "RTID(Wave19@CurrentLevel)" ], [ "RTID(Wave20@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave17" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave18" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cannon@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave19" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave20" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(cannon@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombieShown" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(crater@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Type": "RTID(cannon@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "pirate" ],
+			"objdata": {
+				"TypeName": "pirate",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombiePirateDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombiePirateBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_PirateBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_PIRATE_BASIC",
+				"HomeWorld": "pirate",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "pirate_armor1" ],
+			"objdata": {
+				"TypeName": "pirate_armor1",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombiePirateArmor1Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombiePirateBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_PirateBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_PIRATE_BASIC",
+				"HomeWorld": "pirate",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "pirate_armor2" ],
+			"objdata": {
+				"TypeName": "pirate_armor2",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombiePirateArmor2Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombiePirateBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_PirateBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_PIRATE_BASIC",
+				"HomeWorld": "pirate",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "barrelroller" ],
+			"objdata": {
+				"TypeName": "barrelroller",
+				"ZombieClass": "ZombiePirateBarrelPusher",
+				"Properties": "RTID(ZombiePirateBarrelPusherDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombiePirateBarrelPusherGroup", "ZombiePirateImpGroup" ],
+				"AudioGroups": [ "ZombiePirateImpAudio" ],
+				"AnimRigClass": "ZombieAnimRig_PirateBarrelPusher",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_PIRATE_BARREL_PUSHER",
+				"HomeWorld": "pirate"
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "cannon" ],
+			"objdata": {
+				"TypeName": "cannon",
+				"ZombieClass": "ZombiePirateCannon",
+				"Properties": "RTID(ZombiePirateCannonDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombiePirateCannonGroup", "ZombiePirateImpGroup" ],
+				"AudioGroups": [ "ZombiePirateCannonAudio", "ZombiePirateImpAudio" ],
+				"AnimRigClass": "ZombieAnimRig_PirateCannon",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_PIRATE_CANNON",
+				"HomeWorld": "pirate",
+				"HastyOnStart": false
+			}
+		}, {
+			"aliases": [ "ZombiePirateDefault" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 80,
+					"mWidth": 20,
+					"mX": 0,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 10,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 100,
+				"Weight": 1000
+			}
+		}, {
+			"aliases": [ "ZombiePirateArmor1Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 20,
+					"mX": 0,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 20,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 200,
+				"Weight": 1000,
+				"ZombieArmorProps": [ "RTID(ConeDefault@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "ZombiePirateArmor2Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 20,
+					"mX": 0,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 30,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 300,
+				"Weight": 1000,
+				"ZombieArmorProps": [ "RTID(BucketDefault@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "ZombiePirateBarrelPusherDefault" ],
+			"objclass": "ZombieBarrelPusherProps",
+			"objdata": {
+				"ArtCenter": {
+					"x": 95,
+					"y": 126
+				},
+				"AttackRect": {
+					"mHeight": 55,
+					"mWidth": 10,
+					"mX": 10,
+					"mY": 0
+				},
+				"BarrelType": "bowling_barrel",
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 78,
+					"mWidth": 20,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 10,
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.4
+				},
+				"Speed": 0.2,
+				"StreetCriticalSize": {
+					"x": 3,
+					"y": 1
+				},
+				"StreetOffset": {
+					"x": -2,
+					"y": -1
+				},
+				"StreetSize": {
+					"x": 3,
+					"y": 2
+				},
+				"WavePointCost": 600,
+				"Weight": 1000
+			}
+		}, {
+			"aliases": [ "ZombiePirateCannonDefault" ],
+			"objclass": "ZombiePirateCannonProps",
+			"objdata": {
+				"Ammo": 5,
+				"ArmDropFraction": -1,
+				"ArtCenter": {
+					"x": 120,
+					"y": 120
+				},
+				"AttackRect": {
+					"mHeight": 80,
+					"mWidth": 20,
+					"mX": 15,
+					"mY": 0
+				},
+				"CanBePlantTossedStrong": false,
+				"CanBePlantTossedWeak": false,
+				"CanSpawnPlantFood": true,
+				"ChanceImpFallsInWater": 0.0,
+				"Cost": 150,
+				"EatDPS": 100,
+				"ExplodesWhenMowed": true,
+				"ExplosionImpLaunchHeight": 300,
+				"ExplosionImpLaunchTime": 1.7,
+				"ExplosionImpLaunchTimeVariance": 0.3,
+				"ExplosionImpSpawnCount": 3,
+				"ExplosionImpTargetColumnMax": 3,
+				"ExplosionImpTargetColumnMin": 0,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 80,
+					"mWidth": 62,
+					"mX": -20,
+					"mY": 10
+				},
+				"ConditionImmunities": [ {
+						"Condition": "chill"
+					} ],
+				"Hitpoints": 795,
+				"ScoreOverride": 50,
+				"ImpShotHeight": 95,
+				"ImpShotTime": 0.85,
+				"InitialShotCooldown": 5,
+				"IsValidPinchTarget": false,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"ShotCooldown": 10,
+				"SkipHeadDropState": true,
+				"Speed": 0.2,
+				"StreetCriticalSize": {
+					"x": 3,
+					"y": 1
+				},
+				"StreetOffset": {
+					"x": -2,
+					"y": -1
+				},
+				"StreetSize": {
+					"x": 3,
+					"y": 2
+				},
+				"TimeToWalkInToPosition": 4,
+				"WavePointCost": 800,
+				"Weight": 750
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "ConeDefault" ],
+			"objdata": {
+				"ArmorType": "Cone",
+				"BaseHealth": 200.0,
+				"ArmorFlags": [ "damageable", "droppable", "helm" ],
+				"ArmorLayers": [ "zombie_armor_cone_norm", "zombie_armor_cone_damage_01", "zombie_armor_cone_damage_02" ],
+				"ArmorLayerHealth": [ 0.666, 0.333 ],
+				"ImpactSoundEvent": ""
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "BucketDefault" ],
+			"objdata": {
+				"ArmorType": "Bucket",
+				"BaseHealth": 400.0,
+				"ArmorFlags": [ "metallic", "damageable", "droppable", "helm" ],
+				"ArmorLayers": [ "zombie_armor_bucket_norm", "zombie_armor_bucket_damage_01", "zombie_armor_bucket_damage_02" ],
+				"ArmorLayerHealth": [ 0.8, 0.55 ],
+				"ImpactSoundEvent": ""
+			}
+		} ],
+	"version": 1
+}

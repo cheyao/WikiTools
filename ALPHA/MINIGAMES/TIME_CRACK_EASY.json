@@ -1,0 +1,931 @@
+{
+	"#comment": "VORTEX Remix",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Throwback!",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"ResourceGroupNames": [ "PlantFirePeashooter", "FirePeaEffects", "PlantSporeshroom", "PlantMoonFlower", "PlantMoonFlowerEffects" ],
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(ModernMowers@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(PortalsSpawn@CurrentLevel)", "RTID(InitialPlants@CurrentLevel)", "RTID(GridItems@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)" ],
+				"Name": "A Crack in Time (easy) - DT",
+				"StageModule": "RTID(ModernStage@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "InitialPlants" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 3,
+						"GridY": 0,
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 1,
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"TypeName": "spikeweed"
+					}, {
+						"GridX": 3,
+						"GridY": 4,
+						"TypeName": "spikeweed"
+					} ]
+			}
+		}, {
+			"aliases": [ "GridItems" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 0,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 0,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 1,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 3,
+						"GridY": 0,
+						"TypeName": "moonflowershield"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 3,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 3,
+						"GridY": 4,
+						"TypeName": "moonflowershield"
+					}, {
+						"GridX": 4,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 4,
+						"GridY": 1,
+						"TypeName": "moonflowershield"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"TypeName": "moonflowershield"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"TypeName": "moonflowershield"
+					}, {
+						"GridX": 4,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 5,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 5,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 5,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 5,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 5,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 6,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 6,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 6,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 6,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 6,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 7,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 7,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 7,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 7,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 7,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 8,
+						"GridY": 0,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 8,
+						"GridY": 1,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 8,
+						"GridY": 2,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 8,
+						"GridY": 3,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 8,
+						"GridY": 4,
+						"TypeName": "whitecrater"
+					}, {
+						"GridX": 3,
+						"GridY": 6,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 7,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 8,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 9,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 3,
+						"GridY": 10,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 8,
+						"GridY": 6,
+						"TypeName": "gravestone_tutorial"
+					} ]
+			}
+		}, {
+			"aliases": [ "PortalsSpawn" ],
+			"objclass": "ZombiePotionModuleProperties",
+			"objdata": {
+				"InitialPotionCount": 0,
+				"MaxPotionCount": 5,
+				"PotionSpawnTimer": {
+					"Max": 0,
+					"Min": 0
+				},
+				"PotionTypes": [ "zombieportal_1" ]
+			}
+		}, {
+			"aliases": [ "ZombiePortal_1" ],
+			"objclass": "GridItemZombiePortalProps",
+			"objdata": {
+				"CanBeMowed": false,
+				"CloseAnimation": "end",
+				"Height": "ground",
+				"Hitpoints": 600,
+				"PopAnim": "POPANIM_EFFECTS_MODERN_PORTAL",
+				"PopAnimRenderOffset": {
+					"x": 96,
+					"y": 125
+				},
+				"PopAnimRigClass": "GridItemZombiePortal_AnimRig",
+				"SpawnAnimation": "spawn",
+				"World": "modern",
+				"ZombieSpawnMethod": "NonRandomShuffled",
+				"ZombieSpawnPointOffset": -20,
+				"ZombieTypesToSpawn": [ {
+						"Weight": 1,
+						"ZombieTypeName": "vegan"
+					}, {
+						"Weight": 1,
+						"ZombieTypeName": "vegan"
+					}, {
+						"Weight": 1,
+						"ZombieTypeName": "mech_cone"
+					} ]
+			}
+		}, {
+			"objclass": "EightiesStageProperties",
+			"aliases": [ "ModernStage" ],
+			"objdata": {
+				"ResourceGroupNames": [ "DelayLoad_Background_Modern_Grass", "Dirt_Spawn_Grass", "AudioModern", "ModernGroansAudio" ],
+				"GroupsToUnloadForAds": [ "DelayLoad_Background_Modern_Grass" ],
+				"StagePrefix": "joust",
+				"BackgroundResourceGroup": "DelayLoad_Background_Modern_Grass",
+				"BackgroundImagePrefix": "IMAGE_BACKGROUNDS_MODERN_GRASS",
+				"LevelPowerupSet": "LevelPowerupsDefault",
+				"BasicZombieTypeName": "tutorial",
+				"FlagZombieTypeName": "tutorial_flag",
+				"Armor1ZombieTypeName": "tutorial_armor1",
+				"Armor2ZombieTypeName": "tutorial_armor2",
+				"RailcartDefaultTypeName": "railcart_tutorial",
+				"GravestoneDefaultTypeName": "gravestone_tutorial",
+				"DirtSpawnEffectName": "POPANIM_EFFECTS_DIRT_SPAWN_GRASS",
+				"MusicSuffix": "Modern"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "bombegranate", "goldleaf", "powerplant", "holonut", "lilypad" ],
+				"PresetPlantList": [ {
+						"PlantType": "spikeweed"
+					} ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "Survive while temporal cracks appear. Patch them with ground plants to stop the cracks!",
+				"DescriptiveName": ""
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0.0,
+				"StartingPoints": 0.0,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 8,
+				"ZombiePool": [ "RTID(dummy@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownFirstWaveSecs": 40,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(Jam8Bit@CurrentLevel)", "RTID(WinCondition@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Jam8Bit" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"NotificationEvents": [ "jam_8bit" ]
+			}
+		}, {
+			"aliases": [ "WinCondition" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(traptile_1@GridItemTypes)" ],
+				"SuppressActionIfNoGridItemsFound": true,
+				"WaveStartMessage": "Here they come. Good luck.",
+				"ZombieSpawnWaitTime": "0",
+				"Zombies": [ {
+						"Type": "RTID(triggerer@CurrentLevel)"
+					}, {
+						"Type": "RTID(triggerer@CurrentLevel)"
+					}, {
+						"Type": "RTID(triggerer@CurrentLevel)"
+					}, {
+						"Type": "RTID(triggerer@CurrentLevel)"
+					}, {
+						"Type": "RTID(triggerer@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "triggerer" ],
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieLostCityBasic",
+				"Properties": "RTID(ZombieLostCityDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieLostCityBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_LostCityBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_LOSTCITY_BASIC",
+				"HomeWorld": "lostcity",
+				"IsBasicZombie": true
+			}
+		}, {
+			"aliases": [ "ZombieLostCityDefault" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"#comment": "ShadowOffset is synced to the shadow of the bug when dropping its basic.  Please maintain sync.",
+				"ArtCenter": {
+					"x": 10000,
+					"y": 10000
+				},
+				"AttackRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 10000,
+					"mY": 10000
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 0,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 32,
+					"mX": 10,
+					"mY": 10
+				},
+				"Hitpoints": 1,
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 0
+				},
+				"ChillInsteadOfFreeze": true,
+				"CanTriggerZombieWin": false,
+				"Speed": 100.0,
+				"WavePointCost": 100,
+				"Weight": 1000
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(eighties_arcade@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(vegan@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(vegan@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_1" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE",
+				"PopAnimRenderOffset": {
+					"x": 10000,
+					"y": 10000
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": -460,
+					"z": 40
+				},
+				"ProjectileTypeToSpawn": "RTID(BlackHole@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 99999,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 512,
+					"mX": -256,
+					"mY": -60
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "BlackHole" ],
+			"objdata": {
+				"BaseDamage": 90000,
+				"DiesOnImpact": false,
+				"CollisionFlags": [ "griditems", "normal_plants", "tall_plants" ],
+				"DamageFlags": [ "fire", "shooter" ],
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialAcceleration": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"RenderColor": {
+					"mRed": 20,
+					"mGreen": 0,
+					"mBlue": 36,
+					"mAlpha": 200
+				},
+				"InitialRotation": {
+					"Min": 4.7,
+					"Max": 4.71
+				},
+				"InitialAngularVelocity": {
+					"Min": 0.0,
+					"Max": 0.0
+				},
+				"InitialScale": {
+					"Min": 2.1,
+					"Max": 2.2
+				},
+				"AttachedPAM": "POPANIM_EFFECTS_T_SPORESHROOM_PROJECTILE",
+				"AttachedPAMOffset": {
+					"x": -95,
+					"y": -95
+				},
+				"AttachedPAMAnimationToPlay": [ "animation" ],
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactSoundEvent": "Play_FirePeaShooter_Impact",
+				"ImpactSoundThrottleTimer": 0.075,
+				"ImpactPAM": "POPANIM_EFFECTS_SPLAT_FIRE_PEA_BLUE",
+				"ImpactPAMAnimationToPlay": [ "animation" ],
+				"ImpactOffset": [ {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ]
+			}
+		} ],
+	"version": 1
+}

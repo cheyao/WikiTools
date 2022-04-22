@@ -1,0 +1,765 @@
+{
+	"#comment": "",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(EgyptMowers@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Gravestones@CurrentLevel)", "RTID(InitialGridItems@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)" ],
+				"Name": "Mixed Storm - Sergio+",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(EgyptStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "InitialGridItems" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 3,
+						"GridY": 0,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 3,
+						"GridY": 2,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 3,
+						"GridY": 4,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 0,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 1,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"TypeName": "markertile_1"
+					}, {
+						"GridX": 4,
+						"GridY": 4,
+						"TypeName": "markertile_1"
+					} ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {
+				"ForceSpawnData": [ {
+						"GridX": 5,
+						"GridY": 0
+					}, {
+						"GridX": 6,
+						"GridY": 0
+					}, {
+						"GridX": 7,
+						"GridY": 0
+					}, {
+						"GridX": 8,
+						"GridY": 0
+					}, {
+						"GridX": 5,
+						"GridY": 1
+					}, {
+						"GridX": 6,
+						"GridY": 1
+					}, {
+						"GridX": 7,
+						"GridY": 1
+					}, {
+						"GridX": 8,
+						"GridY": 1
+					}, {
+						"GridX": 5,
+						"GridY": 2
+					}, {
+						"GridX": 6,
+						"GridY": 2
+					}, {
+						"GridX": 7,
+						"GridY": 2
+					}, {
+						"GridX": 8,
+						"GridY": 2
+					}, {
+						"GridX": 5,
+						"GridY": 3
+					}, {
+						"GridX": 6,
+						"GridY": 3
+					}, {
+						"GridX": 7,
+						"GridY": 3
+					}, {
+						"GridX": 8,
+						"GridY": 3
+					}, {
+						"GridX": 5,
+						"GridY": 4
+					}, {
+						"GridX": 6,
+						"GridY": 4
+					}, {
+						"GridX": 7,
+						"GridY": 4
+					}, {
+						"GridX": 8,
+						"GridY": 4
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "splitpea" ],
+				"PresetPlantList": [ {
+						"PlantType": "tanglekelp",
+						"Level": "-1"
+					}, {
+						"PlantType": "imitater",
+						"Level": "-1"
+					} ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "Survive a full attack of Sandstorms and Snowstorms - the zombies will always land on marked tiles.\nSurvive with two less slots.",
+				"DescriptiveName": "h"
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"SuppressFlagZombie": true,
+				"FlagWaveInterval": 9,
+				"WaveCount": 18,
+				"Waves": [ [ "RTID(Wave1StormEvent0@CurrentLevel)" ], [ "RTID(Wave2StormEvent0@CurrentLevel)" ], [ "RTID(Wave3StormEvent0@CurrentLevel)" ], [ "RTID(Wave4StormEvent0@CurrentLevel)" ], [ "RTID(Wave5StormEvent0@CurrentLevel)" ], [ "RTID(Wave6StormEvent0@CurrentLevel)" ], [ "RTID(Wave7StormEvent0@CurrentLevel)", "RTID(Wave7PFStormEvent0@CurrentLevel)" ], [ "RTID(Wave8StormEvent0@CurrentLevel)" ], [ "RTID(Wave9StormEvent0@CurrentLevel)", "RTID(Wave9DifStormEvent0@CurrentLevel)", "RTID(MixedMessage@CurrentLevel)" ], [ "RTID(Wave10StormEvent0@CurrentLevel)" ], [ "RTID(Wave11StormEvent0@CurrentLevel)" ], [ "RTID(Wave12StormEvent0@CurrentLevel)" ], [ "RTID(Wave13StormEvent0@CurrentLevel)" ], [ "RTID(Wave14StormEvent0@CurrentLevel)" ], [ "RTID(Wave15StormEvent0@CurrentLevel)" ], [ "RTID(Wave16StormEvent0@CurrentLevel)" ], [ "RTID(Wave17StormEvent0@CurrentLevel)", "RTID(FireMessage@CurrentLevel)" ], [ "RTID(Wave18StormEvent0@CurrentLevel)", "RTID(Wave18DifStormEvent0@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "4",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7PFStormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"AdditionalPlantfood": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy_flag@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9DifStormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_flag@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "MixedMessage" ],
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 0,
+				"ColumnStart": 0,
+				"GroupSize": 1,
+				"TimeBeforeFullSpawn": "3",
+				"TimeBetweenGroups": "2",
+				"WaveStartMessage": "Mixed Storm!",
+				"ZombieCount": 0,
+				"ZombieName": ""
+			}
+		}, {
+			"aliases": [ "Wave10StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave17StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 0.5,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "FireMessage" ],
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 0,
+				"ColumnStart": 0,
+				"GroupSize": 1,
+				"TimeBeforeFullSpawn": "3",
+				"TimeBetweenGroups": "2",
+				"WaveStartMessage": "Firestorm!",
+				"ZombieCount": 0,
+				"ZombieName": ""
+			}
+		}, {
+			"aliases": [ "Wave18StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": "1",
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy_flag@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave18DifStormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "4",
+				"ColumnStart": "3",
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(iceage_flag@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

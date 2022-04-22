@@ -1,0 +1,181 @@
+{
+	"#comment": "P08",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Warp Party!",
+				"## ZombieLevel": 5,
+				"GridItemLevel": 30,
+				"StartingSun": 50,
+				"IsLevelOfTheDay": true,
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(PiratePlanks@CurrentLevel)", "RTID(GI@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)" ],
+				"Name": "WP-20: Porch Pirates",
+				"StageModule": "RTID(PirateStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 0,
+						"GridY": 0,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 0,
+						"GridY": 1,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 0,
+						"GridY": 2,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 0,
+						"GridY": 4,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 1,
+						"GridY": 0,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 1,
+						"GridY": 1,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 1,
+						"GridY": 2,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 1,
+						"GridY": 3,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 1,
+						"GridY": 4,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 2,
+						"GridY": 0,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 2,
+						"GridY": 1,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 2,
+						"GridY": 2,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 2,
+						"GridY": 3,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 3,
+						"GridY": 0,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 3,
+						"GridY": 2,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 3,
+						"GridY": 4,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 4,
+						"GridY": 0,
+						"TypeName": "gravestone_egypt"
+					}, {
+						"GridX": 4,
+						"GridY": 4,
+						"TypeName": "gravestone_egypt"
+					} ]
+			}
+		}, {
+			"aliases": [ "PiratePlanks" ],
+			"objclass": "PiratePlankProperties",
+			"objdata": {
+				"PlankRows": [ 1, 3 ]
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(SunProduced@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "SunProduced" ],
+			"objclass": "StarChallengeSunProducedProps",
+			"objdata": {
+				"TargetSun": 6000
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [],
+				"PlantExcludeList": [ "lilypad" ],
+				"PlantIncludeList": [],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"WavesPerFlag": 5,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 200,
+				"PointIncrementPerWave": 120,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(pirate_armor1@ZombieTypes)", "RTID(pirate_armor2@ZombieTypes)", "RTID(barrelroller@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"### ZombieCountdownHugeWaveDelay": 0,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ], [ "RTID(Octo@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Octo" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(beach_octopus@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

@@ -1,0 +1,162 @@
+{
+	"#comment": "V8-2",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V8-2: The Locker",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstIntroNarrative": "VASEBREAKER_8-2_INTRO",
+				"ReplayIntroNarrative": "VASEBREAKER_8-2_INTRO",
+				"FirstRewardParam": "moneybag",
+				"StageModule": "RTID(DinoStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(GI@.)" ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "thymewarp",
+						"Level": 0
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 8,
+						"GridY": 0,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 8,
+						"GridY": 1,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 8,
+						"GridY": 2,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 8,
+						"GridY": 3,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 8,
+						"GridY": 4,
+						"TypeName": "traptile_1"
+					} ]
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 2,
+				"MaxColumnIndex": 7,
+				"GridSquareExcludelist": [ {
+						"mX": 2,
+						"mY": 1
+					}, {
+						"mX": 2,
+						"mY": 3
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "dino",
+						"Count": 6
+					}, {
+						"ZombieTypeName": "dino_armor3",
+						"Count": 5
+					}, {
+						"ZombieTypeName": "dino_bully",
+						"Count": 4
+					}, {
+						"PlantTypeName": "primalpeashooter",
+						"Count": 7
+					}, {
+						"PlantTypeName": "splitpea",
+						"Count": 2
+					}, {
+						"PlantTypeName": "springbean",
+						"Count": 4
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 13,
+				"NumColoredZombieVases": 0
+			}
+		}, {
+			"aliases": [ "TrapTileProps_1" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE",
+				"PopAnimRenderOffset": {
+					"x": 10000,
+					"y": 10000
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 10
+				},
+				"ProjectileTypeToSpawn": "RTID(DeathShot@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 100000.0,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 40,
+					"mX": -20,
+					"mY": -60
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "DeathShot" ],
+			"objdata": {
+				"BaseDamage": 1500,
+				"SplashDamage": 5.0,
+				"SplashRadius": 1.0,
+				"ShakeBoardOnSplash": true,
+				"DiesOnImpact": true,
+				"HasShadow": false,
+				"DamageFlags": [ "shooter" ],
+				"CollisionFlags": [ "ground", "griditems", "ground_zombies", "off_ground_zombies" ],
+				"InitialVelocity": [ {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ],
+				"InitialScale": {
+					"Min": 0.95,
+					"Max": 1.05
+				},
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactOffset": [ {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ]
+			}
+		} ]
+}

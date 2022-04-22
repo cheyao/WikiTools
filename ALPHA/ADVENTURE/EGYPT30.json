@@ -1,0 +1,753 @@
+{
+	"#comment": "21-10",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "big_moneybag",
+				"FirstIntroNarrative": "EGYPT30_INTRO",
+				"ReplayIntroNarrative": "EGYPT30_INTRO",
+				"FirstOutroNarrative": "EGYPT30_OUTRO",
+				"ReplayOutroNarrative": "EGYPT30_OUTRO",
+				"ForceNextLevel": "lostcity21",
+				"StartingSun": 150,
+				"LevelNumber": 30,
+				"ResourceGroupNames": [ "PlantBloomerang", "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(CoolDown@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(GI@CurrentLevel)" ],
+				"MusicType": "MiniGame_A",
+				"Name": "21-10: Premised Demise",
+				"StageModule": "RTID(EgyptStage@LevelModules)"
+			}
+		}, {
+			"objclass": "PlantCooldownModifierProperties",
+			"aliases": [ "CoolDown" ],
+			"objdata": {
+				"CooldownMultiplier": 1.5
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "citron", "electricblueberry", "caulipower", "hypnoshroom", "grimrose", "chilibean", "shrinkingviolet", "primalpotatomine", "grapeshot", "powerlily" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 4,
+						"GridY": 5,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 20,
+						"GridY": 5,
+						"TypeName": "crater"
+					}, {
+						"GridX": 3,
+						"GridY": 0,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 3,
+						"GridY": 2,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 3,
+						"GridY": 4,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 7,
+						"GridY": 0,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 7,
+						"GridY": 1,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 7,
+						"GridY": 2,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 7,
+						"GridY": 3,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 7,
+						"GridY": 4,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 8,
+						"GridY": 0,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 8,
+						"GridY": 1,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 8,
+						"GridY": 2,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 8,
+						"GridY": 3,
+						"TypeName": "gravestoneZombieOnDestruction"
+					}, {
+						"GridX": 8,
+						"GridY": 4,
+						"TypeName": "gravestoneZombieOnDestruction"
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 60,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 10,
+				"ZombiePool": [ "RTID(egypt_imp@ZombieTypes)", "RTID(cleopatra@ZombieTypes)", "RTID(mummy_armor1@ZombieTypes)", "RTID(mummy_armor2@ZombieTypes)", "RTID(camel_onehump@ZombieTypes)", "RTID(explorer@ZombieTypes)", "RTID(pharaoh@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(TS1@CurrentLevel)", "RTID(TS2@CurrentLevel)", "RTID(TrapActivate@CurrentLevel)", "RTID(Spawn1@CurrentLevel)" ], [ "RTID(Spawn1@CurrentLevel)" ], [ "RTID(Spawn2@CurrentLevel)" ], [ "RTID(Spawn3@CurrentLevel)" ], [ "RTID(TS3@CurrentLevel)", "RTID(PF@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)" ], [ "RTID(Spawn3@CurrentLevel)" ], [ "RTID(PF@CurrentLevel)" ], [ "RTID(Spawn5@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)" ], [ "RTID(TS4@CurrentLevel)", "RTID(Spawn6@CurrentLevel)" ], [ "RTID(PF@CurrentLevel)", "RTID(Spawn7@CurrentLevel)", "RTID(Spawn8@CurrentLevel)" ], [ "RTID(PF@CurrentLevel)" ], [ "RTID(TS5@CurrentLevel)", "RTID(TS1@CurrentLevel)", "RTID(Spawn5@CurrentLevel)" ], [ "RTID(Spawn10@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)" ], [ "RTID(Spawn8@CurrentLevel)" ], [ "RTID(Spawn9@CurrentLevel)" ], [ "RTID(TS2@CurrentLevel)", "RTID(TS3@CurrentLevel)", "RTID(Spawn8@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)", "RTID(PF2@CurrentLevel)" ], [ "RTID(Spawn3@CurrentLevel)", "RTID(Spawn10@CurrentLevel)" ], [ "RTID(Spawn1@CurrentLevel)", "RTID(Spawn7@CurrentLevel)" ], [ "RTID(TS4@CurrentLevel)", "RTID(TS5@CurrentLevel)", "RTID(Spawn8@CurrentLevel)", "RTID(Spawn2@CurrentLevel)" ], [ "RTID(Spawn5@CurrentLevel)", "RTID(Spawn5@CurrentLevel)", "RTID(Spawn8@CurrentLevel)", "RTID(Spawn8@CurrentLevel)", "RTID(Spawn9@CurrentLevel)", "RTID(Spawn10@CurrentLevel)" ], [ "RTID(Spawn6@CurrentLevel)", "RTID(PF@CurrentLevel)" ], [ "RTID(FireSpawn@CurrentLevel)", "RTID(Spawn7@CurrentLevel)", "RTID(Spawn8@CurrentLevel)" ], [ "RTID(Spawn9@CurrentLevel)", "RTID(Spawn10@CurrentLevel)" ], [ "RTID(TS1@CurrentLevel)", "RTID(TS2@CurrentLevel)", "RTID(TS3@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)", "RTID(Spawn10@CurrentLevel)", "RTID(Spawn10@CurrentLevel)" ], [ "RTID(Spawn8@CurrentLevel)", "RTID(PF@CurrentLevel)", "RTID(Spawn5@CurrentLevel)" ], [ "RTID(Spawn3@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)", "RTID(Spawn7@CurrentLevel)", "RTID(Spawn7@CurrentLevel)" ], [ "RTID(PF2@CurrentLevel)", "RTID(Spawn8@CurrentLevel)", "RTID(Spawn7@CurrentLevel)" ], [ "RTID(Spawn10@CurrentLevel)", "RTID(Spawn5@CurrentLevel)", "RTID(Spawn4@CurrentLevel)" ], [ "RTID(Spawn7@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)", "RTID(FireSpawn@CurrentLevel)", "RTID(Spawn8@CurrentLevel)", "RTID(Spawn9@CurrentLevel)" ], [ "RTID(Spawn4@CurrentLevel)", "RTID(Spawn6@CurrentLevel)", "RTID(Spawn7@CurrentLevel)", "RTID(Spawn8@CurrentLevel)", "RTID(Spawn9@CurrentLevel)", "RTID(Spawn10@CurrentLevel)", "RTID(Spawn10@CurrentLevel)", "RTID(Spawn10@CurrentLevel)", "RTID(Spawn10@CurrentLevel)", "RTID(Spawn10@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "TS1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tombraiser@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "TS2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tombraiser@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "TS3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(tombraiser@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "TS4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(tombraiser@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "TS5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(tombraiser@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		}, {
+			"aliases": [ "Spawn1" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn2" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn3" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn4" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "PF" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "1",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn5" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn6" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn7" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn8" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn9" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "PF2" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "1",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Spawn10" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(gravestone_egypt@GridItemTypes)", "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(egypt_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "FireSpawn" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"WaveStartMessage": "Ghost Fire!",
+				"GridTypes": [ "RTID(gravestoneZombieOnDestruction@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(fireghost@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "tombraiser" ],
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieTombRaiser",
+				"Properties": "RTID(ZombieTombRaiserDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieEgyptTombRaiserGroup", "Egypt_Gravestone" ],
+				"AudioGroups": [ "ZombieEgyptTombRaiserAudio" ],
+				"AnimRigClass": "ZombieAnimRig_TombRaiser",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_EGYPT_TOMBRAISER",
+				"HomeWorld": "egypt"
+			}
+		}, {
+			"aliases": [ "ZombieTombRaiserDefault" ],
+			"objclass": "ZombieTombRaiserProps",
+			"objdata": {
+				"Ammo": 60,
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 60,
+					"mWidth": 10,
+					"mX": 10,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"CanBeFlicked": false,
+				"IsValidPinchTarget": false,
+				"MinColumn": 1,
+				"Cost": 150,
+				"EatDPS": 200,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 26,
+					"mX": 13,
+					"mY": 10
+				},
+				"Hitpoints": 13000,
+				"ScoreOverride": 2000,
+				"NumberOfTombsToSpawn": 1,
+				"Projectile": "RTID(ZombieBoneDefault@ProjectileTypes)",
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 0.85,
+						"Arg2": 1.0,
+						"Formula": "standard",
+						"Key": "TimeBetweenRaisings"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.12,
+				"TimeBetweenCasts": 6,
+				"TimeBetweenRaisings": 4,
+				"WavePointCost": 10000,
+				"Weight": 2000
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "fireghost" ],
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieExplorer",
+				"Properties": "RTID(ZombieExplorerVeteran@CurrentLevel)",
+				"ResourceGroups": [ "ZombieEgyptExplorerVeteranGroup" ],
+				"AudioGroups": [ "ZombieEgyptExplorerAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Explorer",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_EGYPT_VET_EGYPTOLOGIST",
+				"HomeWorld": "egypt"
+			}
+		}, {
+			"aliases": [ "ZombieExplorerVeteran" ],
+			"objclass": "ZombieExplorerProps",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 60,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 10
+				},
+				"CanSpawnPlantFood": false,
+				"CanTriggerZombieWin": false,
+				"CanBePlantTossedWeak": false,
+				"CanBePlantTossedStrong": false,
+				"Cost": 10,
+				"EatDPS": 10,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 0,
+					"mY": 50
+				},
+				"Hitpoints": 99999,
+				"MaxTorchReach": 50,
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.4
+				},
+				"Speed": 0.6,
+				"ScoreOverride": 20,
+				"WavePointCost": 10,
+				"Weight": 10
+			}
+		}, {
+			"aliases": [ "GridItemGravestoneZombieOnDestruction" ],
+			"objclass": "GridItemGravestonePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 98,
+					"y": 120
+				},
+				"PopAnimRenderScale": {
+					"x": 1.25,
+					"y": 1.5
+				},
+				"BreakEffect": "POPANIM_EFFECTS_TOMBSTONE_EGYPT_HIEROGLYPH_DAMAGE",
+				"BreakEffectSound": "Play_Zomb_Egypt_Grave_Crumble",
+				"DamageStateCount": 5,
+				"HitRectOffsetWidth": -30,
+				"HitRectOffsetX": 15,
+				"Hitpoints": 31000,
+				"PlantingRestrictions": {
+					"BlockedPlantingReason": "PLANTING_NOT_ON_CRATERS",
+					"List": [],
+					"ListType": "includelist"
+				},
+				"PopAnim": "POPANIM_GRAVESTONES_EGYPT_HIEROGLYPH",
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapActivate" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"GridTypes": [ "RTID(crater@GridItemTypes)" ],
+				"SuppressActionIfNoGridItemsFound": true,
+				"WaveStartMessage": "",
+				"ZombieSpawnWaitTime": "0",
+				"Zombies": [ {
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_1" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE",
+				"PopAnimRenderOffset": {
+					"x": 10000,
+					"y": 10000
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": -270,
+					"z": 100
+				},
+				"ProjectileTypeToSpawn": "RTID(Magmacream@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 1,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 100000,
+					"mX": -50000,
+					"mY": -60
+				},
+				"TriggeringEntityTypes": [ "zombie", "plant" ]
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "Magmacream" ],
+			"objdata": {
+				"BaseDamage": 0.01,
+				"SplashDamage": 0.01,
+				"SplashRadius": 8000,
+				"CollisionFlags": [ "all_plants", "all_zombies", "ground" ],
+				"DamageFlags": [ "no_flash", "fire" ],
+				"DiesOnImpact": true,
+				"HasShadow": false,
+				"InitialVelocity": [ {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": -100.0,
+						"Max": -100.0
+					} ],
+				"InitialAcceleration": [ {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ],
+				"InitialScale": {
+					"Min": 0.0,
+					"Max": 0.0
+				},
+				"RenderImage": "IMAGE_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_PROJECTILE",
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactSoundEvent": "",
+				"ImpactSoundThrottleTimer": 0.075,
+				"ImpactPAM": "",
+				"ImpactPAMAnimationToPlay": [ "" ],
+				"ImpactOffset": [ {
+						"Min": 0.0,
+						"Max": 0.0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_2" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE",
+				"PopAnimRenderOffset": {
+					"x": 10000,
+					"y": 10000
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": 0,
+					"z": -50
+				},
+				"ProjectileTypeToSpawn": "RTID(GhostKiller@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 5,
+				"TriggerRect": {
+					"mHeight": 10,
+					"mWidth": 10000,
+					"mX": -5000,
+					"mY": 50
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "GhostKiller" ],
+			"objdata": {
+				"BaseDamage": 100000,
+				"CollisionFlags": [ "ground_zombies" ],
+				"DamageFlags": [ "no_flash" ],
+				"DiesOnImpact": false,
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialAcceleration": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialScale": {
+					"Min": 0.0,
+					"Max": 0.0
+				},
+				"AttachedPAM": "POPANIM_EFFECTS_T_BLOOMERANG_PROJECTILE",
+				"AttachedPAMOffset": {
+					"x": -115,
+					"y": -115
+				},
+				"AttachedPAMAnimationToPlay": [ "" ],
+				"ImpactPAM": "",
+				"ImpactPAMAnimationToPlay": [ "" ],
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"CollisionRect": {
+					"mX": -5,
+					"mY": -5,
+					"mWidth": 10,
+					"mHeight": 10
+				}
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "tutorial" ],
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieTutorialDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieTutorialGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_Tutorial",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_TUTORIAL",
+				"HomeWorld": "modern",
+				"IsBasicZombie": true
+			}
+		}, {
+			"aliases": [ "ZombieTutorialDefault" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 10000,
+					"y": 10000
+				},
+				"AttackRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 80000,
+					"mY": 80000
+				},
+				"CanSpawnPlantFood": false,
+				"CanSurrender": true,
+				"HeadDropFraction": 0,
+				"SkipHeadDropState": true,
+				"CanTriggerZombieWin": false,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 32,
+					"mX": 10,
+					"mY": 10
+				},
+				"Hitpoints": 0.01,
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 0
+				},
+				"Speed": 0.0,
+				"WavePointCost": 100,
+				"Weight": 1000
+			}
+		} ],
+	"version": 1
+}

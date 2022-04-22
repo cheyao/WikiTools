@@ -1,0 +1,10 @@
+{
+	"#comment": "Egypt Training Mode",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "training/egyptA0_extreme", "training/egyptA1_extreme", "training/egyptB0_extreme", "training/egyptB1_extreme", "training/egyptC0_extreme", "training/egyptC1_extreme", "training/egyptD1_extreme", "training/egyptD1_extreme", "training/egyptE0_extreme", "training/egyptE1_extreme", "training/egyptF0_extreme", "training/egyptF1_extreme", "training/egyptG1_extreme", "training/egyptG1_extreme" ]
+			}
+		} ],
+	"version": 1
+}

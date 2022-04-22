@@ -1,0 +1,602 @@
+{
+	"#comment": "AE-6",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"FirstIntroNarrative": "",
+				"ReplayIntroNarrative": "",
+				"StartingSun": 50,
+				"LevelNumber": 6,
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(EgyptMowers@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(ProtectThePlant@CurrentLevel)" ],
+				"MusicType": "MiniGame_B",
+				"Name": "AE-6: Close Fire",
+				"StageModule": "RTID(EgyptNightStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "escaperoot" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "[STARCHALLENGE_PROTECT_THE_PLANT]",
+				"DescriptiveName": "[STARCHALLENGE_PROTECT_THE_PLANT_NAME]"
+			}
+		}, {
+			"aliases": [ "ProtectThePlant" ],
+			"objclass": "ProtectThePlantChallengeProperties",
+			"objdata": {
+				"MustProtectCount": 5,
+				"Plants": [ {
+						"GridX": 5,
+						"GridY": 0,
+						"Level": 1,
+						"PlantType": "bonkchoy"
+					}, {
+						"GridX": 5,
+						"GridY": 1,
+						"Level": 1,
+						"PlantType": "bonkchoy"
+					}, {
+						"GridX": 5,
+						"GridY": 2,
+						"Level": 1,
+						"PlantType": "bonkchoy"
+					}, {
+						"GridX": 5,
+						"GridY": 3,
+						"Level": 1,
+						"PlantType": "bonkchoy"
+					}, {
+						"GridX": 5,
+						"GridY": 4,
+						"Level": 1,
+						"PlantType": "bonkchoy"
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": -1,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 8,
+				"ZombiePool": [ "RTID(egypt_imp@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"MinNextWaveHealthPercentage": 0.25,
+				"MaxNextWaveHealthPercentage": 0.25,
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)", "RTID(SS@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)", "RTID(SS@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)", "RTID(SS@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)", "RTID(SS@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "SS" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 4,
+				"ColumnStart": 4,
+				"GroupSize": 1,
+				"TimeBetweenGroups": 1,
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy@ZombieTypes)"
+					}, {
+						"Type": "RTID(mummy_armor1@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

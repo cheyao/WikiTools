@@ -1,0 +1,75 @@
+{
+	"#comment": "V0-3",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V0-3: Tutorial",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstRewardType": "powerupgadget",
+				"FirstRewardParam": "powerupvasebreakerreveal",
+				"FirstIntroNarrative": "VASEBREAKER_0-3_INTRO",
+				"ReplayIntroNarrative": "VASEBREAKER_0-3_INTRO",
+				"FirstOutroNarrative": "VASEBREAKER_0-3_OUTRO",
+				"ReplayOutroNarrative": "VASEBREAKER_0-3_OUTRO",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(SeedBank@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "splitpea",
+						"Level": 0
+					}, {
+						"PlantType": "springbean",
+						"Level": 1
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 3,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 0,
+						"mY": 0
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "tutorial",
+						"Count": 9
+					}, {
+						"ZombieTypeName": "tutorial_armor1",
+						"Count": 4
+					}, {
+						"ZombieTypeName": "tutorial_armor2",
+						"Count": 5
+					}, {
+						"ZombieTypeName": "tutorial_gargantuar",
+						"Count": 1
+					}, {
+						"PlantTypeName": "sunbean",
+						"Count": 5
+					}, {
+						"PlantTypeName": "chilibean",
+						"Count": 3
+					}, {
+						"PlantTypeName": "chardguard",
+						"Count": 2
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 1
+					} ],
+				"NumColoredPlantVases": 10,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

@@ -1,0 +1,1136 @@
+{
+	"#comment": "Bowling",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"ForceNextLevel": "",
+				"FirstIntroNarrative": "EPICQUEST_BOWLING_1_INTRO",
+				"ReplayIntroNarrative": "EPICQUEST_BOWLING_1_INTRO",
+				"StartingSun": 2000,
+				"LevelNumber": 1,
+				"Loot": "RTID(NoLoot@LevelModules)",
+				"ReplayRewardParam": "none",
+				"ReplayRewardType": "none",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "LevelCommon", "PrizeEffectsCommon", "PlantExplodeONut", "PlantAppleMortarAudio", "PlantMissileToeAudio", "PlantCherryBomb", "PlantCherryBombAudio", "PlantCoconutCannonAudio" ],
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(ModernMowers@LevelModules)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(BowlingMinigame@CurrentLevel)" ],
+				"Name": "Bowling Party: Boundyard",
+				"MusicType": "Minigame_B",
+				"StageModule": "RTID(ModernStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "BowlingMinigame" ],
+			"objclass": "BowlingMinigameProperties",
+			"objdata": {
+				"BowlingFoulLine": 2
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3.5,
+						"MaxPackets": 0
+					}, {
+						"Delay": 5,
+						"MaxPackets": 5
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "tool_bowling_200",
+						"Weight": 10
+					}, {
+						"PlantType": "tool_bowling_splash",
+						"Weight": 0
+					}, {
+						"PlantType": "tool_bowling_freeze",
+						"Weight": 5
+					}, {
+						"MaxCount": 2,
+						"MaxWeightFactor": 0,
+						"PlantType": "tool_bowling_giant",
+						"Weight": 0
+					}, {
+						"PlantType": "tool_bowling_explode",
+						"Weight": 1
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 80
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 10,
+				"ZombiePool": [ "RTID(tutorial_armor4@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"ZombieCountdownHugeWaveDelay": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(ZombieShown@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ], [ "RTID(Wave17@CurrentLevel)" ], [ "RTID(Wave18@CurrentLevel)" ], [ "RTID(Wave19@CurrentLevel)" ], [ "RTID(Wave20@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_gargantuar@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_gargantuar@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave17" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_gargantuar@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave18" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_gargantuar@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave19" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave20" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tutorial_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_gargantuar@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_newspaper@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tutorial_gargantuar@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@CurrentLevel)"
+					}, {
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Type": "RTID(tutorial@CurrentLevel)"
+					}, {
+						"Type": "RTID(tutorial@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombieShown" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(crater@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(tutorial@ZombieTypes)"
+					}, {
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "tutorial" ],
+			"objdata": {
+				"TypeName": "tutorial",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieTutorialDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieTutorialGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_Tutorial",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_TUTORIAL",
+				"HomeWorld": "modern",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "tutorial_armor1" ],
+			"objdata": {
+				"TypeName": "tutorial_armor1",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieTutorialArmor1Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombieTutorialGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_Tutorial",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_TUTORIAL",
+				"HomeWorld": "modern",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "tutorial_armor2" ],
+			"objdata": {
+				"TypeName": "tutorial_armor2",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieTutorialArmor2Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombieTutorialGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_Tutorial",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_TUTORIAL",
+				"HomeWorld": "modern",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "modern_newspaper" ],
+			"objdata": {
+				"TypeName": "modern_newspaper",
+				"ZombieClass": "ZombieModernNewspaper",
+				"Properties": "RTID(ZombieModernNewspaperDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieModernNewspaperGroup" ],
+				"AudioGroups": [ "ZombieModernNewspaperAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Newspaper",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_MODERN_NEWSPAPER",
+				"HomeWorld": "modern"
+			}
+		}, {
+			"aliases": [ "ZombieTutorialDefault" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 80,
+					"mWidth": 20,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.4
+				},
+				"Speed": 0.2,
+				"ScoreOverride": 10,
+				"WavePointCost": 100,
+				"Weight": 1000
+			}
+		}, {
+			"aliases": [ "ZombieTutorialArmor1Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 20,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 20,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 200,
+				"Weight": 1000,
+				"ZombieArmorProps": [ "RTID(ConeDefault@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "ZombieTutorialArmor2Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 20,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 30,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 300,
+				"Weight": 1000,
+				"ZombieArmorProps": [ "RTID(BucketDefault@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "ZombieModernNewspaperDefault" ],
+			"objclass": "ZombieModernNewspaperProps",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 200,
+				"EnragedDamageScale": 2,
+				"EnragedSpeedScale": 4,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 20,
+					"mX": 5,
+					"mY": 10
+				},
+				"ConditionImmunities": [ {
+						"Condition": "chill"
+					} ],
+				"Hitpoints": 195,
+				"ScoreOverride": 30,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.22,
+				"WavePointCost": 300,
+				"Weight": 1000,
+				"ZombieArmorProps": [ "RTID(NewspaperDefault@CurrentLevel)" ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "tutorial_gargantuar" ],
+			"objdata": {
+				"TypeName": "tutorial_gargantuar",
+				"ZombieClass": "ZombieGargantuar",
+				"Properties": "RTID(ZombieTutorialGargantuar@CurrentLevel)",
+				"ResourceGroups": [ "ZombieTutorialGargantuarGroup", "ZombieTutorialImpGroup", "ZombieGargantuarEffects" ],
+				"AudioGroups": [ "ZombieGlobalGargantuarAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Gargantuar",
+				"PopAnim": "POPANIM_ZOMBIE_TUTORIAL_GARGANTUAR",
+				"HomeWorld": "tutorial"
+			}
+		}, {
+			"aliases": [ "ZombieTutorialGargantuar" ],
+			"objclass": "ZombieGargantuarProps",
+			"objdata": {
+				"AlmanacOffset": {
+					"x": 20,
+					"y": 70
+				},
+				"AlmanacScale": 1.0,
+				"ArmDropFraction": -1,
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 95,
+					"mWidth": 30,
+					"mX": 0,
+					"mY": 10
+				},
+				"CanBeFlickedOff": false,
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 0,
+				"ExplodesWhenMowed": true,
+				"FlickIsLaneRestricted": true,
+				"GroundTrackName": "ground_swatch",
+				"HealthThresholdToImpAmmoLayers": [ {
+						"HealthPercentThrowImp": 0.5,
+						"ProjectileLayersToHide": [ "zombie_imp_skull", "zombie_imp_jaw", "Zombie_gargantuar_whiterope", "zombie_imp_arm_inner_lower", "zombie_imp_arm_inner_upper", "zombie_imp_arm_outer_lower", "zombie_imp_arm_outer_upper_01", "zombie_imp_arm_outer_upper_02", "zombie_imp_arms_outer_upper", "zombie_imp_eye", "zombie_imp_eye_sm", "zombie_imp_hand_inner", "zombie_imp_hand_outer", "zombie_imp_leg_inner_lower", "zombie_imp_leg_inner_upper", "zombie_imp_leg_outer_lower", "zombie_imp_leg_outer_upper", "zombie_imp_pupil", "zombie_imp_torso", "zombie_imp_waist", "zombie_imp_toe_outer", "zombie_imp_toe_inner" ]
+					} ],
+				"HitRect": {
+					"mHeight": 150,
+					"mWidth": 61,
+					"mX": 32,
+					"mY": 10
+				},
+				"Hitpoints": 2400,
+				"ScoreOverride": 200,
+				"HypnoshroomEffectOffset": {
+					"x": 0,
+					"y": 120
+				},
+				"ImpApex": 250,
+				"ImpFlightTime": 1.5,
+				"ImpSpawnOffset": {
+					"x": -100,
+					"y": 0,
+					"z": 115
+				},
+				"ImpTargetColumn": 2,
+				"ImpType": "tutorial_imp",
+				"IsValidPinchTarget": false,
+				"MinPosXThrowImp": 450,
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.4
+				},
+				"Size": "large",
+				"SkipHeadDropState": true,
+				"SmashDamage": 1500,
+				"SmashDuration": 4,
+				"SoundOnAsh": "Play_Zomb_Global_Gargantuar_Mvmt_Death_Ash",
+				"SoundOnElectrocute": "Play_Zomb_Global_Gargantuar_Mvmt_Shock",
+				"SoundOnIdle": "Play_Zomb_Tutorial_Gargantuar_Mvmt_Idle",
+				"Speed": 0.2,
+				"ZombieArmorProps": [ "RTID(GargArmorDefault1@.)", "RTID(GargArmorDefault2@.)", "RTID(GargArmorDefault3@.)" ],
+				"StaticArtImageAsset": "IMAGE_GARGANTUAR",
+				"ThrowImpDuration": 1,
+				"WavePointCost": 1200,
+				"Weight": 500
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "GargArmorDefault1" ],
+			"objdata": {
+				"ArmorType": "ShoulderArmor",
+				"BaseHealth": 600.0,
+				"ArmorFlags": [ "damageable", "passdamage" ],
+				"ArmorLayers": [ "gargantuar_damage_1" ],
+				"ArmorLayerHealth": [],
+				"ImpactSoundEvent": "",
+				"DropSoundEvent": ""
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "GargArmorDefault2" ],
+			"objdata": {
+				"ArmorType": "ShoulderArmor",
+				"BaseHealth": 1200.0,
+				"ArmorFlags": [ "damageable", "passdamage" ],
+				"ArmorLayers": [ "gargantuar_damage_2" ],
+				"ArmorLayerHealth": [],
+				"ImpactSoundEvent": "",
+				"DropSoundEvent": ""
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "GargArmorDefault3" ],
+			"objdata": {
+				"ArmorType": "ShoulderArmor",
+				"BaseHealth": 1800.0,
+				"ArmorFlags": [ "damageable", "passdamage" ],
+				"ArmorLayers": [ "gargantuar_damage_3" ],
+				"ArmorLayerHealth": [],
+				"ImpactSoundEvent": "",
+				"DropSoundEvent": ""
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "ConeDefault" ],
+			"objdata": {
+				"ArmorType": "Cone",
+				"BaseHealth": 200.0,
+				"ArmorFlags": [ "damageable", "droppable", "helm" ],
+				"ArmorLayers": [ "zombie_armor_cone_norm", "zombie_armor_cone_damage_01", "zombie_armor_cone_damage_02" ],
+				"ArmorLayerHealth": [ 0.666, 0.333 ],
+				"ImpactSoundEvent": ""
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "BucketDefault" ],
+			"objdata": {
+				"ArmorType": "Bucket",
+				"BaseHealth": 400.0,
+				"ArmorFlags": [ "metallic", "damageable", "droppable", "helm" ],
+				"ArmorLayers": [ "zombie_armor_bucket_norm", "zombie_armor_bucket_damage_01", "zombie_armor_bucket_damage_02" ],
+				"ArmorLayerHealth": [ 0.8, 0.55 ],
+				"ImpactSoundEvent": ""
+			}
+		}, {
+			"objclass": "NewspaperArmorPropertySheet",
+			"aliases": [ "NewspaperDefault" ],
+			"objdata": {
+				"ClassName": "NewspaperArmor",
+				"ArmorType": "Newspaper",
+				"BaseHealth": 200.0,
+				"ArmorFlags": [ "damageable" ],
+				"ArmorLayers": [ "_zombie_newspaper", "_zombie_newspaper_dmg1", "_zombie_newspaper_dmg2" ],
+				"ArmorLayerHealth": [ 0.666, 0.333 ],
+				"FireLayer": "_zombie_newspaper_flame",
+				"ImpactSoundEvent": "Play_Zomb_Modern_Newspaper_Paper_Impact",
+				"DropSoundEvent": ""
+			}
+		} ],
+	"version": 1
+}

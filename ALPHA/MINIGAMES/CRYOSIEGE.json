@@ -1,0 +1,2227 @@
+{
+	"#comment": "Cryosiege - EnderallyGolem | ELM: Custom Ver [ECL 8.9]",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"StartingSun": 50,
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"Loot": "RTID(NoLoot@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "Tombstone_Dark_Special", "Tombstone_Dark_Effects", "MarkerTileModule_1" ],
+				"Modules": [ "RTID(DefaultSunDropper@LevelModules)", "RTID(IceageMowers@LevelModules)", "RTID(GI@CurrentLevel)", "RTID(IPP@CurrentLevel)", "RTID(IZP@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(StandardIntro@LevelModules)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "Cryosiege - EnderallyGolem",
+				"StageModule": "RTID(IceageStage@LevelModules)",
+				"MusicType": "MiniGame_A"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "thymewarp", "springbean", "ghostpepper", "laser_bean", "kiwibeast" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 9,
+						"GridY": 0,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 10,
+						"GridY": 0,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 11,
+						"GridY": 0,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 22,
+						"GridY": 0,
+						"TypeName": "traptile_5"
+					}, {
+						"GridX": 9,
+						"GridY": 0,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 9,
+						"GridY": 1,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 10,
+						"GridY": 1,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 11,
+						"GridY": 1,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 28,
+						"GridY": 1,
+						"TypeName": "traptile_4"
+					}, {
+						"GridX": 9,
+						"GridY": 1,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 9,
+						"GridY": 2,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 10,
+						"GridY": 2,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 11,
+						"GridY": 2,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 22,
+						"GridY": 2,
+						"TypeName": "traptile_4"
+					}, {
+						"GridX": 42,
+						"GridY": 2,
+						"TypeName": "traptile_3"
+					}, {
+						"GridX": 46,
+						"GridY": 2,
+						"TypeName": "traptile_3"
+					}, {
+						"GridX": 9,
+						"GridY": 2,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 9,
+						"GridY": 3,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 10,
+						"GridY": 3,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 11,
+						"GridY": 3,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 9,
+						"GridY": 3,
+						"TypeName": "traptile_1"
+					}, {
+						"GridX": 9,
+						"GridY": 4,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 10,
+						"GridY": 4,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 11,
+						"GridY": 4,
+						"TypeName": "traptile_2"
+					}, {
+						"GridX": 9,
+						"GridY": 4,
+						"TypeName": "traptile_1"
+					} ]
+			}
+		}, {
+			"aliases": [ "IPP" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 11,
+						"GridY": 0,
+						"Level": 0,
+						"TypeName": "jalapeno",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 12,
+						"GridY": 0,
+						"Level": 0,
+						"TypeName": "jackolantern",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 13,
+						"GridY": 0,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 14,
+						"GridY": 0,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 16,
+						"GridY": 0,
+						"Level": 0,
+						"TypeName": "powerlily",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 18,
+						"GridY": 0,
+						"Level": 0,
+						"TypeName": "cherry_bomb",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 28,
+						"GridY": 0,
+						"Level": 0,
+						"TypeName": "jackolantern",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 15,
+						"GridY": 1,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 18,
+						"GridY": 1,
+						"Level": 2,
+						"TypeName": "bowlingbulb",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 22,
+						"GridY": 1,
+						"Level": 0,
+						"TypeName": "powerlily",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 28,
+						"GridY": 1,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 15,
+						"GridY": 2,
+						"Level": 2,
+						"TypeName": "snapdragon",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 17,
+						"GridY": 2,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 20,
+						"GridY": 2,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 26,
+						"GridY": 2,
+						"Level": 0,
+						"TypeName": "banana",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 13,
+						"GridY": 3,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 14,
+						"GridY": 3,
+						"Level": 0,
+						"TypeName": "powerlily",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 16,
+						"GridY": 3,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 21,
+						"GridY": 3,
+						"Level": 0,
+						"TypeName": "jalapeno",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 22,
+						"GridY": 3,
+						"Level": 2,
+						"TypeName": "snapdragon",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 25,
+						"GridY": 3,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 26,
+						"GridY": 3,
+						"Level": 0,
+						"TypeName": "grapeshot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 29,
+						"GridY": 3,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 16,
+						"GridY": 4,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 23,
+						"GridY": 4,
+						"Level": 0,
+						"TypeName": "escaperoot",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 31,
+						"GridY": 4,
+						"Level": 0,
+						"TypeName": "jalapeno",
+						"Condition": "icecubed"
+					} ]
+			}
+		}, {
+			"aliases": [ "IZP" ],
+			"objclass": "InitialZombieProperties",
+			"objdata": {
+				"InitialZombiePlacements": [ {
+						"GridX": 9,
+						"GridY": 0,
+						"TypeName": "iceage_imp",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 10,
+						"GridY": 0,
+						"TypeName": "iceage_imp",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 15,
+						"GridY": 0,
+						"TypeName": "iceage_hunter",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 17,
+						"GridY": 0,
+						"TypeName": "iceage_armor2",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 16,
+						"GridY": 1,
+						"TypeName": "iceage_weaselhoarder",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 17,
+						"GridY": 1,
+						"TypeName": "iceage_armor2",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 14,
+						"GridY": 2,
+						"TypeName": "iceage_hunter",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 16,
+						"GridY": 2,
+						"TypeName": "iceage_armor2",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 18,
+						"GridY": 2,
+						"TypeName": "iceage_armor3",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 12,
+						"GridY": 3,
+						"TypeName": "iceage_imp",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 15,
+						"GridY": 3,
+						"TypeName": "iceage_hunter",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 17,
+						"GridY": 3,
+						"TypeName": "iceage_armor3",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 18,
+						"GridY": 3,
+						"TypeName": "iceage_armor3",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 17,
+						"GridY": 4,
+						"TypeName": "iceage_flag",
+						"Condition": "icecubed"
+					}, {
+						"GridX": 18,
+						"GridY": 4,
+						"TypeName": "iceage_armor2",
+						"Condition": "icecubed"
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"WavesPerFlag": 6,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 0,
+				"PointIncrementPerWave": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": []
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 6,
+				"WaveCount": 12,
+				"SuppressFlagZombie": true,
+				"MinNextWaveHealthPercentage": 0,
+				"MaxNextWaveHealthPercentage": 0,
+				"Waves": [ [ "RTID(Wave1@.)", "RTID(trogspawn1@.)", "RTID(zombiedisplay@.)", "RTID(GSSpeed1@.)" ], [ "RTID(Wave2@.)" ], [ "RTID(Wave3@.)", "RTID(frost_L14R@.)" ], [ "RTID(Wave4@.)", "RTID(Snowstorm4_C4@.)", "RTID(Snowstorm4_C5@.)", "RTID(Snowstorm4_C6@.)" ], [ "RTID(Wave5@.)", "RTID(frost_L25R@.)", "RTID(trogspawn2@.)", "RTID(Iceblock2_C19@.)", "RTID(Iceblock2_C20@.)", "RTID(Iceblock2_C21@.)", "RTID(Iceblock2_C22@.)", "RTID(Iceblock2_C23@.)", "RTID(Iceblock2_C24@.)", "RTID(Iceblock2_C25@.)", "RTID(Iceblock2_C26@.)", "RTID(freeze2@.)" ], [ "RTID(Wave6@.)" ], [ "RTID(Wave7@.)" ], [ "RTID(Wave8@.)", "RTID(trogspawn3_C33@.)", "RTID(Iceblock3_C27@.)", "RTID(Iceblock3_C28@.)", "RTID(Iceblock3_C29@.)", "RTID(Iceblock3_C30@.)", "RTID(Iceblock3_C31@.)", "RTID(Iceblock3_C32@.)", "RTID(freeze3@.)", "RTID(GSSpeed2@.)", "RTID(Snowstorm8_C3@.)", "RTID(Snowstorm8_C4@.)" ], [ "RTID(Wave9@.)", "RTID(frost_L234R@.)" ], [ "RTID(Wave10@.)", "RTID(Snowstorm10_C4@.)", "RTID(Snowstorm10_C5@.)", "RTID(Snowstorm10_C6@.)" ], [ "RTID(Wave11@.)", "RTID(frost_L1345R@.)", "RTID(trogspawn4@.)", "RTID(Iceblock3_C20@.)", "RTID(Iceblock3_C21@.)", "RTID(Iceblock3_C22@.)", "RTID(Iceblock3_C23@.)", "RTID(Iceblock3_C24@.)", "RTID(freeze4@.)" ], [ "RTID(frost_L12345R@.)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(slowwave@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "trogspawn1" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 19,
+				"ColumnEnd": 20,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(trog1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(trog1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(trog1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(trog1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(trog1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "zombiedisplay" ],
+			"#EventInfo": "APT-12 APF-0 MLS-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"WaveStartMessage": "helpme",
+				"ZombieSpawnWaitTime": 0,
+				"SuppressActionIfNoGridItemsFound": true,
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(crater@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "GSSpeed1" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 46,
+				"ColumnEnd": 47,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(triggerconst@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "frost_L14R" ],
+			"objclass": "FrostWindWaveActionProps",
+			"objdata": {
+				"Winds": [ {
+						"Direction": "left",
+						"Row": "0"
+					}, {
+						"Direction": "left",
+						"Row": "3"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm4_C4" ],
+			"#EventInfo": "APT-1 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 4,
+				"ColumnEnd": 4,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm4_C5" ],
+			"#EventInfo": "APT-2 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 5,
+				"ColumnEnd": 5,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm4_C6" ],
+			"#EventInfo": "APT-1 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 6,
+				"ColumnEnd": 6,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "frost_L25R" ],
+			"objclass": "FrostWindWaveActionProps",
+			"objdata": {
+				"Winds": [ {
+						"Direction": "left",
+						"Row": "1"
+					}, {
+						"Direction": "left",
+						"Row": "4"
+					} ]
+			}
+		}, {
+			"aliases": [ "trogspawn2" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 27,
+				"ColumnEnd": 28,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(trog2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C19" ],
+			"#EventInfo": "AP1-4 AP2-0 AP3-0 AP4-3 AP5-4 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 19,
+				"ColumnEnd": 20,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C20" ],
+			"#EventInfo": "AP1-5 AP2-4 AP3-0 AP4-4 AP5-3 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 20,
+				"ColumnEnd": 21,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C21" ],
+			"#EventInfo": "AP1-3 AP2-5 AP3-5 AP4-0 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 21,
+				"ColumnEnd": 22,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C22" ],
+			"#EventInfo": "AP1-4 AP2-0 AP3-5 AP4-0 AP5-4 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 22,
+				"ColumnEnd": 23,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C23" ],
+			"#EventInfo": "AP1-4 AP2-4 AP3-3 AP4-4 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 23,
+				"ColumnEnd": 24,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C24" ],
+			"#EventInfo": "AP1-4 AP2-5 AP3-3 AP4-4 AP5-1 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 24,
+				"ColumnEnd": 25,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C25" ],
+			"#EventInfo": "AP1-1 AP2-4 AP3-5 AP4-0 AP5-4 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 25,
+				"ColumnEnd": 26,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock2_C26" ],
+			"#EventInfo": "AP1-4 AP2-5 AP3-0 AP4-0 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 26,
+				"ColumnEnd": 27,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "freeze2" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 22,
+				"ColumnEnd": 23,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(trigger@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "trogspawn3_C33" ],
+			"#EventInfo": "AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 33,
+				"ColumnEnd": 34,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(trog2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(trog2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C27" ],
+			"#EventInfo": "AP1-4 AP2-1 AP3-1 AP4-4 AP5-4 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 27,
+				"ColumnEnd": 28,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C28" ],
+			"#EventInfo": "AP1-0 AP2-0 AP3-4 AP4-4 AP5-1 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 28,
+				"ColumnEnd": 29,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C29" ],
+			"#EventInfo": "AP1-5 AP2-5 AP3-5 AP4-0 AP5-4 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 29,
+				"ColumnEnd": 30,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C30" ],
+			"#EventInfo": "AP1-4 AP2-5 AP3-4 AP4-5 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 30,
+				"ColumnEnd": 31,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C31" ],
+			"#EventInfo": "AP1-4 AP2-5 AP3-4 AP4-4 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 31,
+				"ColumnEnd": 32,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C32" ],
+			"#EventInfo": "AP1-4 AP2-5 AP3-4 AP4-1 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 32,
+				"ColumnEnd": 33,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "freeze3" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 28,
+				"ColumnEnd": 29,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(trigger@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "GSSpeed2" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 42,
+				"ColumnEnd": 43,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(triggerconst@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm8_C3" ],
+			"#EventInfo": "APT-8 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 3,
+				"ColumnEnd": 3,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm8_C4" ],
+			"#EventInfo": "APT-10 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 4,
+				"ColumnEnd": 4,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "frost_L234R" ],
+			"objclass": "FrostWindWaveActionProps",
+			"objdata": {
+				"Winds": [ {
+						"Direction": "left",
+						"Row": "1"
+					}, {
+						"Direction": "left",
+						"Row": "2"
+					}, {
+						"Direction": "left",
+						"Row": "3"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm10_C4" ],
+			"#EventInfo": "APT-7 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 4,
+				"ColumnEnd": 4,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm10_C5" ],
+			"#EventInfo": "APT-7 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 5,
+				"ColumnEnd": 5,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Snowstorm10_C6" ],
+			"#EventInfo": "APT-13 APF-0 MLS-1 MFW-1 ",
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"Type": "snowstorm",
+				"ColumnStart": 6,
+				"ColumnEnd": 6,
+				"TimeBetweenGroups": 0.5,
+				"GroupSize": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "frost_L1345R" ],
+			"objclass": "FrostWindWaveActionProps",
+			"objdata": {
+				"Winds": [ {
+						"Direction": "left",
+						"Row": "0"
+					}, {
+						"Direction": "left",
+						"Row": "2"
+					}, {
+						"Direction": "left",
+						"Row": "3"
+					}, {
+						"Direction": "left",
+						"Row": "4"
+					} ]
+			}
+		}, {
+			"aliases": [ "trogspawn4" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 25,
+				"ColumnEnd": 26,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(trog3@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(trog3@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(trog3@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(trog3@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(trog3@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C20" ],
+			"#EventInfo": "AP1-1 AP2-1 AP3-4 AP4-4 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 20,
+				"ColumnEnd": 21,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C21" ],
+			"#EventInfo": "AP1-5 AP2-5 AP3-4 AP4-1 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 21,
+				"ColumnEnd": 22,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_flag@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C22" ],
+			"#EventInfo": "AP1-4 AP2-4 AP3-1 AP4-5 AP5-4 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 22,
+				"ColumnEnd": 23,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C23" ],
+			"#EventInfo": "AP1-4 AP2-5 AP3-5 AP4-4 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 23,
+				"ColumnEnd": 24,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Iceblock3_C24" ],
+			"#EventInfo": "AP1-4 AP2-1 AP3-5 AP4-4 AP5-5 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 24,
+				"ColumnEnd": 25,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor3@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "freeze4" ],
+			"#EventInfo": "APF-0 AP1-0 AP2-0 AP3-0 AP4-0 AP5-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MFW-1 ",
+			"objclass": "SpawnZombiesFromGroundSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"ColumnStart": 22,
+				"ColumnEnd": 23,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(trigger@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "frost_L12345R" ],
+			"objclass": "FrostWindWaveActionProps",
+			"objdata": {
+				"Winds": [ {
+						"Direction": "left",
+						"Row": "0"
+					}, {
+						"Direction": "left",
+						"Row": "1"
+					}, {
+						"Direction": "left",
+						"Row": "2"
+					}, {
+						"Direction": "left",
+						"Row": "3"
+					}, {
+						"Direction": "left",
+						"Row": "4"
+					} ]
+			}
+		}, {
+			"aliases": [ "slowwave" ],
+			"objclass": "ZombieType",
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieFutureJetpack",
+				"Properties": "RTID(ZombieFutureJetpackDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureJetpackGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_FutureJetpack",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FUTURE_JETPACK_BASIC",
+				"HomeWorld": "future"
+			}
+		}, {
+			"aliases": [ "ZombieFutureJetpackDefault" ],
+			"objclass": "ZombieFutureJetpackProps",
+			"objdata": {
+				"ArtCenter": {
+					"x": 10000,
+					"y": 10000
+				},
+				"AttackRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 0,
+					"mY": 10000
+				},
+				"CanSpawnPlantFood": false,
+				"CanTriggerZombieWin": false,
+				"CanSurrender": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 0,
+					"mWidth": 0,
+					"mX": 1500,
+					"mY": 3000
+				},
+				"Hitpoints": 96000000,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 990,
+					"z": 0
+				},
+				"Speed": 0,
+				"WavePointCost": 10000000,
+				"Weight": 4000
+			}
+		}, {
+			"aliases": [ "TrapTileProps_2" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_BACKGROUNDS_BOULDERTILE",
+				"PopAnimRenderOffset": {
+					"x": 1098,
+					"y": 10122
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": -20,
+					"z": 2.0
+				},
+				"ProjectileTypeToSpawn": "RTID(FrostSpellC9@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0.03,
+				"TriggerRect": {
+					"mHeight": 200,
+					"mWidth": 40,
+					"mX": -20,
+					"mY": -200
+				},
+				"TriggeringEntityTypes": [ "plant" ]
+			}
+		}, {
+			"aliases": [ "FrostSpellC9" ],
+			"objclass": "ProjectilePropertySheet",
+			"objdata": {
+				"ClassName": "HunterSnowballProjectile",
+				"BaseDamage": 0.0,
+				"SplashDamage": 0,
+				"SplashRadius": 0,
+				"HealAmount": 9999,
+				"ShakeBoardOnSplash": false,
+				"DiesOnImpact": true,
+				"RenderImage": "IMAGE_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_PROJECTILE",
+				"ImpactPAM": "POPANIM_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_SPLAT",
+				"ImpactPAMAnimationToPlay": [ "animation" ],
+				"HasShadow": false,
+				"DamageFlags": [ "frost_whole_stage", "heals_iceblocks", "shooter", "no_flash" ],
+				"CollisionFlags": [ "normal_plants", "tall_plants", "griditems", "ground" ],
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": -50.0,
+						"Max": -50.0
+					} ],
+				"InitialScale": {
+					"Min": 0,
+					"Max": 0
+				},
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactOffset": [ {
+						"Min": 1000,
+						"Max": 1000
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_1" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_BACKGROUNDS_BOULDERTILE",
+				"PopAnimRenderOffset": {
+					"x": 1098,
+					"y": 10122
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": -20,
+					"z": 2.0
+				},
+				"ProjectileTypeToSpawn": "RTID(FrostSpellLane@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0.2,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 40,
+					"mX": -20,
+					"mY": -110
+				},
+				"TriggeringEntityTypes": [ "griditem" ]
+			}
+		}, {
+			"aliases": [ "FrostSpellLane" ],
+			"objclass": "ProjectilePropertySheet",
+			"objdata": {
+				"ClassName": "HunterSnowballProjectile",
+				"BaseDamage": 0.0,
+				"SplashDamage": 0,
+				"SplashRadius": 0,
+				"HealAmount": 9999,
+				"ShakeBoardOnSplash": false,
+				"DiesOnImpact": false,
+				"RenderImage": "IMAGE_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_PROJECTILE",
+				"ImpactPAM": "POPANIM_EFFECTS_ZOMBIE_HUNTER_SNOWBALL_SPLAT",
+				"ImpactPAMAnimationToPlay": [ "animation" ],
+				"HasShadow": false,
+				"DamageFlags": [ "frost_whole_stage", "heals_iceblocks", "shooter", "no_flash" ],
+				"CollisionFlags": [ "normal_plants", "tall_plants", "griditems", "ground" ],
+				"InitialVelocity": [ {
+						"Min": 1000,
+						"Max": 1000
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0.0,
+						"Max": 0.0
+					} ],
+				"InitialScale": {
+					"Min": 0,
+					"Max": 0
+				},
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 1500.0,
+					"mHeight": 30.0
+				},
+				"ImpactOffset": [ {
+						"Min": 10000,
+						"Max": 10000
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_3" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_BACKGROUNDS_BOULDERTILE",
+				"PopAnimRenderOffset": {
+					"x": 98,
+					"y": 122
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 2.0
+				},
+				"ProjectileTypeToSpawn": "RTID(SpeedSpell@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0.1,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 40,
+					"mX": 98765,
+					"mY": -110
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"aliases": [ "SpeedSpell" ],
+			"objclass": "ProjectilePropertySheet",
+			"objdata": {
+				"HealAmount": 10,
+				"BaseDamage": 0.0,
+				"SplashDamage": 0.1,
+				"SplashRadius": 640.0,
+				"ShakeBoardOnSplash": false,
+				"DiesOnImpact": true,
+				"HasShadow": false,
+				"DamageFlags": [ "shooter", "no_flash", "frost_whole_stage", "heals_iceblocks" ],
+				"Conditions": [ {
+						"Condition": "terrified",
+						"Duration": {
+							"Min": 0.1,
+							"Max": 0.1
+						}
+					} ],
+				"CollisionFlags": [ "ground", "griditems", "ground_zombies", "off_ground_zombies" ],
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": -500.0,
+						"Max": -600.0
+					} ],
+				"InitialScale": {
+					"Min": 0,
+					"Max": 0
+				},
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_4" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_BACKGROUNDS_BOULDERTILE",
+				"PopAnimRenderOffset": {
+					"x": 98,
+					"y": 122
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.0
+				},
+				"ProjectileTypeToSpawn": "RTID(FreezeSpell@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0.01,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 40,
+					"mX": 98765,
+					"mY": -110
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"aliases": [ "FreezeSpell" ],
+			"objclass": "ProjectilePropertySheet",
+			"objdata": {
+				"BaseDamage": 0.0,
+				"SplashDamage": 0.1,
+				"SplashRadius": 20.0,
+				"ShakeBoardOnSplash": false,
+				"DiesOnImpact": true,
+				"HasShadow": false,
+				"DamageFlags": [ "shooter", "no_flash" ],
+				"Conditions": [ {
+						"Condition": "icecubed",
+						"Duration": {
+							"Min": 9999999.0,
+							"Max": 9999999.0
+						}
+					} ],
+				"CollisionFlags": [ "ground", "griditems", "ground_zombies", "off_ground_zombies" ],
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": -1000.0,
+						"Max": -1000.0
+					} ],
+				"InitialScale": {
+					"Min": 0,
+					"Max": 0
+				},
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "triggerconst" ],
+			"objclass": "ZombieType",
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(triggerconstprop@CurrentLevel)",
+				"ResourceGroups": [ "ZombieEgyptBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_EgyptBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_EGYPT_BASIC",
+				"HomeWorld": "egypt",
+				"IsBasicZombie": true
+			}
+		}, {
+			"aliases": [ "triggerconstprop" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"SkipHeadDropState": true,
+				"Hitpoints": 999999,
+				"Speed": 0,
+				"EatDPS": 0,
+				"CanTriggerZombieWin": false,
+				"CanSurrender": true,
+				"CanSpawnPlantFood": false,
+				"CanBePlantTossedStrong": true,
+				"CanBePlantTossedWeak": true,
+				"ChillInsteadOfFreeze": false,
+				"ArtCenter": {
+					"x": 90,
+					"y": 99125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 98765,
+					"mY": 0
+				},
+				"HitRect": {
+					"mHeight": 80,
+					"mWidth": 20,
+					"mX": 98765,
+					"mY": 10
+				},
+				"ShadowOffset": {
+					"x": 5,
+					"y": 9999,
+					"z": 1.4
+				},
+				"ScoreOverride": 10,
+				"Cost": 150,
+				"GroundTrackName": "ground_swatch",
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"WavePointCost": 100,
+				"Weight": 1000,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness1"
+					}, {
+						"Type": "speed",
+						"Value": "speed1"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "trog1" ],
+			"objdata": {
+				"TypeName": "iceage_troglobite",
+				"ZombieClass": "ZombieIceAgeTroglobite",
+				"Properties": "RTID(trog1p@.)",
+				"ResourceGroups": [ "ZombieIceageTroglobiteGroup", "FrostbiteIceBlockZombieGroup", "ZombieIceageImpGroup" ],
+				"AudioGroups": [ "ZombieIceAgeTroglobiteAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Troglobite",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_TROGLOBITE",
+				"HomeWorld": "iceage",
+				"Placeable": true
+			}
+		}, {
+			"aliases": [ "trog1p" ],
+			"objclass": "ZombieIceAgeTroglobiteProps",
+			"objdata": {
+				"Actions": [ "RTID(ZombiePushGridItemAction@ZombieActions)" ],
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"ChillInsteadOfFreeze": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 100,
+					"mWidth": 30,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 560,
+				"ScoreOverride": 80,
+				"ImpType": "iceage_imp",
+				"NumberOfIceblocksToSpawnWith": 1,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.06,
+				"SpeedVariance": 0.0,
+				"WavePointCost": 900,
+				"Weight": 3500,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness3"
+					}, {
+						"Type": "speed",
+						"Value": "speed1"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "trog2" ],
+			"objdata": {
+				"TypeName": "iceage_troglobite",
+				"ZombieClass": "ZombieIceAgeTroglobite",
+				"Properties": "RTID(trog2p@.)",
+				"ResourceGroups": [ "ZombieIceageTroglobiteGroup", "FrostbiteIceBlockZombieGroup", "ZombieIceageImpGroup" ],
+				"AudioGroups": [ "ZombieIceAgeTroglobiteAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Troglobite",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_TROGLOBITE",
+				"HomeWorld": "iceage",
+				"Placeable": true
+			}
+		}, {
+			"aliases": [ "trog2p" ],
+			"objclass": "ZombieIceAgeTroglobiteProps",
+			"objdata": {
+				"Actions": [ "RTID(ZombiePushGridItemAction@ZombieActions)" ],
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"ChillInsteadOfFreeze": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 100,
+					"mWidth": 30,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 560,
+				"ScoreOverride": 80,
+				"ImpType": "iceage_imp",
+				"NumberOfIceblocksToSpawnWith": 1,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.1,
+				"SpeedVariance": 0.0,
+				"WavePointCost": 900,
+				"Weight": 3500,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness3"
+					}, {
+						"Type": "speed",
+						"Value": "speed1"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "trog3" ],
+			"objdata": {
+				"TypeName": "iceage_troglobite",
+				"ZombieClass": "ZombieIceAgeTroglobite",
+				"Properties": "RTID(trog3p@.)",
+				"ResourceGroups": [ "ZombieIceageTroglobiteGroup", "FrostbiteIceBlockZombieGroup", "ZombieIceageImpGroup" ],
+				"AudioGroups": [ "ZombieIceAgeTroglobiteAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Troglobite",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_TROGLOBITE",
+				"HomeWorld": "iceage",
+				"Placeable": true
+			}
+		}, {
+			"aliases": [ "trog3p" ],
+			"objclass": "ZombieIceAgeTroglobiteProps",
+			"objdata": {
+				"Actions": [ "RTID(ZombiePushGridItemAction@ZombieActions)" ],
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"ChillInsteadOfFreeze": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 100,
+					"mWidth": 30,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 560,
+				"ScoreOverride": 80,
+				"ImpType": "iceage_imp",
+				"NumberOfIceblocksToSpawnWith": 1,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.16,
+				"SpeedVariance": 0.0,
+				"WavePointCost": 900,
+				"Weight": 3500,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness3"
+					}, {
+						"Type": "speed",
+						"Value": "speed1"
+					} ]
+			}
+		}, {
+			"aliases": [ "TrapTileProps_5" ],
+			"objclass": "GridItemProjectileTrapProps",
+			"objdata": {
+				"Height": "ground",
+				"PopAnim": "POPANIM_BACKGROUNDS_BOULDERTILE",
+				"PopAnimRenderOffset": {
+					"x": 98,
+					"y": 122
+				},
+				"PopAnimRigClass": "EffectAnimRig_SwitchTile",
+				"ProjectileFireOriginOffset": {
+					"x": 5,
+					"y": 128,
+					"z": 1.0
+				},
+				"ProjectileTypeToSpawn": "RTID(FreezeSpellFinalWave@CurrentLevel)",
+				"TileBaseAnimation": "bouldertile",
+				"TimeBetweenTriggersInSeconds": 0.01,
+				"TriggerRect": {
+					"mHeight": 60,
+					"mWidth": 40,
+					"mX": 98765,
+					"mY": -110
+				},
+				"TriggeringEntityTypes": [ "zombie" ]
+			}
+		}, {
+			"aliases": [ "FreezeSpellFinalWave" ],
+			"objclass": "ProjectilePropertySheet",
+			"objdata": {
+				"BaseDamage": 0.1,
+				"SplashDamage": 0.1,
+				"SplashRadius": 7,
+				"ShakeBoardOnSplash": false,
+				"DiesOnImpact": true,
+				"HasShadow": false,
+				"DamageFlags": [ "shooter", "no_flash" ],
+				"Conditions": [ {
+						"Condition": "icecubed",
+						"Duration": {
+							"Min": 9999999.0,
+							"Max": 9999999.0
+						}
+					} ],
+				"CollisionFlags": [ "ground", "griditems", "ground_zombies", "off_ground_zombies" ],
+				"InitialVelocity": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": -1000.0,
+						"Max": -1000.0
+					} ],
+				"InitialScale": {
+					"Min": 0,
+					"Max": 0
+				},
+				"CollisionRect": {
+					"mX": -15.0,
+					"mY": -15.0,
+					"mWidth": 30.0,
+					"mHeight": 30.0
+				},
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "trigger" ],
+			"objclass": "ZombieType",
+			"objdata": {
+				"TypeName": "miniboss",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(triggerprop@CurrentLevel)",
+				"ResourceGroups": [ "ZombieEgyptBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_EgyptBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_EGYPT_BASIC",
+				"HomeWorld": "egypt",
+				"IsBasicZombie": true
+			}
+		}, {
+			"aliases": [ "triggerprop" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"SkipHeadDropState": true,
+				"Hitpoints": 0,
+				"Speed": 0.15,
+				"EatDPS": 0,
+				"CanTriggerZombieWin": false,
+				"CanSurrender": true,
+				"CanSpawnPlantFood": false,
+				"CanBePlantTossedStrong": true,
+				"CanBePlantTossedWeak": true,
+				"ChillInsteadOfFreeze": false,
+				"ArtCenter": {
+					"x": 90,
+					"y": 99125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 98765,
+					"mY": 0
+				},
+				"HitRect": {
+					"mHeight": 80,
+					"mWidth": 20,
+					"mX": 98765,
+					"mY": 10
+				},
+				"ShadowOffset": {
+					"x": 5,
+					"y": 9999,
+					"z": 1.4
+				},
+				"ScoreOverride": 10,
+				"Cost": 150,
+				"GroundTrackName": "ground_swatch",
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.1,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Arg1": 1.2,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "WavePointCost"
+					} ],
+				"WavePointCost": 100,
+				"Weight": 1000,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness1"
+					}, {
+						"Type": "speed",
+						"Value": "speed1"
+					} ]
+			}
+		}, {} ],
+	"version": 1
+}

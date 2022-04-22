@@ -1,0 +1,75 @@
+{
+	"#comment": "V5-3",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V5-3: Block Trap",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstIntroNarrative": "VASEBREAKER_5-3_INTRO",
+				"ReplayIntroNarrative": "VASEBREAKER_5-3_INTRO",
+				"FirstRewardParam": "big_moneybag",
+				"StageModule": "RTID(IceageStage@LevelModules)",
+				"StartingSun": 250,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(SeedBank@.)", "RTID(CoolDown@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ]
+			}
+		}, {
+			"objclass": "PlantCooldownModifierProperties",
+			"aliases": [ "CoolDown" ],
+			"objdata": {
+				"CooldownMultiplier": 0
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "hotpotato",
+						"Level": 0
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 3,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 0,
+						"mY": 0
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "iceage_armor3",
+						"Count": 2
+					}, {
+						"ZombieTypeName": "iceage_armor1",
+						"Count": 5
+					}, {
+						"ZombieTypeName": "iceage_troglobite_1block",
+						"Count": 8
+					}, {
+						"ZombieTypeName": "iceage_weaselhoarder",
+						"Count": 2
+					}, {
+						"PlantTypeName": "peanut",
+						"Count": 5
+					}, {
+						"PlantTypeName": "garlic",
+						"Count": 3
+					}, {
+						"PlantTypeName": "hurrikale",
+						"Count": 5
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 13,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

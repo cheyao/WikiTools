@@ -1,0 +1,111 @@
+{
+	"#comment": "P01",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Warp Party!",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"IsLevelOfTheDay": true,
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"ZombieLevel": 5,
+				"StartingSun": 50,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ProtectThePlant@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(GI@CurrentLevel)" ],
+				"Name": "WP-1: Hard Pass",
+				"MusicType": "MiniGame_A",
+				"StageModule": "RTID(IceageStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "Survive and protect the endangered plants",
+				"DescriptiveName": "Custom Objective"
+			}
+		}, {
+			"aliases": [ "ProtectThePlant" ],
+			"objclass": "ProtectThePlantChallengeProperties",
+			"objdata": {
+				"MustProtectCount": 2,
+				"Plants": [ {
+						"GridX": 4,
+						"GridY": 1,
+						"Level": 1,
+						"PlantType": "xshot"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"Level": 1,
+						"PlantType": "xshot"
+					} ]
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 2,
+						"GridY": 0,
+						"TypeName": "slider_down"
+					}, {
+						"GridX": 5,
+						"GridY": 1,
+						"TypeName": "slider_up"
+					}, {
+						"GridX": 5,
+						"GridY": 3,
+						"TypeName": "slider_down"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"TypeName": "slider_up"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "escaperoot" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"WavesPerFlag": 5,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 500,
+				"PointIncrementPerWave": 100,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(iceage_gargantuar@ZombieTypes)", "RTID(iceage@ZombieTypes)", "RTID(iceage_hunter@ZombieTypes)", "RTID(iceage_weaselhoarder@ZombieTypes)", "RTID(dark_wizard@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"### ZombieCountdownHugeWaveDelay": 0,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

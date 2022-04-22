@@ -1,0 +1,206 @@
+{
+	"#comment": "P13",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Warp Party!",
+				"## ZombieLevel": 5,
+				"GridItemLevel": 10,
+				"StartingSun": 50,
+				"IsLevelOfTheDay": true,
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(GI@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(CoolDown@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)" ],
+				"Name": "WP-29: Blockbursters",
+				"MusicType": "MiniGame_B",
+				"StageModule": "RTID(ModernStage@LevelModules)"
+			}
+		}, {
+			"objclass": "PlantCooldownModifierProperties",
+			"aliases": [ "CoolDown" ],
+			"objdata": {
+				"CooldownMultiplier": 0.5
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "All plants recharge twice as fast!",
+				"DescriptiveName": ""
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 0,
+						"GridY": 0,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 0,
+						"GridY": 1,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 0,
+						"GridY": 2,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 0,
+						"GridY": 4,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 1,
+						"GridY": 0,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 1,
+						"GridY": 1,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 1,
+						"GridY": 2,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 1,
+						"GridY": 3,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 1,
+						"GridY": 4,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 2,
+						"GridY": 0,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 2,
+						"GridY": 2,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 3,
+						"GridY": 0,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 3,
+						"GridY": 2,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 3,
+						"GridY": 4,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 4,
+						"GridY": 0,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 4,
+						"GridY": 1,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 4,
+						"GridY": 4,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 5,
+						"GridY": 1,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 5,
+						"GridY": 3,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 6,
+						"GridY": 0,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 6,
+						"GridY": 2,
+						"TypeName": "gravestone_dark"
+					}, {
+						"GridX": 6,
+						"GridY": 4,
+						"TypeName": "gravestone_dark"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "guacodile", "ghostpepper", "jalapeno", "lavaguava", "bombegranate", "cherry_bomb", "grapeshot", "explodeonut", "gravebuster" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"WavesPerFlag": 9,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 200,
+				"PointIncrementPerWave": 280,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(tutorial_gargantuar@ZombieTypes)", "RTID(tutorial_armor1@ZombieTypes)", "RTID(lostcity_crystalskull@ZombieTypes)", "RTID(tomb_raiser@ZombieTypes)", "RTID(iceage_hunter@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"### ZombieCountdownHugeWaveDelay": 0,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(PF@CurrentLevel)", "RTID(PF@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(PF@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "PF" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(tutorial_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

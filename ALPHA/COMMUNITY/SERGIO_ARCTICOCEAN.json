@@ -1,0 +1,1032 @@
+{
+	"#comment": "",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"StartingSun": 50,
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "Tombstone_Dark_Special", "Tombstone_Dark_Effects", "MarkerTileModule_1" ],
+				"Modules": [ "RTID(DefaultSunDropper@LevelModules)", "RTID(IceageMowers@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(StandardIntro@LevelModules)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(InitialTide@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ],
+				"Name": "Arctic Ocean - Sergio+",
+				"StageModule": "RTID(IceageStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantIncludeList": [ "peashooter", "repeater", "threepeater", "peapod", "splitpea", "electricpeashooter", "primalpeashooter", "redstinger", "bloomerang", "sunflower", "twinsunflower", "primalsunflower", "sporeshroom", "fumeshroom", "laser_bean", "phatbeet", "bonkchoy", "guacodile", "chomper", "wallnut", "primalwallnut", "chardguard", "endurian", "sweetpotato", "peanut", "cabbagepult", "kernelpult", "bloominghearts", "melonpult", "applemortar", "armamint", "sapfling", "akee", "cactus", "homingthistle", "bowlingbulb", "citron", "lightningreed", "dandelion", "starfruit", "electriccurrant", "electricblueberry", "witchhazel", "coconutcannon", "strawburst", "magnifyinggrass", "hollyknight", "potatomine", "primalpotatomine", "squash", "shadowshroom", "chilibean", "sunbean", "hypnoshroom", "grimrose", "tanglekelp", "shrinkingviolet", "cherry_bomb", "jalapeno", "grapeshot", "ghostpepper", "explodeonut", "bombegranate", "stunion", "springbean", "stallia", "hurrikale", "thymewarp", "garlic", "magnetshroom", "gravebuster", "empea", "perfumeshroom", "intensivecarrot", "aloe", "escaperoot", "powerplant", "goldleaf", "concealmint", "goldbloom", "powerlily", "imitater", "ailmint" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "Survive with a special seedbank.\nBe aware of the tide movements, those can slightly freeze your plants!",
+				"DescriptiveName": ""
+			}
+		}, {
+			"aliases": [ "InitialTide" ],
+			"objclass": "TideProperties",
+			"objdata": {
+				"StartingWaveLocation": 1
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"WavesPerFlag": 9,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 0,
+				"PointIncrementPerWave": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(tutorial@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 9,
+				"WaveCount": 18,
+				"SuppressFlagZombie": false,
+				"Waves": [ [ "RTID(Wave1@.)" ], [ "RTID(Wave2@.)" ], [ "RTID(Wave3@.)", "RTID(tide_6@.)", "RTID(frost_LR12345@.)" ], [ "RTID(Wave4@.)" ], [ "RTID(Wave5@.)", "RTID(PF5@.)" ], [ "RTID(Wave6@.)", "RTID(tide_4@.)", "RTID(frost_LR12345@.)" ], [ "RTID(Wave7@.)" ], [ "RTID(Wave8@.)", "RTID(PF8@.)" ], [ "RTID(Wave9@.)", "RTID(tide_8@.)", "RTID(frost_L12345R@.)", "RTID(LowTide9@.)", "RTID(LowTide9_2@.)" ], [ "RTID(Wave10@.)" ], [ "RTID(Wave11@.)", "RTID(PF11@.)" ], [ "RTID(Wave12@.)", "RTID(tide_6@.)", "RTID(frost_LR12345@.)" ], [ "RTID(Wave13@.)" ], [ "RTID(Wave14@.)", "RTID(PF14@.)" ], [ "RTID(Wave15@.)", "RTID(tide_4@.)", "RTID(frost_LR12345@.)" ], [ "RTID(Wave16@.)" ], [ "RTID(Wave17@.)" ], [ "RTID(Wave18@.)", "RTID(tide_8@.)", "RTID(frost_L12345R@.)", "RTID(LowTide18@.)", "RTID(LowTide18_2@.)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave17" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave18" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_snorkel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "tide_6" ],
+			"objclass": "TidalChangeWaveActionProps",
+			"objdata": {
+				"TidalChange": {
+					"ChangeAmount": 3,
+					"ChangeType": "absolute"
+				}
+			}
+		}, {
+			"aliases": [ "frost_LR12345" ],
+			"objclass": "FrostWindWaveActionProps",
+			"objdata": {
+				"Winds": [ {
+						"Direction": "right",
+						"Row": "0"
+					}, {
+						"Direction": "right",
+						"Row": "1"
+					}, {
+						"Direction": "right",
+						"Row": "2"
+					}, {
+						"Direction": "right",
+						"Row": "3"
+					}, {
+						"Direction": "right",
+						"Row": "4"
+					} ]
+			}
+		}, {
+			"aliases": [ "PF5" ],
+			"#EventInfo": "APF-1 AP1-0 AP2-0 AP3-4 AP4-0 AP5-0 APT-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MLS-1 MFW-1 ",
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "tide_4" ],
+			"objclass": "TidalChangeWaveActionProps",
+			"objdata": {
+				"TidalChange": {
+					"ChangeAmount": 5,
+					"ChangeType": "absolute"
+				}
+			}
+		}, {
+			"aliases": [ "PF8" ],
+			"#EventInfo": "APF-1 AP1-4 AP2-0 AP3-0 AP4-0 AP5-0 APT-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MLS-1 MFW-1 ",
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "tide_8" ],
+			"objclass": "TidalChangeWaveActionProps",
+			"objdata": {
+				"TidalChange": {
+					"ChangeAmount": 1,
+					"ChangeType": "absolute"
+				}
+			}
+		}, {
+			"aliases": [ "frost_L12345R" ],
+			"objclass": "FrostWindWaveActionProps",
+			"objdata": {
+				"Winds": [ {
+						"Direction": "left",
+						"Row": "0"
+					}, {
+						"Direction": "left",
+						"Row": "1"
+					}, {
+						"Direction": "left",
+						"Row": "2"
+					}, {
+						"Direction": "left",
+						"Row": "3"
+					}, {
+						"Direction": "left",
+						"Row": "4"
+					} ]
+			}
+		}, {
+			"aliases": [ "LowTide9" ],
+			"#EventInfo": "APT-8 ",
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnStart": 5,
+				"ColumnEnd": 9,
+				"ZombieCount": 8,
+				"GroupSize": 1,
+				"TimeBetweenGroups": "0.05",
+				"ZombieName": "iceage",
+				"WaveStartMessage": "Low Tide!"
+			}
+		}, {
+			"aliases": [ "LowTide9_2" ],
+			"#EventInfo": "APT-8 ",
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnStart": 5,
+				"ColumnEnd": 9,
+				"ZombieCount": 4,
+				"GroupSize": 1,
+				"TimeBetweenGroups": "0.05",
+				"ZombieName": "iceage_armor1",
+				"WaveStartMessage": "Low Tide!"
+			}
+		}, {
+			"aliases": [ "PF11" ],
+			"#EventInfo": "APF-1 AP1-0 AP2-0 AP3-0 AP4-0 AP5-3 APT-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MLS-1 MFW-1 ",
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "PF14" ],
+			"#EventInfo": "APF-1 AP1-0 AP2-0 AP3-0 AP4-4 AP5-0 APT-0 ML1-1 ML2-1 ML3-1 ML4-1 ML5-1 MLS-1 MFW-1 ",
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(iceage_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "LowTide18" ],
+			"#EventInfo": "APT-16 ",
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnStart": 5,
+				"ColumnEnd": 9,
+				"ZombieCount": 8,
+				"GroupSize": 1,
+				"TimeBetweenGroups": "0.05",
+				"ZombieName": "iceage_armor1",
+				"WaveStartMessage": "Low Tide!"
+			}
+		}, {
+			"aliases": [ "LowTide18_2" ],
+			"#EventInfo": "APT-16 ",
+			"objclass": "BeachStageEventZombieSpawnerProps",
+			"objdata": {
+				"ColumnStart": 5,
+				"ColumnEnd": 9,
+				"ZombieCount": 4,
+				"GroupSize": 1,
+				"TimeBetweenGroups": "0.05",
+				"ZombieName": "iceage_armor2",
+				"WaveStartMessage": "Low Tide!"
+			}
+		}, {} ],
+	"version": 1
+}

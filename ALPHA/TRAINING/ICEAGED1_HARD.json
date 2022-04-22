@@ -1,0 +1,901 @@
+{
+	"#comment": "Randomised Level test",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E   sandbox - auto sun",
+				"FirstRewardParam": "moneybag",
+				"FirstIntroNarrative": "",
+				"ReplayIntroNarrative": "",
+				"StartingSun": 50,
+				"LevelNumber": 1,
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(AutoSunTrainingMode@CurrentLevel)", "RTID(AutoSunTrainingMode2@CurrentLevel)", "RTID(AutoSunTrainingMode3@CurrentLevel)", "RTID(AutoSunTrainingMode4@CurrentLevel)", "RTID(AutoSunTrainingMode5@CurrentLevel)", "RTID(AutoSunTrainingMode6@CurrentLevel)", "RTID(AutoSunTrainingMode7@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(IceageMowers@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(DangerRoomModule@CurrentLevel)", "RTID(NewWaves@CurrentLevel)" ],
+				"Name": "Training Mode: Auto Sun (hard)",
+				"StageModule": "RTID(IceageStage@LevelModules)"
+			}
+		}, {
+			"objclass": "SunDropperProperties",
+			"aliases": [ "AutoSunTrainingMode" ],
+			"objdata": {
+				"InitialSunDropDelay": 2,
+				"SunCountdownBase": 8,
+				"SunCountdownRange": 0,
+				"SunCountdownIncreasePerSun": 0.0,
+				"SunCountdownMax": 8
+			}
+		}, {
+			"objclass": "SunDropperProperties",
+			"aliases": [ "AutoSunTrainingMode2" ],
+			"objdata": {
+				"InitialSunDropDelay": 24,
+				"SunCountdownBase": 40,
+				"SunCountdownRange": 0,
+				"SunCountdownIncreasePerSun": 0.0,
+				"SunCountdownMax": 40
+			}
+		}, {
+			"objclass": "SunDropperProperties",
+			"aliases": [ "AutoSunTrainingMode3" ],
+			"objdata": {
+				"InitialSunDropDelay": 74,
+				"SunCountdownBase": 40,
+				"SunCountdownRange": 0,
+				"SunCountdownIncreasePerSun": 0.0,
+				"SunCountdownMax": 40
+			}
+		}, {
+			"objclass": "SunDropperProperties",
+			"aliases": [ "AutoSunTrainingMode4" ],
+			"objdata": {
+				"InitialSunDropDelay": 126,
+				"SunCountdownBase": 40,
+				"SunCountdownRange": 0,
+				"SunCountdownIncreasePerSun": 0.0,
+				"SunCountdownMax": 40
+			}
+		}, {
+			"objclass": "SunDropperProperties",
+			"aliases": [ "AutoSunTrainingMode5" ],
+			"objdata": {
+				"InitialSunDropDelay": 180,
+				"SunCountdownBase": 40,
+				"SunCountdownRange": 0,
+				"SunCountdownIncreasePerSun": 0.0,
+				"SunCountdownMax": 40
+			}
+		}, {
+			"objclass": "SunDropperProperties",
+			"aliases": [ "AutoSunTrainingMode6" ],
+			"objdata": {
+				"InitialSunDropDelay": 236,
+				"SunCountdownBase": 40,
+				"SunCountdownRange": 0,
+				"SunCountdownIncreasePerSun": 0.0,
+				"SunCountdownMax": 40
+			}
+		}, {
+			"objclass": "SunDropperProperties",
+			"aliases": [ "AutoSunTrainingMode7" ],
+			"objdata": {
+				"InitialSunDropDelay": 294,
+				"SunCountdownBase": 40,
+				"SunCountdownRange": 0,
+				"SunCountdownIncreasePerSun": 0.0,
+				"SunCountdownMax": 40
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "sunflower", "twinsunflower", "primalsunflower", "moonflower", "sunshroom", "sunbean", "goldleaf", "goldbloom", "puffshroom" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"objclass": "DangerRoomModuleProperties",
+			"aliases": [ "DangerRoomModule" ],
+			"objdata": {
+				"LevelDesigners": [ "RTID(IceBlockDesigner@CurrentLevel)", "RTID(SliderTileDesigner@CurrentLevel)", "RTID(IceageDangerRoomWaveGenerator@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "IceageDangerRoomWaveGenerator" ],
+			"objclass": "DangerRoomJitteredWaveGenerator",
+			"objdata": {
+				"StartingPoints": 100,
+				"BasePointIncrementPerWave": 260,
+				"BasePointIncrementPerLevel": 0,
+				"ZombiePool": [ "RTID(iceage@ZombieTypes)", "RTID(iceage_armor1@ZombieTypes)", "RTID(iceage_armor2@ZombieTypes)", "RTID(iceage_armor3@ZombieTypes)", "RTID(iceage_hunter@ZombieTypes)", "RTID(iceage_imp@ZombieTypes)", "RTID(iceage_dodo@ZombieTypes)", "RTID(hellbird@ZombieTypes)", "RTID(iceage_troglobite@ZombieTypes)", "RTID(iceage_weaselhoarder@ZombieTypes)", "RTID(iceage_gargantuar@ZombieTypes)", "RTID(gargantuar_mega@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "IceBlockDesigner" ],
+			"objclass": "DangerRoomIceBlockDesigner",
+			"objdata": {
+				"LevelRange": {
+					"Min": 1,
+					"Max": 1
+				},
+				"PlantColumnMin": {
+					"Min": 0,
+					"Max": 0
+				},
+				"PlantColumnMax": {
+					"Min": 6,
+					"Max": 6
+				},
+				"ZombieColumnMin": {
+					"Min": 6,
+					"Max": 6
+				},
+				"ZombieColumnMax": {
+					"Min": 8,
+					"Max": 8
+				},
+				"BlocksMin": {
+					"Min": 0,
+					"Max": 0
+				},
+				"BlocksMax": {
+					"Min": 10,
+					"Max": 10
+				},
+				"PctGoodBlocks": {
+					"Min": 40,
+					"Max": 40
+				},
+				"PlantTypeNames": [ "peashooter", "repeater", "threepeater", "peapod", "splitpea", "electricpeashooter", "primalpeashooter", "redstinger", "bloomerang", "sunflower", "primalsunflower", "moonflower", "sporeshroom", "fumeshroom", "laser_bean", "snapdragon", "phatbeet", "bonkchoy", "nightshade", "guacodile", "parsnip", "chomper", "toadstool", "wallnut", "tallnut", "primalwallnut", "chardguard", "endurian", "sweetpotato", "peanut", "cabbagepult", "kernelpult", "bloominghearts", "dusklobber", "melonpult", "akee", "applemortar", "armamint", "sapfling", "spikeweed", "spikerock", "cactus", "homingthistle", "bowlingbulb", "citron", "lightningreed", "dandelion", "starfruit", "xshot", "electriccurrant", "electricblueberry", "caulipower", "witchhazel", "coconutcannon", "strawburst", "magnifyinggrass", "banana", "hollyknight", "stunion", "magnetshroom", "aloe", "hurrikale", "grapeshot", "escaperoot" ],
+				"ZombieTypeNames": [ "iceage_imp", "iceage_imp", "iceage_armor1", "iceage_armor1", "iceage_armor1", "iceage_armor2", "iceage_armor2", "iceage_armor2", "iceage_armor3", "iceage_hunter", "iceage_hunter", "iceage_dodo", "iceage_dodo", "iceage_weaselhoarder", "iceage_weasel", "iceage_weasel", "iceage_hunter" ]
+			}
+		}, {
+			"aliases": [ "SliderTileDesigner" ],
+			"objclass": "DangerRoomBoardGridMapPlacer",
+			"objdata": {
+				"GridMaps": [ "RTID(Floes01@CurrentLevel)", "RTID(Floes01@CurrentLevel)", "RTID(Floes01@CurrentLevel)", "RTID(Floes04@CurrentLevel)", "RTID(Floes05@CurrentLevel)", "RTID(Floes06@CurrentLevel)", "RTID(Floes07@CurrentLevel)", "RTID(Floes08@CurrentLevel)", "RTID(Floes09@CurrentLevel)", "RTID(Floes10@CurrentLevel)", "RTID(Floes11@CurrentLevel)", "RTID(Floes12@CurrentLevel)", "RTID(Floes13@CurrentLevel)", "RTID(Floes14@CurrentLevel)", "RTID(Floes15@CurrentLevel)", "RTID(Floes16@CurrentLevel)", "RTID(Floes17@CurrentLevel)", "RTID(Floes18@CurrentLevel)", "RTID(Floes19@CurrentLevel)", "RTID(Floes20@CurrentLevel)", "RTID(Floes21@CurrentLevel)", "RTID(Floes22@CurrentLevel)", "RTID(Floes23@CurrentLevel)", "RTID(Floes24@CurrentLevel)", "RTID(Floes25@CurrentLevel)", "RTID(Floes26@CurrentLevel)", "RTID(Floes27@CurrentLevel)", "RTID(Floes28@CurrentLevel)", "RTID(Floes29@CurrentLevel)", "RTID(Floes30@CurrentLevel)", "RTID(Floes31@CurrentLevel)", "RTID(Floes32@CurrentLevel)", "RTID(Floes33@CurrentLevel)", "RTID(Floes34@CurrentLevel)", "RTID(Floes35@CurrentLevel)", "RTID(Floes36@CurrentLevel)", "RTID(Floes37@CurrentLevel)", "RTID(Floes38@CurrentLevel)", "RTID(Floes39@CurrentLevel)", "RTID(Floes40@CurrentLevel)", "RTID(Floes41@CurrentLevel)", "RTID(Floes42@CurrentLevel)", "RTID(Floes43@CurrentLevel)", "RTID(Floes44@CurrentLevel)", "RTID(Floes45@CurrentLevel)", "RTID(Floes46@CurrentLevel)", "RTID(Floes47@CurrentLevel)", "RTID(Floes48@CurrentLevel)", "RTID(Floes49@CurrentLevel)", "RTID(Floes50@CurrentLevel)", "RTID(Floes51@CurrentLevel)", "RTID(Floes52@CurrentLevel)", "RTID(Floes53@CurrentLevel)", "RTID(Floes54@CurrentLevel)", "RTID(Floes55@CurrentLevel)", "RTID(Floes56@CurrentLevel)", "RTID(Floes57@CurrentLevel)", "RTID(Floes58@CurrentLevel)", "RTID(Floes59@CurrentLevel)", "RTID(Floes60@CurrentLevel)", "RTID(Floes61@CurrentLevel)", "RTID(Floes62@CurrentLevel)", "RTID(Floes63@CurrentLevel)", "RTID(Floes64@CurrentLevel)", "RTID(Floes65@CurrentLevel)", "RTID(Floes66@CurrentLevel)", "RTID(Floes67@CurrentLevel)", "RTID(Floes68@CurrentLevel)", "RTID(Floes69@CurrentLevel)", "RTID(Floes70@CurrentLevel)", "RTID(Floes71@CurrentLevel)", "RTID(Floes72@CurrentLevel)", "RTID(Floes73@CurrentLevel)", "RTID(Floes74@CurrentLevel)", "RTID(Floes75@CurrentLevel)", "RTID(Floes76@CurrentLevel)", "RTID(Floes77@CurrentLevel)", "RTID(Floes78@CurrentLevel)", "RTID(Floes79@CurrentLevel)", "RTID(Floes80@CurrentLevel)", "RTID(Floes81@CurrentLevel)", "RTID(Floes82@CurrentLevel)", "RTID(Floes83@CurrentLevel)", "RTID(Floes84@CurrentLevel)", "RTID(Floes85@CurrentLevel)", "RTID(Floes86@CurrentLevel)", "RTID(Floes87@CurrentLevel)", "RTID(Floes88@CurrentLevel)", "RTID(Floes89@CurrentLevel)", "RTID(Floes90@CurrentLevel)", "RTID(Floes91@CurrentLevel)", "RTID(Floes92@CurrentLevel)", "RTID(Floes93@CurrentLevel)", "RTID(Floes94@CurrentLevel)", "RTID(Floes95@CurrentLevel)", "RTID(Floes96@CurrentLevel)", "RTID(Floes97@CurrentLevel)", "RTID(Floes99@CurrentLevel)", "RTID(Floes100@CurrentLevel)", "RTID(Floes101@CurrentLevel)", "RTID(Floes102@CurrentLevel)", "RTID(Floes103@CurrentLevel)", "RTID(Floes104@CurrentLevel)", "RTID(Floes105@CurrentLevel)", "RTID(Floes106@CurrentLevel)", "RTID(Floes107@CurrentLevel)", "RTID(Floes108@CurrentLevel)", "RTID(Floes109@CurrentLevel)", "RTID(Floes110@CurrentLevel)", "RTID(Floes111@CurrentLevel)", "RTID(Floes112@CurrentLevel)", "RTID(Floes113@CurrentLevel)", "RTID(Floes114@CurrentLevel)", "RTID(Floes115@CurrentLevel)", "RTID(Floes116@CurrentLevel)", "RTID(Floes126@CurrentLevel)", "RTID(Floes127@CurrentLevel)", "RTID(Floes128@CurrentLevel)", "RTID(Floes129@CurrentLevel)", "RTID(Floes130@CurrentLevel)", "RTID(Floes131@CurrentLevel)", "RTID(Floes132@CurrentLevel)", "RTID(Floes133@CurrentLevel)", "RTID(Floes134@CurrentLevel)", "RTID(Floes135@CurrentLevel)" ],
+				"GridItemTypes": [ "slider_down", "slider_up" ],
+				"GridType": "sliderfloe"
+			}
+		}, {
+			"aliases": [ "Floes01" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes04" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes05" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes06" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes07" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes08" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes09" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes10" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes11" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes12" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes13" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes14" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes15" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes16" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes17" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes18" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes19" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes20" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes21" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes22" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes23" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes24" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes25" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes26" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes27" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes28" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes29" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes30" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes31" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes32" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes33" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes34" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes35" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes36" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes37" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes38" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes39" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes40" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes41" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes42" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes43" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes44" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes45" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes46" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes47" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes48" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes49" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes50" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes51" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes52" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes53" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes54" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes55" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes56" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes57" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes58" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes59" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes60" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes61" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes62" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes63" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes64" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes65" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes66" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes67" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes68" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes69" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes70" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes71" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes72" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes73" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes74" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes75" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes76" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes77" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes78" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes79" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes80" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes81" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes82" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes83" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes84" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes85" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes86" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes87" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes88" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes89" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes90" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes91" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes92" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes93" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes94" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 2, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes95" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes96" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes97" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes99" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 2, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes100" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 2, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes101" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 2, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes102" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes103" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes104" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes105" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes106" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes107" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes108" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes109" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Floes110" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes111" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes112" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes113" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes114" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes115" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes116" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes126" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes127" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes128" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes129" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes130" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes131" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes132" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes133" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 2 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes134" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 2, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Floes135" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0 ], [ 0, 0, 0, 0, 2, 0, 0, 0, 0 ] ]
+			}
+		} ],
+	"version": 1
+}

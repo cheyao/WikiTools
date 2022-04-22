@@ -1,0 +1,10 @@
+{
+	"#comment": "Cowboy Endless",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "cowboy_dangerroom_A", "cowboy_dangerroom_A", "cowboy_dangerroom_A", "cowboy_dangerroom_B", "cowboy_dangerroom_B", "cowboy_dangerroom_C", "cowboy_dangerroom_C", "cowboy_dangerroom_C", "cowboy_dangerroom_C", "cowboy_dangerroom_D" ]
+			}
+		} ],
+	"version": 1
+}

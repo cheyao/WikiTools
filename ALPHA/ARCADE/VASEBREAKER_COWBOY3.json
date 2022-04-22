@@ -1,0 +1,152 @@
+{
+	"#comment": "V6-3",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V6-3: Rail Ramp",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstRewardParam": "big_moneybag",
+				"StageModule": "RTID(WestStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(CowboyRails@.)" ]
+			}
+		}, {
+			"aliases": [ "CowboyRails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_cowboy",
+				"Railcarts": [ {
+						"Column": 2,
+						"Row": 2
+					}, {
+						"Column": 4,
+						"Row": 2
+					}, {
+						"Column": 6,
+						"Row": 2
+					} ],
+				"Rails": [ {
+						"Column": 2,
+						"RowEnd": 4,
+						"RowStart": 0
+					}, {
+						"Column": 4,
+						"RowEnd": 4,
+						"RowStart": 0
+					}, {
+						"Column": 6,
+						"RowEnd": 4,
+						"RowStart": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "ProtectThePlant" ],
+			"objclass": "ProtectThePlantChallengeProperties",
+			"objdata": {
+				"MustProtectCount": 1,
+				"Plants": [ {
+						"GridX": 2,
+						"GridY": 2,
+						"PlantType": "iceburg"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "thymewarp",
+						"Level": 2
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 1,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 2,
+						"mY": 0
+					}, {
+						"mX": 2,
+						"mY": 1
+					}, {
+						"mX": 2,
+						"mY": 2
+					}, {
+						"mX": 2,
+						"mY": 3
+					}, {
+						"mX": 2,
+						"mY": 4
+					}, {
+						"mX": 4,
+						"mY": 0
+					}, {
+						"mX": 4,
+						"mY": 1
+					}, {
+						"mX": 4,
+						"mY": 2
+					}, {
+						"mX": 4,
+						"mY": 3
+					}, {
+						"mX": 4,
+						"mY": 4
+					}, {
+						"mX": 6,
+						"mY": 0
+					}, {
+						"mX": 6,
+						"mY": 1
+					}, {
+						"mX": 6,
+						"mY": 2
+					}, {
+						"mX": 6,
+						"mY": 3
+					}, {
+						"mX": 6,
+						"mY": 4
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "west_bull",
+						"Count": 4
+					}, {
+						"ZombieTypeName": "prospector",
+						"Count": 2
+					}, {
+						"ZombieTypeName": "cowboy_armor2",
+						"Count": 3
+					}, {
+						"ZombieTypeName": "cowboy_gargantuar",
+						"Count": 1
+					}, {
+						"PlantTypeName": "wallnut",
+						"Count": 3
+					}, {
+						"PlantTypeName": "cactus",
+						"Count": 5
+					}, {
+						"PlantTypeName": "stallia",
+						"Count": 3
+					}, {
+						"PlantTypeName": "shrinkingviolet",
+						"Count": 4
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 15,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

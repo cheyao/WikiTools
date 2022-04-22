@@ -1,0 +1,1356 @@
+{
+	"#comment": "Bowling 10",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"FirstIntroNarrative": "EPICQUEST_BOWLING_10_INTRO",
+				"ReplayIntroNarrative": "EPICQUEST_BOWLING_10_INTRO",
+				"FirstOutroNarrative": "EPICQUEST_BOWLING_10_OUTRO",
+				"ReplayOutroNarrative": "EPICQUEST_BOWLING_10_OUTRO",
+				"ForceNextLevel": "",
+				"StartingSun": 2000,
+				"LevelNumber": 10,
+				"Loot": "RTID(NoLoot@LevelModules)",
+				"ReplayRewardParam": "none",
+				"ReplayRewardType": "none",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "LevelCommon", "PrizeEffectsCommon", "PlantExplodeONut", "PlantAppleMortarAudio", "PlantMissileToeAudio", "PlantCherryBomb", "PlantCherryBombAudio", "PlantCoconutCannonAudio" ],
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(FutureMowers@LevelModules)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(BowlingMinigame@CurrentLevel)" ],
+				"Name": "Bowling Party X: The Future",
+				"MusicType": "Minigame_A",
+				"StageModule": "RTID(FutureStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "BowlingMinigame" ],
+			"objclass": "BowlingMinigameProperties",
+			"objdata": {
+				"BowlingFoulLine": 2
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 4.0,
+						"MaxPackets": 0
+					}, {
+						"Delay": 4.0,
+						"MaxPackets": 5
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "tool_bowling_200",
+						"Weight": 20
+					}, {
+						"PlantType": "tool_bowling_splash",
+						"Weight": 10
+					}, {
+						"PlantType": "tool_bowling_freeze",
+						"Weight": 15
+					}, {
+						"PlantType": "tool_bowling_giant",
+						"Weight": 3
+					}, {
+						"PlantType": "tool_bowling_explode",
+						"Weight": 1
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 80
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 10,
+				"ZombiePool": [ "RTID(tutorial_armor4@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"ZombieCountdownHugeWaveDelay": 5,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(ZombieShown@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)", "RTID(ModConveyor@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ], [ "RTID(Wave17@CurrentLevel)" ], [ "RTID(Wave18@CurrentLevel)" ], [ "RTID(Wave19@CurrentLevel)" ], [ "RTID(Wave20@CurrentLevel)" ], [ "RTID(Wave21@CurrentLevel)" ], [ "RTID(Wave22@CurrentLevel)" ], [ "RTID(Wave23@CurrentLevel)" ], [ "RTID(Wave24@CurrentLevel)" ], [ "RTID(Wave25@CurrentLevel)" ], [ "RTID(Wave26@CurrentLevel)" ], [ "RTID(Wave27@CurrentLevel)", "RTID(ModConveyor2@CurrentLevel)" ], [ "RTID(Wave28@CurrentLevel)" ], [ "RTID(Wave29@CurrentLevel)" ], [ "RTID(Wave30@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave17" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave18" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave19" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave20" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave21" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave22" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave23" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave24" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave25" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave26" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave27" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave28" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave29" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave30" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_protector@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(disco_mech@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mech_cone@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor2@CurrentLevel)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@CurrentLevel)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Type": "RTID(future@CurrentLevel)"
+					}, {
+						"Type": "RTID(future@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "ZombieShown" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"AdditionalPlantfood": "0",
+				"GridTypes": [ "RTID(crater@GridItemTypes)" ],
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_protector@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "ModConveyor" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(hurrikale@PlantTypes)",
+						"Weight": 4
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "ModConveyor2" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(jalapeno@PlantTypes)",
+						"Weight": 5
+					} ],
+				"Remove": []
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "future" ],
+			"objdata": {
+				"TypeName": "future",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieFutureDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_FutureBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FUTURE_BASIC_BRICK",
+				"HomeWorld": "future",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "future_armor1" ],
+			"objdata": {
+				"TypeName": "future_armor1",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieFutureArmor1Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_FutureBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FUTURE_BASIC_BRICK",
+				"HomeWorld": "future",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "future_armor2" ],
+			"objdata": {
+				"TypeName": "future_armor2",
+				"ZombieClass": "ZombieBasic",
+				"Properties": "RTID(ZombieFutureArmor2Default@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureBasicGroup" ],
+				"AudioGroups": [],
+				"AnimRigClass": "ZombieAnimRig_FutureBasic",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FUTURE_BASIC_BRICK",
+				"HomeWorld": "future",
+				"IsBasicZombie": true
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "mech_cone" ],
+			"objdata": {
+				"TypeName": "mech_cone",
+				"ZombieClass": "ZombieMech",
+				"Properties": "RTID(ZombieMechCone@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureMechConeGroup", "EMPeachEffects" ],
+				"AudioGroups": [ "ZombieFutureMechConeAudio" ],
+				"AnimRigClass": "ZombieAnimRig_ConeMech",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_MECH_CONE",
+				"HomeWorld": "future"
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "disco_mech" ],
+			"objdata": {
+				"TypeName": "disco_mech",
+				"ZombieClass": "ZombieMechDisco",
+				"Properties": "RTID(ZombieMechDisco@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureMechDiscoGroup", "EMPeachEffects" ],
+				"AudioGroups": [ "ZombieFutureMechDiscoAudio", "ZombieFutureJetpackAudio" ],
+				"AnimRigClass": "ZombieAnimRig_DiscoMech",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_MECH_DISCO",
+				"HomeWorld": "future"
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "future_protector" ],
+			"objdata": {
+				"TypeName": "future_protector",
+				"ZombieClass": "ZombieFutureProtector",
+				"Properties": "RTID(ZombieFutureProtectorDefault@CurrentLevel)",
+				"ResourceGroups": [ "ZombieFutureProtectorGroup", "EMPeachEffects" ],
+				"AudioGroups": [ "ZombieFutureProtectorAudio" ],
+				"AnimRigClass": "ZombieAnimRig_FutureProtector",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FUTURE_PROTECTOR",
+				"HomeWorld": "future"
+			}
+		}, {
+			"aliases": [ "ZombieFutureDefault" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 80,
+					"mWidth": 5,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 190,
+				"ScoreOverride": 10,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 100,
+				"Weight": 1000
+			}
+		}, {
+			"aliases": [ "ZombieFutureArmor1Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 10,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 5,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 20,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 200,
+				"Weight": 1000,
+				"ZombieArmorProps": [ "RTID(ConeDefault@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "ZombieFutureArmor2Default" ],
+			"objclass": "ZombiePropertySheet",
+			"objdata": {
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 5,
+					"mX": 5,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 20,
+					"mX": 5,
+					"mY": 10
+				},
+				"Hitpoints": 195,
+				"ScoreOverride": 30,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"Speed": 0.2,
+				"WavePointCost": 300,
+				"Weight": 1000,
+				"ZombieArmorProps": [ "RTID(BucketDefault@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "ZombieMechCone" ],
+			"objclass": "ZombieMechProps",
+			"objdata": {
+				"ArmDropFraction": -1,
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 50,
+					"mWidth": 15,
+					"mX": -25,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"ExplodesWhenMowed": false,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 105,
+					"mWidth": 40,
+					"mX": 0,
+					"mY": 10
+				},
+				"ConditionImmunities": [ {
+						"Condition": "chill",
+						"Percent": 0.15
+					}, {
+						"Condition": "freeze",
+						"Percent": 0.5
+					}, {
+						"Condition": "stalled",
+						"Percent": 0.5
+					}, {
+						"Condition": "stun",
+						"Percent": 0.5
+					}, {
+						"Condition": "butter"
+					}, {
+						"Condition": "poisoned",
+						"Percent": 0.5
+					}, {
+						"Condition": "contagiouspoison",
+						"Percent": 0.5
+					} ],
+				"Hitpoints": 1995,
+				"ScoreOverride": 100,
+				"HypnoshroomEffectOffset": {
+					"x": -15,
+					"y": 76
+				},
+				"IsValidPinchTarget": false,
+				"NormalDeathOnExplosion": true,
+				"NormalDeathWhenMowed": true,
+				"ChillInsteadOfFreeze": true,
+				"CanBePlantTossedWeak": false,
+				"NumDamageStates": 6,
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.6
+				},
+				"SkipHeadDropState": true,
+				"SoundOnActivate": "Play_Zomb_Future_Cone_Mvmt_Activate",
+				"SoundOnDeactivate": "Play_Zomb_Future_Cone_Mvmt_Deactivate",
+				"SoundOnDeath": "Play_Zomb_Future_Cone_Mvmt_Death",
+				"SoundOnTakeDamage": "Play_Zomb_Future_Mech_Impact_Cone",
+				"Speed": 0.16,
+				"WavePointCost": 1000,
+				"Weight": 750
+			}
+		}, {
+			"aliases": [ "ZombieMechDisco" ],
+			"objclass": "ZombieMechDiscoProps",
+			"objdata": {
+				"ArmDropFraction": -1,
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 30,
+					"mX": -50,
+					"mY": 10
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"DanceCountdown": 15,
+				"DanceDuration": 10,
+				"EatDPS": 100,
+				"ExplodesWhenMowed": false,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 100,
+					"mWidth": 90,
+					"mX": -10,
+					"mY": 10
+				},
+				"ConditionImmunities": [ {
+						"Condition": "chill",
+						"Percent": 0.15
+					}, {
+						"Condition": "stalled",
+						"Percent": 0.5
+					}, {
+						"Condition": "stun",
+						"Percent": 0.5
+					}, {
+						"Condition": "butter"
+					}, {
+						"Condition": "poisoned",
+						"Percent": 0.5
+					}, {
+						"Condition": "contagiouspoison",
+						"Percent": 0.5
+					} ],
+				"Hitpoints": 1995,
+				"ScoreOverride": 80,
+				"HypnoshroomEffectOffset": {
+					"x": 5,
+					"y": 63
+				},
+				"IsValidPinchTarget": false,
+				"NormalDeathOnExplosion": true,
+				"NormalDeathWhenMowed": true,
+				"CanBePlantTossedWeak": false,
+				"CanBePlantTossedStrong": false,
+				"NumDamageStates": 6,
+				"ShadowOffset": {
+					"x": 5,
+					"y": 0,
+					"z": 1.4
+				},
+				"SkipHeadDropState": true,
+				"SoundOnActivate": "Play_Zomb_Future_Disco_Mvmt_Activate",
+				"SoundOnDeactivate": "Play_Zomb_Future_Disco_Mvmt_Deactivate",
+				"SoundOnDeath": "Play_Zomb_Future_Disco_Mvmt_Death",
+				"SoundOnEat": "Play_Zomb_Future_Disco_Mvmt_Chew",
+				"SoundOnSummon": "Play_Zomb_Future_Disco_Mvmt_Summon",
+				"SoundOnWalk": "Play_Zomb_Future_Disco_Mvmt_Mvmt_Foley",
+				"Speed": 0.16,
+				"StaticArtImageAsset": "IMAGE_DISCO_MECH",
+				"SummonDuration": 1,
+				"WavePointCost": 1600,
+				"Weight": 750
+			}
+		}, {
+			"aliases": [ "ZombieFutureProtectorDefault" ],
+			"objclass": "ZombieFutureProtectorProps",
+			"objdata": {
+				"ArmDropFraction": -1,
+				"ArtCenter": {
+					"x": 100,
+					"y": 130
+				},
+				"AttackRect": {
+					"mHeight": 65,
+					"mWidth": 15,
+					"mX": -8,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"ExplodesWhenMowed": false,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 125,
+					"mWidth": 20,
+					"mX": 0,
+					"mY": 10
+				},
+				"ConditionImmunities": [ {
+						"Condition": "stalled",
+						"Percent": 0.5
+					}, {
+						"Condition": "stun",
+						"Percent": 0.5
+					}, {
+						"Condition": "poisoned",
+						"Percent": 0.5
+					}, {
+						"Condition": "contagiouspoison",
+						"Percent": 0.5
+					} ],
+				"Hitpoints": 395,
+				"ScoreOverride": 50,
+				"NormalDeathOnExplosion": true,
+				"NormalDeathWhenMowed": true,
+				"ShadowOffset": {
+					"x": 0,
+					"y": 0,
+					"z": 1.2
+				},
+				"ShieldActivationColumn": 7.5,
+				"ShieldCount": 3,
+				"ShieldDiesUponLossOfControl": true,
+				"ShieldHP": 600,
+				"ShieldReactivationDelay": 5,
+				"ShieldSizeX": 3,
+				"ShieldSizeY": 3,
+				"SkipHeadDropState": true,
+				"SoundOnActivate": "Play_Zomb_Future_Protector_Activate",
+				"SoundOnDeactivate": "Play_Zomb_Future_Protector_Deactivate",
+				"SoundOnDeath": "Play_Zomb_Future_Protector_Die",
+				"SoundOnEat": "Play_Zomb_Future_Protector_Eat",
+				"SoundOnShieldActivate": "Play_Zomb_Future_Protector_Shield_Start",
+				"SoundOnShieldDeactivate": "Play_Zomb_Future_Protector_Shield_Stop",
+				"SoundOnWalk": "",
+				"Speed": 0.2,
+				"WavePointCost": 500,
+				"Weight": 1000
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "ConeDefault" ],
+			"objdata": {
+				"ArmorType": "Cone",
+				"BaseHealth": 200.0,
+				"ArmorFlags": [ "damageable", "droppable", "helm" ],
+				"ArmorLayers": [ "zombie_armor_cone_norm", "zombie_armor_cone_damage_01", "zombie_armor_cone_damage_02" ],
+				"ArmorLayerHealth": [ 0.666, 0.333 ],
+				"ImpactSoundEvent": ""
+			}
+		}, {
+			"objclass": "ArmorPropertySheet",
+			"aliases": [ "BucketDefault" ],
+			"objdata": {
+				"ArmorType": "Bucket",
+				"BaseHealth": 400.0,
+				"ArmorFlags": [ "metallic", "damageable", "droppable", "helm" ],
+				"ArmorLayers": [ "zombie_armor_bucket_norm", "zombie_armor_bucket_damage_01", "zombie_armor_bucket_damage_02" ],
+				"ArmorLayerHealth": [ 0.8, 0.55 ],
+				"ImpactSoundEvent": ""
+			}
+		} ],
+	"version": 1
+}

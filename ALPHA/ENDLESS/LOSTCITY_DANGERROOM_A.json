@@ -1,0 +1,980 @@
+{
+	"#comment": "Lost City Danger Room",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_DANGER_ROOM]",
+				"ForceNextLevel": "lostcity_dangerroom",
+				"IsDangerRoom": true,
+				"LevelNumber": 666,
+				"LevelPowerupSet": "LevelPowerupsDisabled",
+				"SuppressPlantfoodPurchase": true,
+				"Loot": "RTID(DangerRoomLoot@LevelModules)",
+				"Modules": [ "RTID(DangerRoomIntro@CurrentLevel)", "RTID(DangerRoomModule@CurrentLevel)", "RTID(DefaultSunDropper@LevelModules)", "RTID(LostCityMowers@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(ProtectThePlant@CurrentLevel)" ],
+				"Name": "[DANGER_ROOM_LOSTCITY_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(LostCityStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "DangerRoomIntro" ],
+			"objclass": "DangerRoomLevelIntroProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ProtectThePlant" ],
+			"objclass": "ProtectThePlantChallengeProperties",
+			"objdata": {
+				"MustProtectCount": 1,
+				"Plants": [ {
+						"GridX": 30,
+						"GridY": 6,
+						"PlantType": "spikeweed"
+					}, {
+						"GridX": 0,
+						"GridY": 6,
+						"PlantType": "powerlily"
+					} ]
+			}
+		}, {
+			"aliases": [ "DangerRoomModule" ],
+			"objclass": "DangerRoomModuleProperties",
+			"objdata": {
+				"WorldSpecificProperties": "RTID(LostcityDangerRoomProps@PropertySheets)",
+				"LevelDesigners": [ "RTID(LostCityDangerRoomWaveGenerator@CurrentLevel)", "RTID(GridTileDesigner@CurrentLevel)", "RTID(DangerRoomParachuteRainDesigner@CurrentLevel)" ]
+			}
+		}, {
+			"aliases": [ "DangerRoomParachuteRainDesigner" ],
+			"objclass": "DangerRoomParachuteRainDesigner",
+			"objdata": {
+				"BaseSpiderRainCount": 0,
+				"MaxSpiderRainCount": 10,
+				"BaseSpiderRainCountPerLevel": 0.5,
+				"BaseSpiderRainZombieCount": 2,
+				"MaxSpiderRainZombies": 25,
+				"BaseSpiderRainZombiesCountPerLevel": 0.5,
+				"BaseSpiderRainStartWave": 5
+			}
+		}, {
+			"aliases": [ "LostCityDangerRoomWaveGenerator" ],
+			"objclass": "DangerRoomJitteredWaveGenerator",
+			"objdata": {
+				"StartingPoints": 100,
+				"BasePointIncrementPerWave": 30,
+				"BasePointIncrementPerLevel": 8,
+				"ZombiePool": [ "RTID(lostcity_armor1@ZombieTypes)", "RTID(lostcity_armor2@ZombieTypes)", "RTID(lostcity_imp@ZombieTypes)", "RTID(lostcity_excavator@ZombieTypes)", "RTID(lostcity_jane@ZombieTypes)", "RTID(lostcity_bug@ZombieTypes)", "RTID(lostcity_bug_armor1@ZombieTypes)", "RTID(lostcity_bug_armor2@ZombieTypes)", "RTID(lostcity_impporter@ZombieTypes)", "RTID(lostcity_relichunter@ZombieTypes)", "RTID(lostcity_crystalskull@ZombieTypes)", "RTID(lostcity_gargantuar@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "GridTileDesigner" ],
+			"objclass": "DangerRoomBoardGridMapPlacer",
+			"objdata": {
+				"GridMaps": [ "RTID(Gold01@CurrentLevel)", "RTID(Gold02@CurrentLevel)", "RTID(Gold03@CurrentLevel)", "RTID(Gold04@CurrentLevel)", "RTID(Gold05@CurrentLevel)", "RTID(Gold06@CurrentLevel)", "RTID(Gold07@CurrentLevel)", "RTID(Gold08@CurrentLevel)", "RTID(Gold09@CurrentLevel)", "RTID(Gold10@CurrentLevel)", "RTID(Gold11@CurrentLevel)", "RTID(Gold12@CurrentLevel)", "RTID(Gold13@CurrentLevel)", "RTID(Gold14@CurrentLevel)", "RTID(Gold15@CurrentLevel)", "RTID(Gold16@CurrentLevel)", "RTID(Gold17@CurrentLevel)", "RTID(Gold18@CurrentLevel)", "RTID(Gold19@CurrentLevel)", "RTID(Gold20@CurrentLevel)", "RTID(Gold21@CurrentLevel)", "RTID(Gold22@CurrentLevel)", "RTID(Gold23@CurrentLevel)", "RTID(Gold24@CurrentLevel)", "RTID(Gold25@CurrentLevel)", "RTID(Gold26@CurrentLevel)", "RTID(Gold27@CurrentLevel)", "RTID(Gold28@CurrentLevel)", "RTID(Gold29@CurrentLevel)", "RTID(Gold30@CurrentLevel)", "RTID(Gold31@CurrentLevel)", "RTID(Gold32@CurrentLevel)", "RTID(Gold33@CurrentLevel)", "RTID(Gold34@CurrentLevel)", "RTID(Gold35@CurrentLevel)", "RTID(Gold36@CurrentLevel)", "RTID(Gold37@CurrentLevel)", "RTID(Gold38@CurrentLevel)", "RTID(Gold39@CurrentLevel)", "RTID(Gold40@CurrentLevel)", "RTID(Gold41@CurrentLevel)", "RTID(Gold42@CurrentLevel)", "RTID(Gold43@CurrentLevel)", "RTID(Gold44@CurrentLevel)", "RTID(Gold45@CurrentLevel)", "RTID(Gold46@CurrentLevel)", "RTID(Gold47@CurrentLevel)", "RTID(Gold48@CurrentLevel)", "RTID(Gold49@CurrentLevel)", "RTID(Gold50@CurrentLevel)", "RTID(Gold51@CurrentLevel)", "RTID(Gold52@CurrentLevel)", "RTID(Gold53@CurrentLevel)", "RTID(Gold54@CurrentLevel)", "RTID(Gold55@CurrentLevel)", "RTID(Gold56@CurrentLevel)", "RTID(Gold57@CurrentLevel)", "RTID(Gold58@CurrentLevel)", "RTID(Gold59@CurrentLevel)", "RTID(Gold60@CurrentLevel)", "RTID(Gold61@CurrentLevel)", "RTID(Gold62@CurrentLevel)", "RTID(Gold63@CurrentLevel)", "RTID(Gold64@CurrentLevel)", "RTID(Gold65@CurrentLevel)", "RTID(Gold66@CurrentLevel)", "RTID(Gold67@CurrentLevel)", "RTID(Gold68@CurrentLevel)", "RTID(Gold69@CurrentLevel)", "RTID(Gold70@CurrentLevel)", "RTID(Gold71@CurrentLevel)", "RTID(Gold72@CurrentLevel)", "RTID(Gold73@CurrentLevel)", "RTID(Gold74@CurrentLevel)", "RTID(Gold75@CurrentLevel)", "RTID(Gold76@CurrentLevel)", "RTID(Gold77@CurrentLevel)", "RTID(Gold78@CurrentLevel)", "RTID(Gold79@CurrentLevel)", "RTID(Gold80@CurrentLevel)", "RTID(Gold81@CurrentLevel)", "RTID(Gold82@CurrentLevel)", "RTID(Gold83@CurrentLevel)", "RTID(Gold84@CurrentLevel)", "RTID(Gold85@CurrentLevel)", "RTID(Gold86@CurrentLevel)", "RTID(Gold87@CurrentLevel)", "RTID(Gold88@CurrentLevel)", "RTID(Gold89@CurrentLevel)", "RTID(Gold90@CurrentLevel)", "RTID(Gold91@CurrentLevel)", "RTID(Gold92@CurrentLevel)", "RTID(Gold93@CurrentLevel)", "RTID(Gold94@CurrentLevel)", "RTID(Gold95@CurrentLevel)", "RTID(Gold96@CurrentLevel)", "RTID(Gold97@CurrentLevel)", "RTID(Gold98@CurrentLevel)", "RTID(Gold99@CurrentLevel)", "RTID(Gold100@CurrentLevel)", "RTID(Gold101@CurrentLevel)", "RTID(Gold102@CurrentLevel)", "RTID(Gold103@CurrentLevel)", "RTID(Gold104@CurrentLevel)", "RTID(Gold105@CurrentLevel)", "RTID(Gold106@CurrentLevel)", "RTID(Gold107@CurrentLevel)", "RTID(Gold108@CurrentLevel)", "RTID(Gold109@CurrentLevel)", "RTID(Gold110@CurrentLevel)", "RTID(Gold111@CurrentLevel)", "RTID(Gold112@CurrentLevel)", "RTID(Gold113@CurrentLevel)", "RTID(Gold114@CurrentLevel)", "RTID(Gold115@CurrentLevel)", "RTID(Gold116@CurrentLevel)", "RTID(Gold117@CurrentLevel)", "RTID(Gold118@CurrentLevel)", "RTID(Gold119@CurrentLevel)", "RTID(Gold120@CurrentLevel)", "RTID(Trap01@CurrentLevel)", "RTID(Trap02@CurrentLevel)", "RTID(Trap03@CurrentLevel)", "RTID(Trap04@CurrentLevel)", "RTID(Trap05@CurrentLevel)", "RTID(Trap06@CurrentLevel)", "RTID(Trap07@CurrentLevel)", "RTID(Trap08@CurrentLevel)", "RTID(Trap09@CurrentLevel)", "RTID(Trap10@CurrentLevel)", "RTID(Trap11@CurrentLevel)", "RTID(Trap12@CurrentLevel)", "RTID(Trap13@CurrentLevel)", "RTID(Trap14@CurrentLevel)", "RTID(Trap15@CurrentLevel)", "RTID(Trap16@CurrentLevel)", "RTID(Trap17@CurrentLevel)", "RTID(Trap18@CurrentLevel)", "RTID(Trap19@CurrentLevel)", "RTID(Trap20@CurrentLevel)", "RTID(Trap21@CurrentLevel)", "RTID(Trap22@CurrentLevel)", "RTID(Trap23@CurrentLevel)", "RTID(Trap24@CurrentLevel)", "RTID(Trap25@CurrentLevel)", "RTID(Trap26@CurrentLevel)", "RTID(Trap27@CurrentLevel)", "RTID(Trap28@CurrentLevel)", "RTID(Trap29@CurrentLevel)", "RTID(Trap30@CurrentLevel)" ],
+				"GridItemTypes": [ "goldtile", "bugspreader" ],
+				"GridType": "sliderfloe"
+			}
+		}, {
+			"aliases": [ "Gold01" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold02" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold03" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold04" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold05" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold06" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold07" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold08" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold09" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold10" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold11" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold12" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold13" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold14" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 1 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold15" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold16" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold17" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold18" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold19" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold20" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold21" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold22" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold23" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold24" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold25" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold26" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold27" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold28" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold29" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold30" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold31" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold32" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold33" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold34" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold35" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold36" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 0, 0, 0, 1, 1, 0 ], [ 0, 1, 0, 0, 0, 0, 1, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 1, 0, 0, 0, 1, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold37" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 1, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold38" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 1, 0, 1, 0, 1, 0, 1 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold39" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 1, 0, 1, 0, 1, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold40" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 1, 0, 1, 0, 1 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold41" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 1, 0, 1, 0, 1, 0, 1, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold42" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 1, 0, 0, 1, 1, 1, 0 ], [ 0, 1, 0, 1, 0, 0, 1, 0, 0 ], [ 0, 1, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold43" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold44" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold45" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold46" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold47" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold48" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold49" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold50" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold51" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold52" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 1, 0, 1, 0, 1, 0, 1 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold53" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 1, 0, 1, 0, 1, 0, 1, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold54" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 1 ], [ 1, 1, 1, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold55" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold56" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold57" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold58" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 1, 0, 0, 0, 0, 1, 0 ], [ 1, 0, 0, 1, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 0, 1, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold59" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 1, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 1, 1, 0, 1, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold60" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold61" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold62" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold63" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold64" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 1, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold65" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold66" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold67" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold68" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold69" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 1, 1, 0, 1, 1, 1, 0 ], [ 0, 1, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 1, 1, 1, 0, 1, 1, 1, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 1, 0 ], [ 0, 1, 1, 1, 0, 1, 1, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold70" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 1, 0, 0, 1, 0, 0, 1, 0, 0 ], [ 0, 0, 1, 0, 0, 1, 0, 0, 1 ], [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 1, 0, 0, 1, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold71" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 1, 0, 0, 1 ], [ 1, 0, 0, 1, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 1, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold72" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold73" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 1, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold74" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold75" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold76" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold77" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold78" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold79" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold80" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 1, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 0, 1, 0, 0, 1, 0, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold81" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 1, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 1, 1, 0, 1 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold82" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold83" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 1 ], [ 0, 0, 0, 0, 1, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold84" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold85" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold86" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold87" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 1, 0, 0, 0, 0, 1, 0, 0 ], [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold88" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 0, 0, 0, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold89" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold90" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold91" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 1, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold92" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold93" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold94" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold95" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold96" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 0, 0, 0, 0 ], [ 0, 1, 1, 1, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold97" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold98" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 1, 1, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 1, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold99" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold100" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 1, 1, 1, 0, 1, 1, 1, 0 ], [ 0, 0, 0, 1, 1, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold101" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 1, 0, 0 ], [ 0, 0, 1, 0, 0, 1, 0, 1, 0 ], [ 0, 1, 0, 1, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold102" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 1, 1, 1, 1, 1, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold103" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ], [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold104" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 1, 1, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 1, 1, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold105" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold106" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold107" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold108" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold109" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold110" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold111" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold112" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold113" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 1, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold114" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 1, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold115" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold116" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold117" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold118" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 1, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Gold119" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 1, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Gold120" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap01" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap02" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 1, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap03" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 1, 1, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 1, 1, 0, 0, 2, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap04" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 2, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 2, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap05" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 2, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 1, 2, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap06" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 1, 1, 2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 1, 1, 1, 1, 2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 1, 2, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap07" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 1, 0, 1, 0, 2 ], [ 0, 0, 0, 0, 1, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 2, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 2, 0, 1, 0, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Trap08" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 2, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 2, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 1, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 1, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Trap09" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 2, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 2, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap11" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 1, 2, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 2, 1, 0 ], [ 0, 0, 0, 0, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 2, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap12" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 0, 0, 0, 2, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap13" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 1, 0, 0, 0, 2, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap14" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 0, 0, 0, 2, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap15" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 0, 0, 0, 2, 2 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap16" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 0, 0, 0, 2, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Trap17" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 2, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 2, 1, 1, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 2, 1, 1, 1, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap18" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 1, 0, 0, 0, 1, 1, 0 ], [ 1, 0, 0, 0, 2, 0, 0, 0, 1 ], [ 0, 1, 1, 0, 0, 0, 1, 1, 0 ], [ 1, 0, 0, 0, 2, 0, 0, 0, 1 ], [ 0, 1, 1, 0, 0, 0, 1, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap19" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 1, 2, 1, 2, 1, 2, 1, 2, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Trap20" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 2, 1, 2, 1, 2, 1, 2, 1 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap21" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 1, 0, 0, 0, 1, 0, 0, 0 ], [ 1, 2, 1, 2, 1, 2, 1, 2, 1 ], [ 0, 0, 0, 1, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap22" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 1, 0 ], [ 1, 2, 1, 2, 1, 2, 1, 2, 1 ], [ 0, 1, 0, 0, 0, 1, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap23" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 1, 2, 1, 2, 1, 2, 1, 2, 1 ], [ 0, 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap24" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 1, 0, 1, 0, 0, 2 ], [ 1, 1, 1, 2, 1, 0, 0, 0, 2 ], [ 1, 1, 1, 1, 0, 1, 0, 0, 2 ], [ 1, 1, 1, 2, 1, 0, 0, 0, 2 ], [ 1, 1, 1, 1, 0, 1, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Trap25" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 0, 0, 0, 0, 2, 0 ], [ 1, 1, 1, 0, 0, 0, 0, 0, 2 ], [ 1, 1, 1, 0, 0, 0, 0, 2, 0 ], [ 1, 1, 1, 0, 0, 0, 0, 0, 2 ], [ 1, 1, 1, 0, 0, 0, 0, 2, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap26" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 2, 1, 0, 0, 0, 0, 0 ], [ 2, 1, 1, 2, 1, 0, 0, 0, 0 ], [ 1, 2, 1, 1, 2, 1, 0, 0, 0 ], [ 0, 1, 2, 1, 1, 2, 1, 0, 0 ], [ 0, 0, 1, 2, 1, 1, 2, 1, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap27" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 0, 0, 0, 2, 1, 1, 2, 1, 1 ], [ 0, 0, 2, 1, 1, 2, 1, 1, 0 ], [ 0, 2, 1, 1, 2, 1, 1, 0, 0 ], [ 2, 1, 1, 2, 1, 1, 0, 0, 0 ], [ 1, 1, 2, 1, 1, 0, 0, 0, 0 ] ]
+			}
+		}, {
+			"aliases": [ "Trap28" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 0, 1, 2, 1, 0, 1, 2, 1 ], [ 0, 1, 0, 1, 2, 1, 0, 1, 2 ], [ 1, 0, 1, 2, 1, 0, 1, 2, 1 ], [ 0, 1, 0, 1, 2, 1, 0, 1, 2 ], [ 1, 0, 1, 2, 1, 0, 1, 2, 1 ] ]
+			}
+		}, {
+			"aliases": [ "Trap29" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 1, 0, 0, 0, 0, 2 ], [ 1, 0, 0, 1, 0, 0, 2, 0, 0 ], [ 0, 1, 1, 0, 0, 0, 0, 2, 0 ], [ 1, 0, 0, 1, 0, 0, 2, 0, 0 ], [ 1, 1, 1, 1, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "Trap30" ],
+			"objclass": "BoardGridMapProps",
+			"objdata": {
+				"Values": [ [ 1, 1, 1, 0, 0, 0, 0, 0, 2 ], [ 0, 1, 1, 1, 0, 0, 0, 2, 0 ], [ 0, 0, 1, 1, 1, 0, 2, 0, 0 ], [ 0, 1, 1, 1, 0, 0, 0, 2, 0 ], [ 1, 1, 1, 0, 0, 0, 0, 0, 2 ] ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		} ],
+	"version": 1
+}

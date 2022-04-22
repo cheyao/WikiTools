@@ -1,0 +1,1010 @@
+{
+	"#comment": "",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed", "Tombstone_Dark_Special", "Tombstone_Dark_Effects", "PlantCoconutCannon" ],
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(PirateMowers@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(PiratePlanks@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(NewWaves@CurrentLevel)" ],
+				"MusicType": "MiniGame_A",
+				"Name": "Stay Back - Sergio+",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(PirateStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "PiratePlanks" ],
+			"objclass": "PiratePlankProperties",
+			"objdata": {
+				"PlankRows": [ 0, 1, 2, 3, 4 ]
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(ZombieDistance@CurrentLevel)", "RTID(SimultaneousPlants@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "ZombieDistance" ],
+			"objclass": "StarChallengeZombieDistanceProps",
+			"objdata": {
+				"TargetDistance": 4.85
+			}
+		}, {
+			"aliases": [ "SimultaneousPlants" ],
+			"objclass": "StarChallengeSimultaneousPlantsProps",
+			"objdata": {
+				"MaximumPlants": 20
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 6,
+						"MaxPackets": 0
+					} ],
+				"InitialPlantList": [ {
+						"MaxCount": 8,
+						"MaxWeightFactor": 0,
+						"PlantType": "pepperpult",
+						"Level": 1,
+						"Weight": 3
+					}, {
+						"PlantType": "sporeshroom",
+						"Level": 0,
+						"Weight": 6
+					}, {
+						"MaxCount": 5,
+						"MaxWeightFactor": 0,
+						"PlantType": "coconutcannon",
+						"Level": 1,
+						"Weight": 2
+					}, {
+						"PlantType": "stallia",
+						"Level": 2,
+						"Weight": 4
+					}, {
+						"PlantType": "hollyknight",
+						"Level": 2,
+						"Weight": 1
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 80
+					} ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 9,
+				"WaveCount": 18,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(FakeHunter@CurrentLevel)", "RTID(BossL3@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)", "RTID(RaidingParty0@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)", "RTID(BossL2@CurrentLevel)", "RTID(BossL4@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)", "RTID(RaidingParty1@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)", "RTID(Wave8PF@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)", "RTID(RaidingParty2@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)", "RTID(BossL1@CurrentLevel)", "RTID(BossL3@CurrentLevel)", "RTID(BossL5@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)", "RTID(RaidingParty3@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)", "RTID(Wave13PF@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)", "RTID(RaidingParty4@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)", "RTID(BossL1@CurrentLevel)", "RTID(BossL2@CurrentLevel)", "RTID(BossL3@CurrentLevel)", "RTID(BossL4@CurrentLevel)", "RTID(BossL5@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)", "RTID(Wave16PF@CurrentLevel)" ], [ "RTID(Wave17@CurrentLevel)", "RTID(RaidingParty5@CurrentLevel)" ], [ "RTID(Wave18@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "FakeHunter" ],
+			"objclass": "SpawnZombiesFromGridItemSpawnerProps",
+			"objdata": {
+				"WaveStartMessage": "",
+				"ZombieSpawnWaitTime": 0,
+				"SuppressActionIfNoGridItemsFound": false,
+				"AdditionalPlantfood": "0",
+				"GridTypes": [],
+				"Zombies": [ {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8PF" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13PF" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16PF" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave17" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pelican@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave18" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_armor4@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "RaidingParty0" ],
+			"objclass": "RaidingPartyZombieSpawnerProps",
+			"objdata": {
+				"SwashbucklerCount": 4,
+				"GroupSize": 1,
+				"TimeBetweenGroups": 0.5
+			}
+		}, {
+			"aliases": [ "RaidingParty1" ],
+			"objclass": "RaidingPartyZombieSpawnerProps",
+			"objdata": {
+				"SwashbucklerCount": 8,
+				"GroupSize": 1,
+				"TimeBetweenGroups": 0.5
+			}
+		}, {
+			"aliases": [ "RaidingParty2" ],
+			"objclass": "RaidingPartyZombieSpawnerProps",
+			"objdata": {
+				"SwashbucklerCount": 11,
+				"GroupSize": 1,
+				"TimeBetweenGroups": 0.5
+			}
+		}, {
+			"aliases": [ "RaidingParty3" ],
+			"objclass": "RaidingPartyZombieSpawnerProps",
+			"objdata": {
+				"SwashbucklerCount": 14,
+				"GroupSize": 1,
+				"TimeBetweenGroups": 0.5
+			}
+		}, {
+			"aliases": [ "RaidingParty4" ],
+			"objclass": "RaidingPartyZombieSpawnerProps",
+			"objdata": {
+				"SwashbucklerCount": 17,
+				"GroupSize": 1,
+				"TimeBetweenGroups": 0.5
+			}
+		}, {
+			"aliases": [ "RaidingParty5" ],
+			"objclass": "RaidingPartyZombieSpawnerProps",
+			"objdata": {
+				"SwashbucklerCount": 20,
+				"GroupSize": 1,
+				"TimeBetweenGroups": 0.5
+			}
+		}, {
+			"aliases": [ "BossL1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(CannonBoss@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossL2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(CannonBoss@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossL3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(CannonBoss@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossL4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(CannonBoss@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"aliases": [ "BossL5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(CannonBoss@CurrentLevel)"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieType",
+			"aliases": [ "CannonBoss" ],
+			"objdata": {
+				"TypeName": "iceage_hunter",
+				"ZombieClass": "ZombieIceAgeHunter",
+				"Properties": "RTID(ZombieIceAgeHunter@CurrentLevel)",
+				"ResourceGroups": [ "ZombieIceAgeHunterGroup", "FrostbiteIceBlockPlantGroup" ],
+				"AudioGroups": [ "ZombieIceAgeHunterAudio" ],
+				"AnimRigClass": "ZombieAnimRig_Hunter",
+				"PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER",
+				"HomeWorld": "iceage",
+				"Placeable": true
+			}
+		}, {
+			"aliases": [ "ZombieIceAgeHunter" ],
+			"objclass": "ZombieIceAgeHunterProps",
+			"objdata": {
+				"Actions": [ "RTID(ZombieIceAgeProjectileAction@CurrentLevel)" ],
+				"ArtCenter": {
+					"x": 90,
+					"y": 125
+				},
+				"AttackRect": {
+					"mHeight": 60,
+					"mWidth": 10,
+					"mX": 10,
+					"mY": 0
+				},
+				"CanSpawnPlantFood": false,
+				"ChillInsteadOfFreeze": true,
+				"Cost": 150,
+				"EatDPS": 100,
+				"FarAttackRange": 9,
+				"GroundTrackName": "ground_swatch",
+				"HitRect": {
+					"mHeight": 95,
+					"mWidth": 30,
+					"mX": 7,
+					"mY": 10
+				},
+				"Hitpoints": 4500,
+				"NearAttackRange": 1,
+				"ScaledProps": [ {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "Hitpoints"
+					}, {
+						"Arg1": 1.3,
+						"Arg2": 0.05,
+						"Formula": "standard",
+						"Key": "EatDPS"
+					}, {
+						"Formula": "constant",
+						"Key": "Speed"
+					}, {
+						"Formula": "constant",
+						"Key": "WavePointCost"
+					} ],
+				"ShadowOffset": {
+					"x": 10,
+					"y": 0,
+					"z": 1.2
+				},
+				"SnowballsPerBarrage": 1,
+				"Speed": 0.12,
+				"WavePointCost": 500,
+				"Weight": 100,
+				"ZombieStats": [ {
+						"Type": "toughness",
+						"Value": "toughness4"
+					}, {
+						"Type": "speed",
+						"Value": "speed0"
+					} ]
+			}
+		}, {
+			"objclass": "ZombieProjectileActionDefinition",
+			"aliases": [ "ZombieIceAgeProjectileAction" ],
+			"objdata": {
+				"TimeBeforeFirst": {
+					"Min": 14,
+					"Max": 14
+				},
+				"TimeBetween": {
+					"Min": 0.5,
+					"Max": 0.5
+				},
+				"TimeBetweenBarrages": {
+					"Min": 14,
+					"Max": 14
+				},
+				"Projectile": "RTID(CannonballDefault@CurrentLevel)",
+				"ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush",
+				"SpawnOffset": {
+					"x": -20,
+					"y": 0,
+					"z": 45
+				},
+				"ApexHeight": 100,
+				"TimeUntilHit": 0.75
+			}
+		}, {
+			"objclass": "ProjectilePropertySheet",
+			"aliases": [ "CannonballDefault" ],
+			"objdata": {
+				"BaseDamage": 1900,
+				"SplashDamage": 1,
+				"SplashRadius": 2.0736,
+				"ShakeBoardOnSplash": true,
+				"CollisionFlags": [ "plants", "normal_plants", "tall_plants" ],
+				"DamageFlags": [ "lobbed", "shooter" ],
+				"InitialVelocity": [ {
+						"Min": -900,
+						"Max": -1100
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialAcceleration": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"InitialScale": {
+					"Min": 1,
+					"Max": 1
+				},
+				"AttachedPAM": "POPANIM_EFFECTS_T_COCONUT_PROJECTILE_EXPLOSION",
+				"AttachedPAMAnimRigClass": "EffectAnimRig_CoconutCannonball",
+				"AttachedPAMAnimationToPlay": [ "coconut_projectile", "coconut_projectile2", "coconut_projectile3" ],
+				"AttachedPAMOffset": {
+					"x": -100,
+					"y": -97
+				},
+				"CollisionRect": {
+					"mX": -15,
+					"mY": -15,
+					"mWidth": 30,
+					"mHeight": 30
+				},
+				"ImpactPAM": "POPANIM_EFFECTS_T_COCONUT_PROJECTILE_EXPLOSION",
+				"ImpactPAMAnimationToPlay": [ "coconut_explosion", "coconut_explosion2", "coconut_explosion3" ],
+				"ImpactOffset": [ {
+						"Min": 0,
+						"Max": 0
+					}, {
+						"Min": 0,
+						"Max": 0
+					} ],
+				"ImpactSoundEvent": "Play_PVZ_CoconutCannon_PF_Impact"
+			}
+		} ],
+	"version": 1
+}

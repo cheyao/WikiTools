@@ -1,0 +1,614 @@
+{
+	"#comment": "The Concealment",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E",
+				"FirstRewardParam": "moneybag",
+				"FirstIntroNarrative": "EPICQUEST_SHADOWLEAF_7_INTRO",
+				"ReplayIntroNarrative": "EPICQUEST_SHADOWLEAF_7_INTRO",
+				"StartingSun": 50,
+				"LevelNumber": 7,
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(LostCityMowers@LevelModules)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(GI@CurrentLevel)" ],
+				"MusicType": "MiniGame_A",
+				"Name": "SDL-7: Friends from Another Dimension",
+				"StageModule": "RTID(LostCityNightStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "GI" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 6,
+						"GridY": 1,
+						"TypeName": "goldtile"
+					}, {
+						"GridX": 6,
+						"GridY": 2,
+						"TypeName": "goldtile"
+					}, {
+						"GridX": 6,
+						"GridY": 3,
+						"TypeName": "goldtile"
+					}, {
+						"GridX": 7,
+						"GridY": 0,
+						"TypeName": "goldtile"
+					}, {
+						"GridX": 7,
+						"GridY": 4,
+						"TypeName": "goldtile"
+					}, {
+						"GridX": 8,
+						"GridY": 1,
+						"TypeName": "goldtile"
+					}, {
+						"GridX": 8,
+						"GridY": 2,
+						"TypeName": "goldtile"
+					}, {
+						"GridX": 8,
+						"GridY": 3,
+						"TypeName": "goldtile"
+					} ]
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 5,
+						"MaxPackets": 0
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "grimrose",
+						"Level": 0,
+						"Weight": 4
+					}, {
+						"MaxCount": 1,
+						"MaxCountCooldownSeconds": 20,
+						"MaxWeightFactor": 1.0,
+						"PlantType": "concealmint",
+						"Level": 1,
+						"Weight": 5
+					}, {
+						"PlantType": "thymewarp",
+						"Level": 0,
+						"Weight": 3
+					}, {
+						"MaxCount": 1,
+						"MaxCountCooldownSeconds": 30,
+						"PlantType": "shrinkingviolet",
+						"Level": 2,
+						"Weight": 5
+					}, {
+						"PlantType": "kiwibeast",
+						"Level": 0,
+						"Weight": 4
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 80
+					} ]
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 150,
+				"StartingPoints": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 8,
+				"ZombiePool": [ "RTID(iceage_dodo@ZombieTypes)", "RTID(iceage_troglobite@ZombieTypes)", "RTID(iceage_weaselhoarder@ZombieTypes)", "RTID(lostcity_relichunter@ZombieTypes)", "RTID(lostcity_bug@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 5,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)", "RTID(Portal1A@CurrentLevel)", "RTID(Portal1B@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)", "RTID(Portal2A@CurrentLevel)", "RTID(Portal2B@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)", "RTID(Portal3A@CurrentLevel)", "RTID(Portal3B@CurrentLevel)", "RTID(Portal3C@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_troglobite@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_bug@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_relichunter@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(hellbird@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_impporter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Portal1A" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 5,
+				"PortalRow": 2,
+				"PortalType": "dangerroom_egypt",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Portal1B" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 6,
+				"PortalRow": 3,
+				"PortalType": "dangerroom_iceage",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Portal2A" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 4,
+				"PortalRow": 1,
+				"PortalType": "dangerroom_dark",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Portal2B" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 4,
+				"PortalRow": 0,
+				"PortalType": "dangerroom_egypt",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Portal3A" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 6,
+				"PortalRow": 4,
+				"PortalType": "dangerroom_iceage",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Portal3B" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 3,
+				"PortalRow": 2,
+				"PortalType": "dangerroom_dark",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Portal3C" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 2,
+				"PortalRow": 3,
+				"PortalType": "dangerroom_dark",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		} ],
+	"version": 1
+}

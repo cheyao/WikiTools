@@ -1,0 +1,64 @@
+{
+	"#comment": "V8-1",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V8-1: Lucky Vase",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstRewardParam": "moneybag",
+				"StageModule": "RTID(DinoStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(SeedBank@.)" ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "squash",
+						"Level": 0
+					}, {
+						"PlantType": "chilibean",
+						"Level": 2
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 3,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 0,
+						"mY": 0
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "dino_imp",
+						"Count": 9
+					}, {
+						"ZombieTypeName": "dino_armor1",
+						"Count": 3
+					}, {
+						"ZombieTypeName": "dino_armor2",
+						"Count": 3
+					}, {
+						"PlantTypeName": "stunion",
+						"Count": 3
+					}, {
+						"PlantTypeName": "nightshade",
+						"Count": 4
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 8
+					} ],
+				"NumColoredPlantVases": 7,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

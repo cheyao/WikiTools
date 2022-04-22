@@ -1,0 +1,62 @@
+{
+	"#comment": "Cowboy Endless",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "E  C  L  I  S  E   sandbox",
+				"LevelNumber": 1,
+				"LevelPowerupSet": "LevelPowerupsDisabled",
+				"SuppressPlantfoodPurchase": true,
+				"DisablePlantBoosts": true,
+				"Loot": "RTID(DangerRoomLoot@LevelModules)",
+				"Modules": [ "RTID(DefaultSunDropper@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(LevelDifficultyScaling@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ],
+				"Name": "Survival: Wild West",
+				"SuppressAwardScreen": true,
+				"StageModule": "RTID(WestStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "goldleaf", "caulipower" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "LevelDifficultyScaling" ],
+			"objclass": "LevelDifficultyScalingModuleProperties",
+			"objdata": {
+				"DifficultyRulesType": "SurvivalScalingHasChicken"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 30,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 150,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"WavesPerFlag": 7,
+				"ZombiePool": [ "RTID(cowboy@ZombieTypes)", "RTID(cowboy_armor1@ZombieTypes)", "RTID(cowboy_armor2@ZombieTypes)", "RTID(cowboy_armor4@ZombieTypes)", "RTID(cowboy_gargantuar@ZombieTypes)", "RTID(chicken_farmer@ZombieTypes)", "RTID(prospector@ZombieTypes)", "RTID(west_bull@ZombieTypes)", "RTID(vegan@ZombieTypes)", "RTID(piano@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownHugeWaveDelay": 10,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"ZombieSpawnPattern": "ZombieSpawnerPatternStaggered",
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

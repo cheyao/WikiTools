@@ -1,0 +1,10 @@
+{
+	"#comment": "Dark Endless",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "dark_dangerroom_A", "dark_dangerroom_A", "dark_dangerroom_A", "dark_dangerroom_A", "dark_dangerroom_B", "dark_dangerroom_C", "dark_dangerroom_C", "dark_dangerroom_C", "dark_dangerroom_C", "dark_dangerroom_D" ]
+			}
+		} ],
+	"version": 1
+}

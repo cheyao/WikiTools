@@ -1,0 +1,10 @@
+{
+	"#comment": "Pirate Training Mode",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"RandomLevelSet": [ "training/pirateA1_easy_1", "training/pirateA1_easy_2", "training/pirateB1_easy_1", "training/pirateB1_easy_2", "training/pirateC1_easy_1", "training/pirateC1_easy_2", "training/pirateD1_easy_1", "training/pirateD1_easy_2", "training/pirateE1_easy_1", "training/pirateE1_easy_2", "training/pirateF1_easy_1", "training/pirateF1_easy_2", "training/pirateG1_easy_1", "training/pirateG1_easy_2" ]
+			}
+		} ],
+	"version": 1
+}

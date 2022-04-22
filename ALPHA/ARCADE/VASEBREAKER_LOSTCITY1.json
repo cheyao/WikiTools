@@ -1,0 +1,67 @@
+{
+	"#comment": "V2-1",
+	"version": 1,
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Name": "V2-1: The Blockage",
+				"IsVasebreaker": true,
+				"AddBonusStartingSun": false,
+				"LevelPowerupSet": "LevelPowerupsVasebreaker",
+				"Description": "",
+				"FirstRewardParam": "moneybag",
+				"StageModule": "RTID(LostCityStage@LevelModules)",
+				"StartingSun": 0,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(VaseBreakerArcade@LevelModules)", "RTID(VaseBreakerProps@.)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)" ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"PlantType": "thymewarp",
+						"Level": 2
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"objclass": "VaseBreakerPresetProperties",
+			"aliases": [ "VaseBreakerProps" ],
+			"objdata": {
+				"MinColumnIndex": 4,
+				"MaxColumnIndex": 8,
+				"GridSquareExcludelist": [ {
+						"mX": 4,
+						"mY": 1
+					}, {
+						"mX": 4,
+						"mY": 3
+					} ],
+				"Vases": [ {
+						"ZombieTypeName": "lostcity_armor1",
+						"Count": 4
+					}, {
+						"ZombieTypeName": "lostcity_jane",
+						"Count": 4
+					}, {
+						"ZombieTypeName": "lostcity_excavator",
+						"Count": 4
+					}, {
+						"PlantTypeName": "repeater",
+						"Count": 4
+					}, {
+						"PlantTypeName": "pepperpult",
+						"Count": 5
+					}, {
+						"PlantTypeName": "springbean",
+						"Count": 2
+					}, {
+						"CollectableTypeName": "sun",
+						"Count": 0
+					} ],
+				"NumColoredPlantVases": 11,
+				"NumColoredZombieVases": 0
+			}
+		} ]
+}

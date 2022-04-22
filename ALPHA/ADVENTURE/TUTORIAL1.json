@@ -1,0 +1,40 @@
+{
+	"#comment": "Skip",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"FirstRewardParam": "peashooter",
+				"FirstRewardType": "unlock_plant",
+				"ReplayRewardType": "none",
+				"ForceNextLevel": "tutorial2",
+				"LevelPowerupSet": "LevelPowerupsDisabled",
+				"StartingSun": 0,
+				"DisableRestart": true,
+				"DisableSaveGame": true,
+				"SuppressAwardScreen": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(NewWaves@CurrentLevel)" ],
+				"Name": "No skipping the Tutorial this time.",
+				"StageModule": "RTID(ModernStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownFirstWaveSecs": 0,
+				"ZombieCountdownFirstWaveConveyorSecs": 0,
+				"ZombieCountdownHugeWaveDelay": 0,
+				"SuppressFlagZombie": true,
+				"FlagWaveInterval": 1,
+				"WaveCount": 1,
+				"Waves": []
+			}
+		} ],
+	"version": 1
+}

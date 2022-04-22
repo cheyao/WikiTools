@@ -1,0 +1,510 @@
+{
+	"#comment": "P17",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Warp Party!",
+				"ZombieLevel": 10,
+				"## GridItemLevel": 10,
+				"StartingSun": 1000,
+				"IsLevelOfTheDay": true,
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(CowboyRails@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(IPP@CurrentLevel)", "RTID(LastStand@CurrentLevel)" ],
+				"Name": "WP-34: Tiny Tech Giants",
+				"MusicType": "MiniGame_A",
+				"StageModule": "RTID(FutureStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "LastStand" ],
+			"objclass": "LastStandMinigameProperties",
+			"objdata": {
+				"StartingPlantfood": 1,
+				"StartingSun": 1500
+			}
+		}, {
+			"aliases": [ "IPP" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 2,
+						"GridY": 5,
+						"Level": 1,
+						"TypeName": "holonut"
+					}, {
+						"GridX": 4,
+						"GridY": 5,
+						"Level": 1,
+						"TypeName": "holonut"
+					}, {
+						"GridX": 6,
+						"GridY": 5,
+						"Level": 1,
+						"TypeName": "holonut"
+					}, {
+						"GridX": 0,
+						"GridY": 2,
+						"Level": 1,
+						"TypeName": "powerplant"
+					}, {
+						"GridX": 2,
+						"GridY": 5,
+						"Level": 1,
+						"TypeName": "powerplant"
+					}, {
+						"GridX": 4,
+						"GridY": 5,
+						"Level": 1,
+						"TypeName": "powerplant"
+					}, {
+						"GridX": 6,
+						"GridY": 5,
+						"Level": 1,
+						"TypeName": "powerplant"
+					} ]
+			}
+		}, {
+			"aliases": [ "CowboyRails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_cowboy",
+				"Railcarts": [ {
+						"Column": 0,
+						"Row": 2
+					} ],
+				"Rails": [ {
+						"Column": 0,
+						"RowStart": 0,
+						"RowEnd": 4
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "caulipower" ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)", "RTID(PlantsLost@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "[STARCHALLENGE_LASTSTAND_MINIGAME]",
+				"DescriptiveName": "[STARCHALLENGE_LASTSTAND_MINIGAME_NAME]"
+			}
+		}, {
+			"aliases": [ "PlantsLost" ],
+			"objclass": "StarChallengePlantsLostProps",
+			"objdata": {
+				"MaximumPlantsLost": 15
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 4,
+				"WavesPerFlag": 4,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 0,
+				"PointIncrementPerWave": 0,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(mech_cone@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"### ZombieCountdownHugeWaveDelay": 0,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weasel@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}

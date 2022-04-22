@@ -1,0 +1,131 @@
+{
+	"#comment": "P03",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Warp Party!",
+				"ZombieLevel": 4,
+				"StartingSun": 50,
+				"IsLevelOfTheDay": true,
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"ResourceGroupNames": [ "DelayLoad_Background_Beach", "DelayLoad_Background_Beach_Compressed" ],
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Escalation@CurrentLevel)", "RTID(NewWaves@CurrentLevel)", "RTID(CowboyRails@CurrentLevel)", "RTID(IPP@CurrentLevel)" ],
+				"Name": "WP-4: High Sliders",
+				"StageModule": "RTID(FutureStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "CowboyRails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_cowboy",
+				"Railcarts": [ {
+						"Column": 1,
+						"Row": 2
+					}, {
+						"Column": 3,
+						"Row": 0
+					}, {
+						"Column": 3,
+						"Row": 4
+					}, {
+						"Column": 5,
+						"Row": 2
+					}, {
+						"Column": 7,
+						"Row": 1
+					}, {
+						"Column": 7,
+						"Row": 3
+					} ],
+				"Rails": [ {
+						"Column": 1,
+						"RowStart": 0,
+						"RowEnd": 4
+					}, {
+						"Column": 3,
+						"RowStart": 0,
+						"RowEnd": 4
+					}, {
+						"Column": 5,
+						"RowStart": 0,
+						"RowEnd": 4
+					}, {
+						"Column": 7,
+						"RowStart": 0,
+						"RowEnd": 4
+					} ]
+			}
+		}, {
+			"aliases": [ "IPP" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 1,
+						"GridY": 2,
+						"TypeName": "repeater",
+						"Level": 1
+					}, {
+						"GridX": 5,
+						"GridY": 2,
+						"TypeName": "dazeychain",
+						"Level": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "Escalation" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"WavesPerFlag": 5,
+				"PlantfoodToSpawnCount": 0,
+				"StartingPoints": 400,
+				"PointIncrementPerWave": 120,
+				"WaveManagerProps": "RTID(WaveManager@CurrentLevel)",
+				"ZombiePool": [ "RTID(future_armor1@ZombieTypes)", "RTID(future_armor2@ZombieTypes)", "RTID(swashbuckler@ZombieTypes)", "RTID(dino_imp@ZombieTypes)", "RTID(football@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "WaveManager" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"### ZombieCountdownHugeWaveDelay": 0,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 0,
+				"Waves": [ [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Wave0@CurrentLevel)" ], [ "RTID(Blank@CurrentLevel)" ], [ "RTID(Wave0@CurrentLevel)" ], [ "RTID(Wave0@CurrentLevel)" ], [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave0@CurrentLevel)", "RTID(Wave0@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave0" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Blank" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": []
+			}
+		} ],
+	"version": 1
+}
