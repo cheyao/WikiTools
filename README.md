@@ -10,6 +10,7 @@ The tool for PVZ Wiki.
 ## Installation
 1. Install [Python](https://www.python.org/downloads/)
 2. Save [WikiTools.py](https://github.com/cheyao/WikiTools/archive/refs/heads/master.zip) to your download folder and unzip it
+3. Add your own PVZ obb extract to the folder, if you don't have one, contact admins, we only give it to trustful persons.
 
 Windows:
 3. Download [Windows Terminal](https://github.com/microsoft/terminal/releases/tag/v1.12.10982.0) if you don't have it
