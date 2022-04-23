@@ -25,13 +25,17 @@ def main():
     file_data = open("ALPHA/" + dir_name + "/" + file_name + ".json", "r").read()
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     tmp2 = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
+    waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row", "", re.sub(".+\\[]}},{aliases:|]}}],version:1}", "", re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", file_data))))).split("|")
+    waves = re.sub("\\s*\\re.sub(dark\\)\\s*","34\\{\\{P|PeasantZombie|2}}",)re.sub("\\s*\\re.sub(dark_armor1\\)\\s*","35\\{\\{P|ConeheadPeasant|2}}",)re.sub("\\s*\\re.sub(dark_armor2\\)\\s*","36\\{\\{P|BucketheadPeasant|2}}",)re.sub("\\s*\\re.sub(dark_armor3\\)\\s*","37\\{\\{P|KnightZombie|2}}",)re.sub("\\s*\\re.sub(dark_juggler\\)\\s*","43\\{\\{P|JesterZombie|2}}",)re.sub("\\s*\\re.sub(dark_wizard\\)\\s*","41\\{\\{P|WizardZombie|2}}",)re.sub("\\s*\\re.sub(dark_king\\)\\s*","42\\{\\{P|ZombieKing|2}}",)re.sub("\\s*\\re.sub(dark_imp_dragon\\)\\s*","40\\{\\{P|ImpDragonZombie|2}}", re.sub("\\s*\\re.sub(dark_gargantuar\\)\\s*","38\\{\\{P|DarkAgesGargantuar|2}}", re.sub("\\s*\\re.sub(dark_imp\\)\\s*","39\\{\\{P|ImpMonkZombie|2}}", re.sub()"\\s*\\re.sub(night_camel\\)\\s*","44\\{\\{P|ShadowZombie|2}}", waves)
     if tmp:
         level_name = tmp.group(1)
         full_level_name = tmp2.group(1)
-    level_place = level_name.search("(\\d)-").group(1)
+    level_place = re.search("(\\d)-", level_name).group(1)
 
     # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+
+    print(waves)
 
     final_string = """{{BAHTabber|Level=1-2}}
     {{Level Infobox
