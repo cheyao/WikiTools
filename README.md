@@ -13,14 +13,14 @@ The tool for PVZ Wiki.
 3. Add your own PVZ obb extract to the folder, if you don't have one, contact admins, we only give it to trustful persons.
 
 Windows:
-3. Download [Windows Terminal](https://github.com/microsoft/terminal/releases/tag/v1.12.10982.0) if you don't have it
-4. Open Windows Terminal
-5. Type `cd Downloads/WikiTools-master` in the terminal
-6. Type `python WikiTools.py` in the terminal
-7. Follow the instructions that appear in the terminal
+4. Download [Windows Terminal](https://github.com/microsoft/terminal/releases/tag/v1.12.10982.0) if you don't have it
+5. Open Windows Terminal
+6. Type `cd Downloads/WikiTools-master` in the terminal
+7. Type `python WikiTools.py` in the terminal
+8. Follow the instructions that appear in the terminal
 
 Mac & Linux:
-3. Open Terminal since it's preinstalled on Mac & Linux
-4. Type `cd Downloads/WikitTools-master` in the terminal
-5. Type `python WikiTools.py` in the terminal
-6. Follow the instructions that appear in the terminal
+4. Open Terminal since it's preinstalled on Mac & Linux
+5. Type `cd Downloads/WikitTools-master` in the terminal
+6. Type `python WikiTools.py` in the terminal
+7. Follow the instructions that appear in the terminal
