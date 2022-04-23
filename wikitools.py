@@ -1,10 +1,9 @@
-from PIL import Image
 from os.path import exists
 import webbrowser
 from sys import platform
 import re
-from tkinter import Tk
 import pyperclip
+from convert import convert
 
 
 def main():
@@ -29,23 +28,9 @@ def main():
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
                re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", file_data))))).split("|")
-    waves = re.sub("\\s*\\(dark\\)\\s*", "34\\{\\{P|PeasantZombie|2}}",
-                   re.sub("\\s*\\(dark_armor1\\)\\s*", "35\\{\\{P|ConeheadPeasant|2}}",
-                          re.sub("\\s*\\(dark_armor2\\)\\s*", "36\\{\\{P|BucketheadPeasant|2}}",
-                                 re.sub("\\s*\\(dark_armor3\\)\\s*", "37\\{\\{P|KnightZombie|2}}",
-                                        re.sub("\\s*\\(dark_juggler\\)\\s*", "43\\{\\{P|JesterZombie|2}}",
-                                               re.sub("\\s*\\(dark_wizard\\)\\s*", "41\\{\\{P|WizardZombie|2}}",
-                                                      re.sub("\\s*\\(dark_king\\)\\s*",
-                                                             "42\\{\\{P|ZombieKing|2}}",
-                                                             re.sub("\\s*\\(dark_imp_dragon\\)\\s*",
-                                                                    "40\\{\\{P|ImpDragonZombie|2}}",
-                                                                    re.sub("\\s*\\(dark_gargantuar\\)\\s*",
-                                                                           "38\\{\\{P|DarkAgesGargantuar|2}}",
-                                                                           re.sub("\\s*\\(dark_imp\\)\\s*",
-                                                                                  "39\\{\\{P|ImpMonkZombie|2}}", re.sub(
-                                                                                   "\\s*\\(night_camel\\)\\s*",
-                                                                                   "44\\{\\{P|ShadowZombie|2}}",
-                                                                                   waves[2])))))))))))
+    waves.remove("")
+
+    waves = convert(waves[1::2])
     if tmp:
         level_name = tmp.group(1)
         full_level_name = tmp2.group(1)
@@ -105,22 +90,6 @@ def getName(input_int: int):
     else:
         print("Invalid input")
         quit()
-
-
-def convert(input_text):
-    input_text.replace(r"\\s*\\(ra@ZombieTypes\\)\\s*", "<sup>0</sup> 13 \\{\\{P|Ra Zombie|2}}").replace(
-        r"\\s*\\(mummy@ZombieTypes\\)\\s*", "<sup>0</sup> 7 \\{\\{P|Mummy Zombie|2}}").replace(
-        r"\\s*\\(mummy_armor1@ZombieTypes\\)\\s*", "<sup>0</sup> 8 \\{\\{P|Conehead Mummy|2}}").replace(
-        r"\\s*\\(mummy_armor2@ZombieTypes\\)\\s*", "<sup>0</sup> 9 \\{\\{P|Buckethead Mummy|2}}").replace(
-        r"\\s*\\(camel_onehump@ZombieTypes\\)\\s*", "<sup>0</sup> 14 \\{\\{P|Camel Zombies|2}}").replace(
-        r"\\s*\\(explorer@ZombieTypes\\)\\s*", "<sup>0</sup> 15 \\{\\{P|Explorer Zombie|2}}").replace(
-        r"\\s*\\(egypt_imp@ZombieTypes\\)\\s*", "<sup>0</sup> 12 \\{\\{P|Imp Mummy|2}}").replace(
-        r"\\s*\\(mummy_armor4@ZombieTypes\\)\\s*", "<sup>0</sup> 10 \\{\\{P|Pyramid-Head Zombie|2}}").replace(
-        r"\\s*\\(egypt_gargantuar@ZombieTypes\\)\\s*", "<sup>0</sup> 11 \\{\\{P|Mummified Gargantuar|2}}").replace(
-        r"\\s*\\(pharaoh@ZombieTypes\\)\\s*", "<sup>0</sup> 16\\{\\{P|Pharaoh Zombie|2}}").replace(
-        r"\\s*\\(tomb_raiser@ZombieTypes\\)\\s*", "<sup>0</sup> 17 \\{\\{P|Tomb Raiser Zombie|2}}").replace(
-        r"\\s*\\(explorer_veteran@ZombieTypes\\)\\s*", "<sup>0</sup> 18 \\{\\{P|Torchlight Zombie|2}}").replace(
-        r"\\s*\\(cleopatra_zombie@ZombieTypes\\)\\s*", "<sup>0</sup> 19 \\{\\{P|Cleopatra Zombie|2}}")
 
 
 if __name__ == '__main__':
