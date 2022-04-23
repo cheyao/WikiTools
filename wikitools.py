@@ -1,6 +1,3 @@
-import subprocess
-
-process = subprocess.Popen(['pip3', 'install', 'requests'], stdout=subprocess.PIPE)
 from PIL import Image
 from os.path import exists
 import webbrowser
@@ -8,6 +5,7 @@ from sys import platform
 import re
 from tkinter import Tk
 import pyperclip
+
 
 def main():
     final_file_name = 'output.txt'
@@ -33,7 +31,11 @@ def main():
     # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
-    pyperclip.copy("your string")
+    final_string = """{{BAHTabber|Level=1-2}}
+    {{Level Infobox
+    |Name=""" + re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data).group(1)
+
+    pyperclip.copy(final_string)
 
 
 def openUrl(fin_url: str):
