@@ -18,8 +18,9 @@ def main():
     file_data = open(file_path + ".json", "r").read()
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     tmp2 = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
-    tmp3 = re.search('\"aliases\": \[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
+    tmp3 = re.search('\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
     tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
+    tmp5 = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
@@ -42,6 +43,8 @@ def main():
         gi = tmp3.group(1)
     if tmp4:
         flag_count = tmp4.group(1)
+    if tmp5:
+        wave_format = tmp5.group(1)
     before_level = level_name.split("-")
     before_level[0] = str(int(before_level[0]) - 1)
     before_level = "-".join(before_level)
@@ -49,6 +52,7 @@ def main():
     after_level[0] = str(int(after_level[0]) + 1)
     after_level = "-".join(after_level)
 
+    wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
 
     level_place = re.search("(\\d)-", level_name).group(1)
 
@@ -62,12 +66,18 @@ def main():
     sorted_list.append(sorted_list[0])
     sorted_list.pop(0)
 
+    for i in range(len(wave_format)):
+        for I in range(len(sorted_list)):
+            if I % 2 == 5:
+                print("h")
+
     # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
+    no_numb_lvl_name = re.sub("\\d+?-\\d+", "", full_level_name)
 
-    final_string = """{}BAHTabber|Level={}{}
+    final_string = """{{{{BAHTabber|Level={}}}}}
 {{Level Infobox
 |Name = {}
 |Image = {}Alpha.jpg
@@ -79,10 +89,17 @@ def main():
 |NR =
 |before = {} (Alpha)
 |after = {} (Alpha)
-{}
+}}}}
 \'\'\'{}\'\'\', also known as\'\'\'{}\'\'\'
 
-{}""".format("{{", level_name, "}}", full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, "}}", re.sub("\\d+?-\\d+", "", full_level_name), level_name, "{{clear}}")
+{{{{clear}}}}
+== Waves ==
+{{| class="article-table"
+!Waves
+!Non-dynamic zombies
+!Ambush zombies
+!Notes
+|-""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, no_numb_lvl_name, level_name)
 
     pyperclip.copy(final_string)
 
