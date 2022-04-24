@@ -59,10 +59,11 @@ def main():
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     final_string = """{{BAHTabber|Level=1-2}}
-    {{Level Infobox
-    |Name = {}
-    |Image = {}ALPHA.jpg
-    |Type """.format(level_name, file_name)
+{{Level Infobox
+|Name = {}
+|Image = {}ALPHA.jpg
+|Type = Regular
+|EM = {}""".format(level_name, file_name, gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction"))
 
     pyperclip.copy(final_string)
 
