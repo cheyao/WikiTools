@@ -8,8 +8,7 @@ from convert import convert
 
 def main():
     final_file_name = 'output.txt'
-    dir_name = int(input("""Type in level type: 1. ADVENTURE  2. ARCADE  3. CHALLENGES 4. CHECKPOINTS  5. COMMUNITY
-6. ENDLESS  7. HARDCORE  8.MINIGAMES  9. SECRET  10. SURVIVAL  11. TICKDOWN  12. TRAINING  13. WARP: """))
+    dir_name = int(input("""Type in level type: 1. ADVENTURE  2. ARCADE  3. CHALLENGES 4. CHECKPOINTS  5. COMMUNITY  6. ENDLESS  7. HARDCORE  8.MINIGAMES  9. SECRET  10. SURVIVAL  11. TICKDOWN  12. TRAINING  13. WARP: """))
     dir_name = getName(dir_name)
     print(f"You selected: {dir_name}")
 
@@ -30,7 +29,15 @@ def main():
                re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", file_data))))).split("|")
     waves.remove("")
 
-    waves = convert(waves[1::2])
+    index = 0
+    new_waves = []
+    for _ in range(len(waves)):
+        index += 1
+        if index % 2 == 0:
+            new_waves.append(re.sub("(<sup>\\d</sup>);(\\d+);({{P\\|.+?\\|2}})", "\\3;\\1|\\2|", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub("(\\d)", "<sup>\\1</sup>", str(waves[index - 1])))))[:-1].split("|"))
+        else:
+            new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
+
     if tmp:
         level_name = tmp.group(1)
         full_level_name = tmp2.group(1)
@@ -39,7 +46,7 @@ def main():
     # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
-    print(waves)
+    print(new_waves)
 
     final_string = """{{BAHTabber|Level=1-2}}
     {{Level Infobox
