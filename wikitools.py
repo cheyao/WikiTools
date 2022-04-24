@@ -11,7 +11,7 @@ def main():
     dir_name = getName(dir_name)
     print(f"You selected: {dir_name}")
 
-    file_name = input("Type in file name: ").upper()
+    file_name = input("Type in file name: ")
 
     if not exists("ALPHA/" + dir_name + "/" + file_name + ".json"):
         print("~/ALPHA/" + dir_name + "/" + file_name + ".json does not exist")
@@ -23,6 +23,7 @@ def main():
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     tmp2 = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
     tmp3 = re.search('\"aliases\": \[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
+    tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
@@ -43,6 +44,16 @@ def main():
         full_level_name = tmp2.group(1)
     if tmp3:
         gi = tmp3.group(1)
+    if tmp4:
+        flag_count = tmp4.group(1)
+    before_level = level_name.split("-")
+    before_level[0] = str(int(before_level[0]) - 1)
+    before_level = "-".join(before_level)
+    after_level = level_name.split("-")
+    after_level[0] = str(int(after_level[0]) + 1)
+    after_level = "-".join(after_level)
+
+
     level_place = re.search("(\\d)-", level_name).group(1)
 
     sorted_list = []
@@ -58,12 +69,21 @@ def main():
     # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
-    final_string = """{{BAHTabber|Level=1-2}}
+    gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
+
+    final_string = """{{BAHTabber|Level={}}}
 {{Level Infobox
 |Name = {}
 |Image = {}ALPHA.jpg
 |Type = Regular
-|EM = {}""".format(level_name, file_name, gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction"))
+|EM = {}
+|Flag = {}
+|Plant = Choise
+|FR =
+|NR =
+|before = {}(Alpha)
+|after = {}(Aplha)
+}}""".format(level_name, full_level_name, file_name, gravestone_count, flag_count, before_level, after_level)
 
     pyperclip.copy(final_string)
 
