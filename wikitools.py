@@ -7,19 +7,15 @@ from convert import convert
 
 
 def main():
-    dir_name = int(input("""Type in level type: 1. ADVENTURE  2. ARCADE  3. CHALLENGES 4. CHECKPOINTS  5. COMMUNITY  6. ENDLESS  7. HARDCORE  8.MINIGAMES  9. SECRET  10. SURVIVAL  11. TICKDOWN  12. TRAINING  13. WARP: """))
-    dir_name = getName(dir_name)
-    print(f"You selected: {dir_name}")
+    file_path = input("Type in file path (current dir is where you placed the py file, don't write \".json\"): ")
 
-    file_name = input("Type in file name: ")
-
-    if not exists("ALPHA/" + dir_name + "/" + file_name + ".json"):
-        print("~/ALPHA/" + dir_name + "/" + file_name + ".json does not exist")
+    if not exists(file_path + ".json"):
+        print("~/" + file_path + ".json does not exist")
         quit()
 
-    print(f"Transforming ~/{dir_name}/{file_name}.json")
+    print(f"Transforming ~/{file_path}.json")
 
-    file_data = open("ALPHA/" + dir_name + "/" + file_name + ".json", "r").read()
+    file_data = open(file_path + ".json", "r").read()
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     tmp2 = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
     tmp3 = re.search('\"aliases\": \[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
@@ -71,19 +67,22 @@ def main():
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
 
-    final_string = """{{BAHTabber|Level={}}}
+    final_string = """{}BAHTabber|Level={}{}
 {{Level Infobox
 |Name = {}
-|Image = {}ALPHA.jpg
+|Image = {}Alpha.jpg
 |Type = Regular
 |EM = {}
 |Flag = {}
 |Plant = Choise
 |FR =
 |NR =
-|before = {}(Alpha)
-|after = {}(Aplha)
-}}""".format(level_name, full_level_name, file_name, gravestone_count, flag_count, before_level, after_level)
+|before = {} (Alpha)
+|after = {} (Alpha)
+{}
+\'\'\'{}\'\'\', also known as\'\'\'{}\'\'\'
+
+{}""".format("{{", level_name, "}}", full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, "}}", re.sub("\\d+?-\\d+", "", full_level_name), level_name, "{{clear}}")
 
     pyperclip.copy(final_string)
 
