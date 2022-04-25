@@ -31,7 +31,7 @@ def main():
     for index in range(len(waves)):
         index += 1
         if index % 2 == 0:
-            new_waves.append(re.sub("(<sup>\\d</sup>);(\\d+);({{P\\|.+?\\|2}})", "\\3 \\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))[:-1].split("#"))
+            new_waves.append(re.sub("(<sup>\\d</sup>);(\\d+);({{P\\|.+?\\|2}})", "\\3\\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))[:-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
@@ -87,19 +87,21 @@ def main():
     final_string = ""
 
     for item in range(len(final_list)):
-        if re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1) == item:
+        print((item + 1) / int(re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1)) % 1 == 0.0)
+        if ((item + 1) / int(re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1)) % 1) == 0.0:
             tmp = "Flag"
         else:
-            tmp = "-"
+            tmp = "<br />"
 
-        if item == len(final_list):
+        if item == len(final_list) - 1:
             tmp2 = ""
         else:
             tmp2 = "-"
+
         final_string += f'|{item + 1}\n|'
         for i in range(len(final_list[item])):
-            final_string += f'{final_list[item][i]}'
-        final_string += '|None\n'
+            final_string += f'{final_list[item][i][0]} '
+        final_string += '\n|None\n'
         final_string += f'|{tmp}\n'
         final_string += f'|{tmp2}\n'
 
@@ -133,7 +135,10 @@ def main():
 !Ambush zombies
 !Notes
 |-
-{}""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, no_numb_lvl_name, level_name, final_string)
+{}}}
+
+==Gallery==
+<br />{{LevelsA}}""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, no_numb_lvl_name, level_name, final_string)
 
     pyperclip.copy(final_string)
 
