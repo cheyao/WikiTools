@@ -46,10 +46,10 @@ def main():
     if tmp5:
         wave_format = tmp5.group(1)
     before_level = level_name.split("-")
-    before_level[0] = str(int(before_level[0]) - 1)
+    before_level[1] = str(int(before_level[1]) - 1)
     before_level = "-".join(before_level)
     after_level = level_name.split("-")
-    after_level[0] = str(int(after_level[0]) + 1)
+    after_level[1] = str(int(after_level[1]) + 1)
     after_level = "-".join(after_level)
 
     wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
@@ -66,11 +66,6 @@ def main():
     sorted_list.append(sorted_list[0])
     sorted_list.pop(0)
 
-    print(sorted_list)
-    print(wave_format)
-
-    print(len(wave_format))
-    print(len(sorted_list))
     final_list = []
     for i in range(len(wave_format)):
         #if i != 0:
@@ -81,13 +76,10 @@ def main():
 
     final_list.append(final_list[0])
     final_list.pop(0)
-    print(final_list[0])
-    print(final_list[0][::1][::2])
 
     final_string = ""
 
     for item in range(len(final_list)):
-        print((item + 1) / int(re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1)) % 1 == 0.0)
         if ((item + 1) / int(re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1)) % 1) == 0.0:
             tmp = "Flag"
         else:
@@ -105,12 +97,11 @@ def main():
         final_string += f'|{tmp}\n'
         final_string += f'|{tmp2}\n'
 
-    print(final_string)
     # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
-    no_numb_lvl_name = re.sub("\\d+?-\\d+", "", full_level_name)
+    no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
 
     final_string = """{{{{BAHTabber|Level={}}}}}
 {{{{Level Infobox
@@ -119,13 +110,13 @@ def main():
 |Type = Regular
 |EM = {}
 |Flag = {}
-|Plant = Choise
+|Plant = Choice
 |FR =
 |NR =
 |before = {} (Alpha)
 |after = {} (Alpha)
 }}}}
-\'\'\'{}\'\'\', also known as\'\'\'{}\'\'\'
+\'\'\'{}\'\'\', also known as \'\'\'{}\'\'\'
 
 {{{{clear}}}}
 == Waves ==
@@ -138,7 +129,8 @@ def main():
 {}}}
 
 ==Gallery==
-<br />{{LevelsA}}""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, no_numb_lvl_name, level_name, final_string)
+<br />{{LevelsA}}
+""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, no_numb_lvl_name, level_name, final_string)
 
     pyperclip.copy(final_string)
 
