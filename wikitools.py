@@ -21,7 +21,6 @@ def main():
     tmp3 = re.search('\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
     tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
     tmp5 = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
-    tmp6 = re.search('\"WavesPerFlag\": (\d+)\\n', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
@@ -46,8 +45,6 @@ def main():
         flag_count = tmp4.group(1)
     if tmp5:
         wave_format = tmp5.group(1)
-    if tmp6:
-        waves_per_flag = tmp6.group(1)
     before_level = level_name.split("-")
     before_level[0] = str(int(before_level[0]) - 1)
     before_level = "-".join(before_level)
@@ -69,35 +66,44 @@ def main():
     sorted_list.append(sorted_list[0])
     sorted_list.pop(0)
 
+    print(sorted_list)
+    print(wave_format)
+
+    print(len(wave_format))
+    print(len(sorted_list))
     final_list = []
     for i in range(len(wave_format)):
-        if 1 % 2 == 1:
-            for o in range(len(sorted_list)):
-                if o % 2 == 1:
-                    if int(wave_format[i - 1]) == int(sorted_list[o - 1]):
-                        final_list.append(sorted_list[o])
+        #if i != 0:
+        for o in range(len(sorted_list)):
+            if o % 2 == 1:
+                if int(wave_format[i - 1]) == int(sorted_list[o - 1]):
+                    final_list.append(sorted_list[o])
 
-    my = "".join(final_list[0][0])
+    final_list.append(final_list[0])
+    final_list.pop(0)
+    print(final_list[0])
+    print(final_list[0][::1][::2])
 
     final_string = ""
 
-    for item in range(len(final_list[0])):
-
-        if item == waves_per_flag:
+    for item in range(len(final_list)):
+        if re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1) == item:
             tmp = "Flag"
         else:
             tmp = "-"
 
-        if item == len(final_list[0]):
+        if item == len(final_list):
             tmp2 = ""
         else:
             tmp2 = "-"
-        final_string += f'|{item}\n'
-        final_string += '|' + "".join(final_list[0][item - 1][::2]) + "\n"
+        final_string += f'|{item + 1}\n|'
+        for i in range(len(final_list[item])):
+            final_string += f'{final_list[item][i]}'
         final_string += '|None\n'
         final_string += f'|{tmp}\n'
-        final_string += f'|{tmp2}'
+        final_string += f'|{tmp2}\n'
 
+    print(final_string)
     # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
     print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
@@ -105,9 +111,9 @@ def main():
     no_numb_lvl_name = re.sub("\\d+?-\\d+", "", full_level_name)
 
     final_string = """{{{{BAHTabber|Level={}}}}}
-{{Level Infobox
-|Name = {}
-|Image = {}Alpha.jpg
+{{{{Level Infobox
+|name = {}
+|image = {}Alpha.jpg
 |Type = Regular
 |EM = {}
 |Flag = {}
