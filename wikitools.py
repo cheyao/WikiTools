@@ -35,6 +35,22 @@ def main():
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
+    print(new_waves)
+
+    tmp_list = []
+    for index in range(len(new_waves)):
+        if index % 2 == 0:
+            for ind in range(len(new_waves[index - 1])):
+                if ind % 2 == 1:
+                    tmp_list.append(new_waves[index - 1][ind - 1])
+
+    for i in range(len(tmp_list)):
+        tmp_list[i - 1] = re.sub('<sup>\\d</sup>', "", tmp_list[i - 1])
+
+    zmb_set = set(tmp_list)
+
+    print(tmp_list)
+
     if tmp:
         level_name = tmp.group(1)
     if tmp2:
@@ -86,19 +102,24 @@ def main():
             tmp = "<br />"
 
         if item == len(final_list) - 1:
-            tmp2 = ""
+            tmp2 = "}"
         else:
             tmp2 = "-"
 
         final_string += f'|{item + 1}\n|'
         for i in range(len(final_list[item])):
             final_string += f'{final_list[item][i][0]} '
+        if ((item + 1) / int(re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1)) % 1) == 0.0:
+            final_string += '{{P|Flag Zombie|2}}'
         final_string += '\n|None\n'
         final_string += f'|{tmp}\n'
         final_string += f'|{tmp2}\n'
 
-    # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
-    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # For dist use:
+    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+
+    # For debug use:
+    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
@@ -111,6 +132,7 @@ def main():
 |EM = {}
 |Flag = {}
 |Plant = Choice
+|Zombie = {}
 |FR =
 |NR =
 |before = {} (Alpha)
@@ -126,11 +148,11 @@ def main():
 !Ambush zombies
 !Notes
 |-
-{}}}
+{}
 
 ==Gallery==
 <br />{{LevelsA}}
-""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, before_level, after_level, no_numb_lvl_name, level_name, final_string)
+""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, ' '.join(zmb_set) + ' {{P|Flag Zombie|2}}', before_level, after_level, no_numb_lvl_name, level_name, final_string)
 
     pyperclip.copy(final_string)
 
