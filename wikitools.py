@@ -7,7 +7,7 @@ from convert import convert
 
 
 def main():
-    file_path = input("Type in file path (current dir is where you placed the py file, don't write \".json\"): ")
+    file_path = input("Type in file path, the current dir is where you placed the py file, and don't write \".json\": ")
 
     if not exists(file_path + ".json"):
         print("~/" + file_path + ".json does not exist")
@@ -35,8 +35,6 @@ def main():
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
-    print(new_waves)
-
     tmp_list = []
     for index in range(len(new_waves)):
         if index % 2 == 0:
@@ -48,8 +46,6 @@ def main():
         tmp_list[i - 1] = re.sub('<sup>\\d</sup>', "", tmp_list[i - 1])
 
     zmb_set = set(tmp_list)
-
-    print(tmp_list)
 
     if tmp:
         level_name = tmp.group(1)
