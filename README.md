@@ -1,4 +1,4 @@
-# WikiTools
+# WikiTools ![license](https://img.shields.io/github/license/cheyao/WikiTools?style=flat&logo=apache) ![size](https://img.shields.io/github/languages/code-size/cheyao/WikiTools)
 
 The tool for PVZ Wiki.
 
