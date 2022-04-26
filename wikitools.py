@@ -90,7 +90,6 @@ def main():
 
     final_list = []
     for i in range(len(wave_format)):
-        #if i != 0:
         for o in range(len(sorted_list)):
             if o % 2 == 1:
                 if int(wave_format[i - 1]) == int(sorted_list[o - 1]):
@@ -122,10 +121,10 @@ def main():
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
-    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
