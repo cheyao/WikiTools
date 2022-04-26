@@ -120,6 +120,7 @@ def main():
         final_string += f'|{tmp}\n'
         final_string += f'|{tmp2}\n'
 
+    
     # For dist use:
     openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
