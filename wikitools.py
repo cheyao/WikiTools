@@ -35,7 +35,7 @@ def main():
     for index in range(len(waves)):
         index += 1
         if index % 2 == 0:
-            new_waves.append(re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1]))))))[:-1].split("#"))
+            new_waves.append(re.sub('|AdditionalPlantfood\\d', '', re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[:-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
