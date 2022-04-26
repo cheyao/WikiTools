@@ -7,6 +7,8 @@ The tool for PVZ Wiki.
 - All waves
 - Minimal work
 
+### DO NOT USE IT ON JURASSIC ATM, FIX IS IN PROGRESS
+
 ## Installation
 1. Install [Python](https://www.python.org/downloads/), for Windows tick the "add python to path" option. (and install PIP if you are downloading with custom options)
 2. Download [WikiTools.py](https://github.com/cheyao/WikiTools/archive/refs/heads/master.zip) and unzip it

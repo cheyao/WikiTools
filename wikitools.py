@@ -14,6 +14,8 @@ def main():
         quit()
 
     print(f"Transforming ~/{file_path}.json")
+    print("""['Wave1', '<sup>4</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave2', '<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}', 'Wave3', '<sup>4</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave4', '<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave5', '<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>2</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave6', '<sup>3</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>5</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}', 'Wave7', '<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>4</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}', 'Wave8', '<sup>1</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>2</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave9', '<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>4</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>5</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}', 'Wave10', '<sup>3</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>4</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave11', '<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>4</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>2</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}', 'Wave12', '<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>3</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>4</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>5</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>1</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>2</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}']
+['1', ['{{P|Mummy Zombie|2}}<sup>4</sup>', '7'], '2', ['{{P|Ra Zombie|2}}<sup>2</sup>', '13'], '3', ['{{P|Mummy Zombie|2}}<sup>4</sup>', '7', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7'], '4', ['{{P|Ra Zombie|2}}<sup>2</sup>', '13', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7'], '5', ['{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Mummy Zombie|2}}<sup>2</sup>', '7'], '6', ['{{P|Conehead Mummy|2}}<sup>3</sup>', '8', '{{P|Conehead Mummy|2}}<sup>5</sup>', '8'], '7', ['{{P|Ra Zombie|2}}<sup>1</sup>', '13', '{{P|Ra Zombie|2}}<sup>3</sup>', '13', '{{P|Conehead Mummy|2}}<sup>4</sup>', '8', '{{P|Ra Zombie|2}}<sup>1</sup>', '13'], '8', ['{{P|Mummy Zombie|2}}<sup>1</sup>', '7', '{{P|Buckethead Mummy|2}}<sup>2</sup>', '9', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7'], '9', ['{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Conehead Mummy|2}}<sup>4</sup>', '8', '{{P|Buckethead Mummy|2}}<sup>5</sup>', '9', '{{P|Ra Zombie|2}}<sup>1</sup>', '13'], '10', ['{{P|Buckethead Mummy|2}}<sup>3</sup>', '9', '{{P|Buckethead Mummy|2}}<sup>4</sup>', '9', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7'], '11', ['{{P|Ra Zombie|2}}<sup>1</sup>', '13', '{{P|Ra Zombie|2}}<sup>2</sup>', '13', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Ra Zombie|2}}<sup>4</sup>', '13', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7', '{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Mummy Zombie|2}}<sup>2</sup>', '7', '{{P|Conehead Mummy|2}}<sup>5</sup>', '8'], '12', ['{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Conehead Mummy|2}}<sup>3</sup>', '8', '{{P|Buckethead Mummy|2}}<sup>4</sup>', '9', '{{P|Conehead Mummy|2}}<sup>5</sup>', '8', '{{P|Buckethead Mummy|2}}<sup>1</sup>', '9', '{{P|Conehead Mummy|2}}<sup>2</sup>', '8', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Buckethead Mummy|2}}<sup>5</sup>', '9', '{{P|Ra Zombie|2}}<sup>2</sup>', '13', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Ra Zombie|2}}<sup>2</sup>', '13']]""")
 
     file_data = open(file_path + ".json", "r").read()
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
@@ -21,17 +23,19 @@ def main():
     tmp3 = re.search('\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
     tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
     tmp5 = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
+    tmp6 = re.sub('', '', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
-        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row", "",
+        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", file_data))))).split("|")
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", tmp6))))).split("|")
     waves.remove("")
+    print(convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves)))))
 
     new_waves = []
     for index in range(len(waves)):
         index += 1
         if index % 2 == 0:
-            new_waves.append(re.sub("(<sup>\\d</sup>);(\\d+);({{P\\|.+?\\|2}})", "\\3\\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))[:-1].split("#"))
+            new_waves.append(re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1]))))))[:-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
@@ -68,10 +72,16 @@ def main():
 
     level_place = re.search("(\\d)-", level_name).group(1)
 
+    print(new_waves)
+
     sorted_list = []
     for index in range(len(new_waves)):
         if index % 2 == 0:
-            sorted_list.append(sorted([new_waves[index - 1][i:i+2] for i in range(0, len(new_waves[index - 1]), 2)], key=lambda x: x[1]))
+            sorted_list.append(sorted([new_waves[index - 1][i:i+2]
+                                       for i in range(0,
+                                                      len(new_waves[index - 1]),
+                                                      2)],
+                                      key=lambda x: x[1]))
         else:
             sorted_list.append(new_waves[index - 1])
 
@@ -112,10 +122,10 @@ def main():
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
-    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
