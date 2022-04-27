@@ -26,7 +26,6 @@ def main():
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
                re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", tmp6))))).split("|")
     waves.remove("")
-    print(convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves)))))
 
     if tmp:
         level_name = tmp.group(1)
