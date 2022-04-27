@@ -15,28 +15,29 @@ def main():
     print(f"Transforming ~/{file_path}.json")
 
     file_data = open(file_path + ".json", "r").read()
-    tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
-    tmp2 = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
-    tmp3 = re.search('\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
-    tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
-    tmp5 = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
-    tmp6 = re.sub('', '', file_data)
+    level_name_tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
+    full_level_name_tmp = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
+    gi_tmp = re.search('\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
+    flag_count_tmp = re.search('\"FlagCount\": (\\d+?),', file_data)
+    wave_format_tmp = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
+    waves_unformated = re.sub('', '', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", tmp6))))).split("|")
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", waves_unformated))))).split("|")
     waves.remove("")
 
-    if tmp:
-        level_name = tmp.group(1)
-    if tmp2:
-        full_level_name = tmp2.group(1)
-    if tmp3:
-        gi = tmp3.group(1)
-    if tmp4:
-        flag_count = tmp4.group(1)
-    if tmp5:
-        wave_format = tmp5.group(1)
+    if level_name_tmp:
+        level_name = level_name_tmp.group(1)
+    if full_level_name_tmp:
+        full_level_name = full_level_name_tmp.group(1)
+    if gi_tmp:
+        gi = gi_tmp.group(1)
+    if flag_count_tmp:
+        flag_count = flag_count_tmp.group(1)
+    if wave_format_tmp:
+        wave_format = wave_format_tmp.group(1)
+
     before_level = level_name.split("-")
     before_level[1] = str(int(before_level[1]) - 1)
     before_level = "-".join(before_level)
