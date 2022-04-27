@@ -17,7 +17,9 @@ def main():
     file_data = open(file_path + ".json", "r").read()
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     tmp2 = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
-    tmp3 = re.search('\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
+    tmp3 = re.search(
+        '\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]',
+        file_data)
     tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
     tmp5 = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
     tmp6 = re.sub('', '', file_data)
@@ -48,7 +50,12 @@ def main():
     for index in range(len(waves)):
         index += 1
         if index % 2 == 0:
-            new_waves.append(re.sub('|AdditionalPlantfood\\d', '', re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[:-1].split("#"))
+            new_waves.append(re.sub('|AdditionalPlantfood\\d', '',
+                                    re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#",
+                                           re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(
+                                               re.sub('\"AdditionalPlantfood\": 1,', '',
+                                                      re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[
+                             :-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
@@ -69,7 +76,7 @@ def main():
     sorted_list = []
     for index in range(len(new_waves)):
         if index % 2 == 0:
-            sorted_list.append(sorted([new_waves[index - 1][i:i+2]
+            sorted_list.append(sorted([new_waves[index - 1][i:i + 2]
                                        for i in range(0,
                                                       len(new_waves[index - 1]),
                                                       2)],
@@ -111,12 +118,11 @@ def main():
         final_string += f'|{tmp}\n'
         final_string += f'|{tmp2}\n'
 
-    
     # For dist use:
-    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}?action=edit')
 
     # For debug use:
-    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
@@ -124,7 +130,7 @@ def main():
     final_string = """{{{{BAHTabber|Level={}}}}}
 {{{{Level Infobox
 |name = {}
-|image = {}Alpha.jpg
+|image = {}.jpg
 |Type = Regular
 |EM = {}
 |Flag = {}
@@ -132,8 +138,8 @@ def main():
 |Zombie = {}
 |FR =
 |NR =
-|before = {} (Alpha)
-|after = {} (Alpha)
+|before = {}
+|after = {}
 }}}}
 \'\'\'{}\'\'\', also known as \'\'\'{}\'\'\'
 
@@ -148,8 +154,10 @@ def main():
 {}
 
 ==Gallery==
-<br />{{LevelsA}}
-""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, ' '.join(zmb_set) + ' {{P|Flag Zombie|2}}', before_level, after_level, no_numb_lvl_name, level_name, final_string)
+<br />{{Levels}}
+""".format(level_name, full_level_name, level_name, gravestone_count, flag_count,
+           ' '.join(zmb_set) + ' {{P|Flag Zombie|2}}', before_level, after_level, no_numb_lvl_name, level_name,
+           final_string)
 
     pyperclip.copy(final_string)
 
@@ -162,38 +170,6 @@ def openUrl(fin_url: str):
     elif platform == "win32":
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
     webbrowser.get(chrome_path).open(fin_url)
-
-
-def getName(input_int: int):
-    if input_int == 1:
-        return "ADVENTURE"
-    elif input_int == 2:
-        return "ARCADE"
-    elif input_int == 3:
-        return "CHALLENGES"
-    elif input_int == 4:
-        return "CHECKPOINTS"
-    elif input_int == 5:
-        return "COMMUNITY"
-    elif input_int == 6:
-        return "ENDLESS"
-    elif input_int == 7:
-        return "HARDCORE"
-    elif input_int == 8:
-        return "MINIGAMES"
-    elif input_int == 9:
-        return "SECRET"
-    elif input_int == 10:
-        return "SURVIVAL"
-    elif input_int == 11:
-        return "TICKDOWN"
-    elif input_int == 12:
-        return "TRAINING"
-    elif input_int == 13:
-        return "WARP"
-    else:
-        print("Invalid input")
-        quit()
 
 
 if __name__ == '__main__':
