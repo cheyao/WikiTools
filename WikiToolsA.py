@@ -2,8 +2,8 @@ from os.path import exists
 import webbrowser
 from sys import platform
 import re
-import pyperclip
 from convert import convert
+import functions as f
 
 
 def main():
@@ -152,8 +152,7 @@ def main():
 <br />{{LevelsA}}
 """.format(level_name, full_level_name, level_name, gravestone_count, flag_count, ' '.join(zmb_set) + ' {{P|Flag Zombie|2}}', before_level, after_level, no_numb_lvl_name, level_name, final_string)
 
-    pyperclip.copy(final_string)
-
+    f.final_click(final_string)
 
 def openUrl(fin_url: str):
     if platform == "linux" or platform == "linux2":
