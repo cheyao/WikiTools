@@ -22,3 +22,8 @@ DM me on discord (cyao1234#2488) and I'll compile with it
 
 ## Bug report
 Open an Issue on GitHub or DM me on Discord (cyao1234#2488)
+
+## Contributing
+Feel free to contribute, open a branch on GitHub and send a pull request.
+
+[![Stars](https://starchart.cc/caarlos0/starcharts.svg)](https://starchart.cc/caarlos0/starcharts)
