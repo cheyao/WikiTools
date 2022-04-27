@@ -1,4 +1,4 @@
-# WikiTools ![license](https://img.shields.io/github/license/cheyao/WikiTools?style=flat&logo=apache) ![size](https://img.shields.io/github/languages/code-size/cheyao/WikiTools)
+# WikiTools ![license](https://img.shields.io/github/license/cheyao/WikiTools?style=flat&logo=apache) ![size](https://img.shields.io/github/languages/code-size/cheyao/WikiTools) ![](https://img.shields.io/tokei/lines/github/cheyao/wikitools)
 
 The tool for PVZ Wiki.
 
@@ -26,4 +26,5 @@ Open an Issue on GitHub or DM me on Discord (cyao1234#2488)
 ## Contributing
 Feel free to contribute, open a branch on GitHub and send a pull request.
 
-[![Stars](https://starchart.cc/caarlos0/starcharts.svg)](https://starchart.cc/caarlos0/starcharts)
+# Stars
+[![Stars](https://starchart.cc/cheyao/WikiTools.svg)](https://starchart.cc/cheyao/WikiTools)
