@@ -2,7 +2,7 @@
 
 The tool for PVZ Wiki.
 
-- Makes most of description
+- Makes most of the description
 - All waves
 - Minimal work
 
