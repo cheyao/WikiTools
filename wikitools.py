@@ -8,14 +8,11 @@ from convert import convert
 
 def main():
     file_path = input("Type in file path, the current dir is where you placed the py file, and don't write \".json\": ")
-
     if not exists(file_path + ".json"):
         print("~/" + file_path + ".json does not exist")
         quit()
 
     print(f"Transforming ~/{file_path}.json")
-    print("""['Wave1', '<sup>4</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave2', '<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}', 'Wave3', '<sup>4</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave4', '<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave5', '<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>2</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave6', '<sup>3</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>5</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}', 'Wave7', '<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>4</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}', 'Wave8', '<sup>1</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>2</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave9', '<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>4</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>5</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}', 'Wave10', '<sup>3</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>4</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}', 'Wave11', '<sup>1</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>4</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>5</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>2</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}', 'Wave12', '<sup>1</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>3</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>4</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>5</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>1</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>2</sup>;<sup>0</sup>;8;{{P|Conehead Mummy|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>5</sup>;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}<sup>3</sup>;<sup>0</sup>;7;{{P|Mummy Zombie|2}}<sup>2</sup>;<sup>0</sup>;13;{{P|Ra Zombie|2}}']
-['1', ['{{P|Mummy Zombie|2}}<sup>4</sup>', '7'], '2', ['{{P|Ra Zombie|2}}<sup>2</sup>', '13'], '3', ['{{P|Mummy Zombie|2}}<sup>4</sup>', '7', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7'], '4', ['{{P|Ra Zombie|2}}<sup>2</sup>', '13', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7'], '5', ['{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Mummy Zombie|2}}<sup>2</sup>', '7'], '6', ['{{P|Conehead Mummy|2}}<sup>3</sup>', '8', '{{P|Conehead Mummy|2}}<sup>5</sup>', '8'], '7', ['{{P|Ra Zombie|2}}<sup>1</sup>', '13', '{{P|Ra Zombie|2}}<sup>3</sup>', '13', '{{P|Conehead Mummy|2}}<sup>4</sup>', '8', '{{P|Ra Zombie|2}}<sup>1</sup>', '13'], '8', ['{{P|Mummy Zombie|2}}<sup>1</sup>', '7', '{{P|Buckethead Mummy|2}}<sup>2</sup>', '9', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7'], '9', ['{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Conehead Mummy|2}}<sup>4</sup>', '8', '{{P|Buckethead Mummy|2}}<sup>5</sup>', '9', '{{P|Ra Zombie|2}}<sup>1</sup>', '13'], '10', ['{{P|Buckethead Mummy|2}}<sup>3</sup>', '9', '{{P|Buckethead Mummy|2}}<sup>4</sup>', '9', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7'], '11', ['{{P|Ra Zombie|2}}<sup>1</sup>', '13', '{{P|Ra Zombie|2}}<sup>2</sup>', '13', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Ra Zombie|2}}<sup>4</sup>', '13', '{{P|Mummy Zombie|2}}<sup>5</sup>', '7', '{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Mummy Zombie|2}}<sup>2</sup>', '7', '{{P|Conehead Mummy|2}}<sup>5</sup>', '8'], '12', ['{{P|Conehead Mummy|2}}<sup>1</sup>', '8', '{{P|Conehead Mummy|2}}<sup>3</sup>', '8', '{{P|Buckethead Mummy|2}}<sup>4</sup>', '9', '{{P|Conehead Mummy|2}}<sup>5</sup>', '8', '{{P|Buckethead Mummy|2}}<sup>1</sup>', '9', '{{P|Conehead Mummy|2}}<sup>2</sup>', '8', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Buckethead Mummy|2}}<sup>5</sup>', '9', '{{P|Ra Zombie|2}}<sup>2</sup>', '13', '{{P|Mummy Zombie|2}}<sup>3</sup>', '7', '{{P|Ra Zombie|2}}<sup>2</sup>', '13']]""")
 
     file_data = open(file_path + ".json", "r").read()
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
@@ -30,6 +27,23 @@ def main():
                re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", tmp6))))).split("|")
     waves.remove("")
     print(convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves)))))
+
+    if tmp:
+        level_name = tmp.group(1)
+    if tmp2:
+        full_level_name = tmp2.group(1)
+    if tmp3:
+        gi = tmp3.group(1)
+    if tmp4:
+        flag_count = tmp4.group(1)
+    if tmp5:
+        wave_format = tmp5.group(1)
+    before_level = level_name.split("-")
+    before_level[1] = str(int(before_level[1]) - 1)
+    before_level = "-".join(before_level)
+    after_level = level_name.split("-")
+    after_level[1] = str(int(after_level[1]) + 1)
+    after_level = "-".join(after_level)
 
     new_waves = []
     for index in range(len(waves)):
@@ -51,28 +65,7 @@ def main():
 
     zmb_set = set(tmp_list)
 
-    if tmp:
-        level_name = tmp.group(1)
-    if tmp2:
-        full_level_name = tmp2.group(1)
-    if tmp3:
-        gi = tmp3.group(1)
-    if tmp4:
-        flag_count = tmp4.group(1)
-    if tmp5:
-        wave_format = tmp5.group(1)
-    before_level = level_name.split("-")
-    before_level[1] = str(int(before_level[1]) - 1)
-    before_level = "-".join(before_level)
-    after_level = level_name.split("-")
-    after_level[1] = str(int(after_level[1]) + 1)
-    after_level = "-".join(after_level)
-
     wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
-
-    level_place = re.search("(\\d)-", level_name).group(1)
-
-    print(new_waves)
 
     sorted_list = []
     for index in range(len(new_waves)):
@@ -99,7 +92,6 @@ def main():
     final_list.pop(0)
 
     final_string = ""
-
     for item in range(len(final_list)):
         if ((item + 1) / int(re.search('\"WavesPerFlag\": (\\d+),\\n', file_data).group(1)) % 1) == 0.0:
             tmp = "Flag"
