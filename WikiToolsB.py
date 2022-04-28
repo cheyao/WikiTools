@@ -73,15 +73,8 @@ def main():
 
     wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
 
-    sorted_list = []
-    for index in range(len(new_waves)):
-        if index % 2 == 0:
-            sorted_list.append(sorted([new_waves[index - 1][i:i + 2]for i in range(0, len(new_waves[index - 1]), 2)], key=lambda x: x[1]))
-        else:
-            sorted_list.append(new_waves[index - 1])
-
-    sorted_list.append(sorted_list[0])
-    sorted_list.pop(0)
+    # Sorts the zombies
+    sorted_list = f.sort_zombies(new_waves)
 
     final_list = []
     for i in range(len(wave_format)):
