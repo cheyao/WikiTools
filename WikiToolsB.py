@@ -39,6 +39,7 @@ def main():
         flag_count = tmp4.group(1)
     if tmp5:
         wave_format = tmp5.group(1)
+
     before_level = level_name.split("-")
     before_level[1] = str(int(before_level[1]) - 1)
     before_level = "-".join(before_level)
@@ -54,8 +55,7 @@ def main():
                                     re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#",
                                            re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(
                                                re.sub('\"AdditionalPlantfood\": 1,', '',
-                                                      re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[
-                             :-1].split("#"))
+                                                      re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[:-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
@@ -76,11 +76,7 @@ def main():
     sorted_list = []
     for index in range(len(new_waves)):
         if index % 2 == 0:
-            sorted_list.append(sorted([new_waves[index - 1][i:i + 2]
-                                       for i in range(0,
-                                                      len(new_waves[index - 1]),
-                                                      2)],
-                                      key=lambda x: x[1]))
+            sorted_list.append(sorted([new_waves[index - 1][i:i + 2]for i in range(0, len(new_waves[index - 1]), 2)], key=lambda x: x[1]))
         else:
             sorted_list.append(new_waves[index - 1])
 
@@ -103,7 +99,6 @@ def main():
             tmp = "Flag"
         else:
             tmp = "<br />"
-
         if item == len(final_list) - 1:
             tmp2 = "}"
         else:
