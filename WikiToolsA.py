@@ -25,7 +25,7 @@ def main():
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", file_data))))).split("|")
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"\\n\\t\\t\\t\\t\\t} ]),*\n', file_data).group(1)))))).split("|")
     waves.remove("")
 
     if level_name_tmp:
@@ -64,9 +64,9 @@ def main():
     for i in range(len(tmp_list)):
         tmp_list[i - 1] = re.sub('<sup>\\d</sup>', "", tmp_list[i - 1])
 
-    zmb_set = set(new_waves)
+    zmb_set = set(tmp_list)
     wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
-
+    print(new_waves)
     # Sorts the zombies
     sorted_list = f.sort_zombies(new_waves)
 

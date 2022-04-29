@@ -89,6 +89,7 @@
 \(dino_gargantuar\): ;<sup>0</sup>;101;{{P|Jurassic Gargantuar|2}}
 \(dino_imp\): ;<sup>0</sup>;102;{{P|Jurassic Imp|2}}
 \(dino_bully\)|\(dino_bully_veteran\): ;<sup>0</sup>;103;{{P|Jurassic Bully|2}}
+\(rascal_imp\): ;<sup>0</sup>;104;{{P|Rapscallion Imp|2}}
 \(modern_superfanimp\): ;<sup>0</sup>;104;{{P|Flint imp|2}}
 \(raptor\): ;<sup>0</sup>;104.5;{{P|Raptor|2}}
 \(stego\): ;<sup>0</sup>;104.5;{{P|Stegosaurus|2}}

@@ -42,3 +42,4 @@ def tmp_list(new_waves: list):
             for ind in range(len(new_waves[index - 1])):
                 if ind % 2 == 1:
                     tmp_list.append(new_waves[index - 1][ind - 1])
+    return tmp_list
