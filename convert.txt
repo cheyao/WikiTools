@@ -1,13 +1,25 @@
 \(tutorial\): ;<sup>0</sup>;1;{{P|Basic Zombie|2}}
 \(tutorial_armor1\): ;<sup>0</sup>;2;{{P|Conehead Zombie|2}}
 \(tutorial_armor2\): ;<sup>0</sup>;3;{{P|Buckethead Zombie|2}}
-\\(tutorial_armor4\\): ;<sup>0</sup>;4;{{P|Brickhead Zombie|2}}
-\\(tutorial_gargantuar\\): ;<sup>0</sup>;5;{{P|Gargantuar|2}}
-\\(tutorial_imp\\): ;<sup>0</sup>;6;{{P|Imp|2}}
+\(tutorial_armor4\): ;<sup>0</sup>;4;{{P|Brickhead Zombie|2}}
+\(tutorial_gargantuar\): ;<sup>0</sup>;5;{{P|Gargantuar|2}}
+\(tutorial_imp\): ;<sup>0</sup>;6;{{P|Imp|2}}
+\(mummy\): ;<sup>0</sup>;7;{{P|Mummy Zombie|2}}
+\(mummy_armor1\): ;<sup>0</sup>;8;{{P|Conehead Mummy|2}}
+\(mummy_armor2\): ;<sup>0</sup>;9;{{P|Buckethead Mummy|2}}
+\(mummy_armor4\): ;<sup>0</sup>;10;{{P|Pyramid-Head Zombie|2}}
+\(egypt_gargantuar\): ;<sup>0</sup>;11;{{P|Mummified Gargantuar|2}}
+\(egypt_imp\): ;<sup>0</sup>;12;{{P|Imp Mummy|2}}
 \(ra\): ;<sup>0</sup>;13;{{P|Ra Zombie|2}}
-\\(modern_balloon\\): ;<sup>0</sup>;95;{{P|Balloon Zombie|2}}
-\\(tutorial_balloon\\): ;<sup>0</sup>;95;{{P|Balloon Zombie|2}}
-\\(modern_newspaper\\): ;<sup>0</sup>;131;{{P|Newspaper Zombie|2}}
-\\(newspaper_veteran\\): ;<sup>0</sup>;131;{{P|Newspaper Zombie|2}}
-\\(mega_gargantuar\\)|\\(gargantuar_mega\\): ;<sup>0</sup>;132;{{P|Mega Gargantuar|2}}
-\\(conehead_imp\\): ;<sup>0</sup>;133;{{P|Conehead Imp|2}}
+\(camel_onehump\): ;<sup>0</sup>;14;{{P|Camel Zombies|2}}
+\(explorer\): ;<sup>0</sup>;15;{{P|Explorer Zombie|2}}
+\(pharaoh\): ;<sup>0</sup>;16;{{P|Pharaoh Zombie|2}}
+\(tomb_raiser\): ;<sup>0</sup>;17;{{P|Tomb Raiser Zombie|2}}
+\(explorer_veteran\): ;<sup>0</sup>;18;{{P|Torchlight Zombie|2}}
+\(cleopatra_zombie\): ;<sup>0</sup>;19;{{P|Cleopatra Zombie|2}}
+\(modern_balloon\): ;<sup>0</sup>;95;{{P|Balloon Zombie|2}}
+\(tutorial_balloon\): ;<sup>0</sup>;95;{{P|Balloon Zombie|2}}
+\(modern_newspaper\): ;<sup>0</sup>;131;{{P|Newspaper Zombie|2}}
+\(newspaper_veteran\): ;<sup>0</sup>;131;{{P|Newspaper Zombie|2}}
+\(mega_gargantuar\)|\(gargantuar_mega\): ;<sup>0</sup>;132;{{P|Mega Gargantuar|2}}
+\(conehead_imp\): ;<sup>0</sup>;133;{{P|Conehead Imp|2}}
