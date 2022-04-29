@@ -17,7 +17,9 @@ def main():
     file_data = open(file_path + ".json", "r").read()
     level_name_tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     full_level_name_tmp = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
-    gi_tmp = re.search('\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]', file_data)
+    gi_tmp = re.search(
+        '\"aliases\": \\[ \"GI\" ],\\n			\"objclass\": \"InitialGridItemProperties\",\\n			\"objdata\": {([.\\n\\t\\s\\S]+?)} ]',
+        file_data)
     flag_count_tmp = re.search('\"FlagCount\": (\\d+?),', file_data)
     wave_format_tmp = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
     waves_unformated = re.sub('', '', file_data)
@@ -49,7 +51,12 @@ def main():
     for index in range(len(waves)):
         index += 1
         if index % 2 == 0:
-            new_waves.append(re.sub('|AdditionalPlantfood\\d', '', re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#", re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(re.sub('\"AdditionalPlantfood\": 1,', '', re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[:-1].split("#"))
+            new_waves.append(re.sub('|AdditionalPlantfood\\d', '',
+                                    re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#",
+                                           re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(
+                                               re.sub('\"AdditionalPlantfood\": 1,', '',
+                                                      re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[
+                             :-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
@@ -101,12 +108,11 @@ def main():
         final_string += f'|{tmp}\n'
         final_string += f'|{tmp2}\n'
 
-    
     # For dist use:
-    # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
-    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
@@ -139,9 +145,12 @@ def main():
 
 ==Gallery==
 <br />{{LevelsA}}
-""".format(level_name, full_level_name, level_name, gravestone_count, flag_count, ' '.join(zmb_set) + ' {{P|Flag Zombie|2}}', before_level, after_level, no_numb_lvl_name, level_name, final_string)
+""".format(level_name, full_level_name, level_name, gravestone_count, flag_count,
+           ' '.join(zmb_set) + ' {{P|Flag Zombie|2}}', before_level, after_level, no_numb_lvl_name, level_name,
+           final_string)
 
     f.final_click(final_string)
+
 
 def openUrl(fin_url: str):
     if platform == "linux" or platform == "linux2":
