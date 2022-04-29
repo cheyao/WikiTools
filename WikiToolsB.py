@@ -22,11 +22,10 @@ def main():
         file_data)
     tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
     tmp5 = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
-    tmp6 = re.sub('', '', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps", "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", tmp6))))).split("|")
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", file_data))))).split("|")
     waves.remove("")
 
     if tmp:
@@ -59,12 +58,7 @@ def main():
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
-    tmp_list = []
-    for index in range(len(new_waves)):
-        if index % 2 == 0:
-            for ind in range(len(new_waves[index - 1])):
-                if ind % 2 == 1:
-                    tmp_list.append(new_waves[index - 1][ind - 1])
+    tmp_list = f.tmp_list(new_waves)
 
     for i in range(len(tmp_list)):
         tmp_list[i - 1] = re.sub('<sup>\\d</sup>', "", tmp_list[i - 1])

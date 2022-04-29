@@ -33,3 +33,12 @@ def sort_zombies(zombies: list):
     sorted_list.pop(0)
 
     return sorted_list
+
+
+def tmp_list(new_waves: list):
+    tmp_list = []
+    for index in range(len(new_waves)):
+        if index % 2 == 0:
+            for ind in range(len(new_waves[index - 1])):
+                if ind % 2 == 1:
+                    tmp_list.append(new_waves[index - 1][ind - 1])
