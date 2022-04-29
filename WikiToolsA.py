@@ -103,10 +103,10 @@ def main():
 
     
     # For dist use:
-    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
-    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)

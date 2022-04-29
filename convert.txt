@@ -1,0 +1,3 @@
+\(tutorial\)-;<sup>0</sup>;1;{{P|Basic Zombie|2}}
+\(tutorial_armor1\)-;<sup>0</sup>;2;{{P|Conehead Zombie|2}}
+\(ra\)-;<sup>0</sup>;13;{{P|Ra Zombie|2}}
