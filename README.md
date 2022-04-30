@@ -15,7 +15,9 @@ The tool for PVZ Wiki.
 5. Navigate to the folder where the python file is, `cd ../` is to go up by one folder, `cd folder_name` is to navigate to the folder_name folder, ls is to see which folders/files are in the current folder.
 6. Type `python3 WikiToolsA.py` for Alpha or `python3 WikiToolsB` for beta in the terminal (non-case sensitive)
 7. Follow the instructions that appear in the terminal
-#### DO NOT COVERT JURASSIC LEVELS WITH DINOS ATM, FIX IS IN PROGRESS
+
+## Add zombies
+Add the zombie into convert.txt, as `\(json_zombie_name\): ;<sup>0<sup>;arrangement_number;{{P|wiki_zombie_name|2}}`
 
 ## Other pvz versions
 DM me on discord (cyao1234#2488) and I'll compile with it
