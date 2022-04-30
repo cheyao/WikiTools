@@ -23,11 +23,16 @@ def main():
     tmp4 = re.search('\"FlagCount\": (\\d+?),', file_data)
     tmp5 = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
-        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps", "",
+        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps|DinoType:RTID|DinoRow|DinoWaveDuration|Dino|Type",
+        "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", file_data))))).split("|")
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps|DinoWaveActionProps", "",
+                      re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"*\\n\\t+} ]),*\n',
+                                re.sub(', {\\n\\t+\\"aliases\\": \\[ \"RM\" ][\\s\\S]+} ', ' ',
+                                       re.sub('\"DinoWaveDuration\": \"\\d\"', '', file_data))).group(1)))))).split("|")
     waves.remove("")
 
+    gi = ''
     if tmp:
         level_name = tmp.group(1)
     if tmp2:
@@ -50,11 +55,13 @@ def main():
     for index in range(len(waves)):
         index += 1
         if index % 2 == 0:
-            new_waves.append(re.sub('|AdditionalPlantfood\\d', '',
-                                    re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#",
-                                           re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(
-                                               re.sub('\"AdditionalPlantfood\": 1,', '',
-                                                      re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[:-1].split("#"))
+            new_waves.append(re.sub('(\\d);({{P\\|\\S+\\s*\\S*\\|2}})<sup>0</sup>', '\\2<sup>\\1</sup>',
+                                    re.sub('|AdditionalPlantfood\\d', '',
+                                           re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#",
+                                                  re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(
+                                                      re.sub('\"AdditionalPlantfood\": 1,', '',
+                                                             re.sub("(\\d)\\(", "<sup>\\1</sup>(",
+                                                                    str(waves[index - 1]))))))))[:-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
 
@@ -74,7 +81,7 @@ def main():
     for i in range(len(wave_format)):
         for o in range(len(sorted_list)):
             if o % 2 == 1:
-                if int(wave_format[i - 1]) == int(sorted_list[o - 1]):
+                if wave_format[i - 1] == sorted_list[o - 1]:
                     final_list.append(sorted_list[o])
 
     final_list.append(final_list[0])
@@ -86,6 +93,7 @@ def main():
             tmp = "Flag"
         else:
             tmp = "<br />"
+
         if item == len(final_list) - 1:
             tmp2 = "}"
         else:

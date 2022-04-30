@@ -31,14 +31,7 @@ def main():
                                 re.sub(', {\\n\\t+\\"aliases\\": \\[ \"RM\" ][\\s\\S]+} ', ' ',
                                        re.sub('\"DinoWaveDuration\": \"\\d\"', '', file_data))).group(1)))))).split("|")
     waves.remove("")
-    print(re.sub(
-        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps|DinoType:RTID|DinoRow|DinoWaveDuration|Dino|Type",
-        "",
-        re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps|DinoWaveActionProps", "",
-                      re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"*\\n\\t+} ]),*\n',
-                                re.sub(', {\\n\\t+\\"aliases\\": \\[ \"RM\" ][\\s\\S]+} ', ' ',
-                                       re.sub('\"DinoWaveDuration\": \"\\d\"', '', file_data))).group(1)))))
+
     gi = ''
     if level_name_tmp:
         level_name = level_name_tmp.group(1)
@@ -68,8 +61,7 @@ def main():
                                                   re.sub("<sup>(\\d)</sup>;<sup>0</sup>", "<sup>\\1</sup>", convert(
                                                       re.sub('\"AdditionalPlantfood\": 1,', '',
                                                              re.sub("(\\d)\\(", "<sup>\\1</sup>(",
-                                                                    str(waves[index - 1]))))))))[
-                             :-1].split("#"))
+                                                                    str(waves[index - 1]))))))))[:-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
     print(new_waves)
@@ -117,10 +109,10 @@ def main():
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
-    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
