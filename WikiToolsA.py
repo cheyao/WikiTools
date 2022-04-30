@@ -64,7 +64,6 @@ def main():
                                                                     str(waves[index - 1]))))))))[:-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
-    print(new_waves)
 
     tmp_list = f.tmp_list(new_waves)
 
@@ -109,7 +108,7 @@ def main():
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    f.openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
     # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
@@ -150,16 +149,6 @@ def main():
            final_string)
 
     f.final_click(final_string)
-
-
-def openUrl(fin_url: str):
-    if platform == "linux" or platform == "linux2":
-        chrome_path = '/usr/bin/google-chrome %s'
-    elif platform == "darwin":
-        chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
-    elif platform == "win32":
-        chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-    webbrowser.get(chrome_path).open(fin_url)
 
 
 if __name__ == '__main__':

@@ -1,3 +1,4 @@
+import webbrowser
 import pyperclip
 import time
 import pyautogui
@@ -33,6 +34,17 @@ def sort_zombies(zombies: list):
     sorted_list.pop(0)
 
     return sorted_list
+
+
+def openUrl(fin_url: str):
+    chrome_path = "null"
+    if platform == "linux" or platform == "linux2":
+        chrome_path = '/usr/bin/google-chrome %s'
+    elif platform == "darwin":
+        chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+    elif platform == "win32":
+        chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+    webbrowser.get(chrome_path).open(fin_url)
 
 
 def tmp_list(new_waves: list):

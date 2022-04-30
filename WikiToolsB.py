@@ -109,7 +109,7 @@ def main():
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}?action=edit')
+    f.openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}?action=edit')
 
     # For debug use:
     # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}?action=edit')
@@ -150,16 +150,6 @@ def main():
            final_string)
 
     f.final_click(final_string)
-
-
-def openUrl(fin_url: str):
-    if platform == "linux" or platform == "linux2":
-        chrome_path = '/usr/bin/google-chrome %s'
-    elif platform == "darwin":
-        chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
-    elif platform == "win32":
-        chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-    webbrowser.get(chrome_path).open(fin_url)
 
 
 if __name__ == '__main__':
