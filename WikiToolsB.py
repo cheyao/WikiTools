@@ -1,6 +1,4 @@
 from os.path import exists
-import webbrowser
-from sys import platform
 import re
 from convert import convert
 import functions as f

@@ -1,6 +1,4 @@
 from os.path import exists
-import webbrowser
-from sys import platform
 import re
 from convert import convert
 import functions as f
@@ -33,6 +31,7 @@ def main():
     waves.remove("")
 
     gi = ''
+    level_name = ''
     if level_name_tmp:
         level_name = level_name_tmp.group(1)
     if full_level_name_tmp:
