@@ -11,7 +11,7 @@ pyautogui.PAUSE = 1
 def final_click(copy: str):
     pyperclip.copy(copy)
 
-    time.sleep(10)
+    time.sleep(7)
 
     pyautogui.moveTo(width / 2, height / 2, 1)
     pyautogui.click()
