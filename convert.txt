@@ -91,11 +91,11 @@
 \(dino_bully\)|\(dino_bully_veteran\): ;<sup>0</sup>;103;{{P|Jurassic Bully|2}}
 \(rascal_imp\): ;<sup>0</sup>;104;{{P|Rapscallion Imp|2}}
 \(modern_superfanimp\): ;<sup>0</sup>;104;{{P|Flint imp|2}}
-\(raptor\): ;<sup>0</sup>;104.5;{{P|Raptor|2}}
-\(stego\): ;<sup>0</sup>;104.5;{{P|Stegosaurus|2}}
-\(ptero\): ;<sup>0</sup>;104.5;{{P|Pterodactyl|2}}
-\(tyranno\): ;<sup>0</sup>;104.5;{{P|Tyrannosaurus Rex|2}}
-\(ankylo\): ;<sup>0</sup>;104.5;{{P|Ankylosaurus|2}}
+raptor\d*: ;<sup>0</sup>;104.5;{{P|Raptor|2}}
+stego\d*: ;<sup>0</sup>;104.5;{{P|Stegosaurus|2}}
+ptero\d*: ;<sup>0</sup>;104.5;{{P|Pterodactyl|2}}
+tyranno\d*: ;<sup>0</sup>;104.5;{{P|Tyrannosaurus Rex|2}}
+ankylo\d*: ;<sup>0</sup>;104.5;{{P|Ankylosaurus|2}}
 \(future\): ;<sup>0</sup>;105;{{Future Zombie|2}}
 \(future_armor1\): ;<sup>0</sup>;106;{{Future Conehead Zombie|2}}
 \(future_armor2\): ;<sup>0</sup>;107;{{Future Buckethead Zombie|2}}

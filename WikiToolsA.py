@@ -23,11 +23,23 @@ def main():
     flag_count_tmp = re.search('\"FlagCount\": (\\d+?),', file_data)
     wave_format_tmp = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
-        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps", "",
+        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps|DinoType:RTID|DinoRow|DinoWaveDuration|Dino|Type",
+        "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps", "", re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"\\n\\t\\t\\t\\t\\t} ]),*\n', file_data).group(1)))))).split("|")
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps|DinoWaveActionProps", "",
+                      re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"*\\n\\t+} ]),*\n',
+                                re.sub(', {\\n\\t+\\"aliases\\": \\[ \"RM\" ][\\s\\S]+} ', ' ',
+                                       re.sub('\"DinoWaveDuration\": \"\\d\"', '', file_data))).group(1)))))).split("|")
     waves.remove("")
-
+    print(re.sub(
+        ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps|DinoType:RTID|DinoRow|DinoWaveDuration|Dino|Type",
+        "",
+        re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps|DinoWaveActionProps", "",
+                      re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"*\\n\\t+} ]),*\n',
+                                re.sub(', {\\n\\t+\\"aliases\\": \\[ \"RM\" ][\\s\\S]+} ', ' ',
+                                       re.sub('\"DinoWaveDuration\": \"\\d\"', '', file_data))).group(1)))))
+    gi = ''
     if level_name_tmp:
         level_name = level_name_tmp.group(1)
     if full_level_name_tmp:
@@ -50,14 +62,17 @@ def main():
     for index in range(len(waves)):
         index += 1
         if index % 2 == 0:
-            new_waves.append(re.sub('|AdditionalPlantfood\\d', '',
-                                    re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#",
-                                           re.sub("(<sup>\\d</sup>);<sup>0</sup>", "\\1", convert(
-                                               re.sub('\"AdditionalPlantfood\": 1,', '',
-                                                      re.sub("(\\d)\\(", "<sup>\\1</sup>(", str(waves[index - 1])))))))[
+            new_waves.append(re.sub('(\\d);({{P\\|\\S+\\s*\\S*\\|2}})<sup>0</sup>', '\\2<sup>\\1</sup>',
+                                    re.sub('|AdditionalPlantfood\\d', '',
+                                           re.sub("(<sup>\\d</sup>);(\\d+\\.*\\d*);({{P\\|.+?\\|2}})", "\\3\\1#\\2#",
+                                                  re.sub("<sup>(\\d)</sup>;<sup>0</sup>", "<sup>\\1</sup>", convert(
+                                                      re.sub('\"AdditionalPlantfood\": 1,', '',
+                                                             re.sub("(\\d)\\(", "<sup>\\1</sup>(",
+                                                                    str(waves[index - 1]))))))))[
                              :-1].split("#"))
         else:
             new_waves.append(re.sub("Wave", "", str(waves[index - 1])))
+    print(new_waves)
 
     tmp_list = f.tmp_list(new_waves)
 
@@ -66,7 +81,7 @@ def main():
 
     zmb_set = set(tmp_list)
     wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
-    print(new_waves)
+
     # Sorts the zombies
     sorted_list = f.sort_zombies(new_waves)
 
@@ -74,7 +89,7 @@ def main():
     for i in range(len(wave_format)):
         for o in range(len(sorted_list)):
             if o % 2 == 1:
-                if int(wave_format[i - 1]) == int(sorted_list[o - 1]):
+                if wave_format[i - 1] == sorted_list[o - 1]:
                     final_list.append(sorted_list[o])
 
     final_list.append(final_list[0])
@@ -102,10 +117,10 @@ def main():
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
-    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
