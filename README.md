@@ -13,7 +13,7 @@ The tool for PVZ Wiki.
 3. Add your own PVZ obb extract to the folder, if you don't have one, contact admins, we only give it to trustful persons.
 4. Open Command prompt for Windows, terminal for macOS & Linux
 5. Navigate to the folder where the python file is, `cd ../` is to go up by one folder, `cd folder_name` is to navigate to the folder_name folder, ls is to see which folders/files are in the current folder.
-6. Type `python3 WikiToolsA.py` for Alpha or `python3 WikiToolsB` for beta in the terminal (non-case sensitive)
+6. Type `python3 WikiToolsA.py` for Alpha or `python3 WikiToolsB.py` for beta in the terminal (non-case sensitive)
 7. Follow the instructions that appear in the terminal
 
 ## Add zombies
