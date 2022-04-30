@@ -5,7 +5,8 @@ import functions as f
 
 
 def main():
-    file_path = input("Type in file path, the current dir is where you placed the py file, and don't write \".json\": ")
+    file_path = input("Type in file path, the current dir is where you placed the py file. Don't write \".json\": ")
+
     if not exists(file_path + ".json"):
         print("~/" + file_path + ".json does not exist")
         quit()
