@@ -70,6 +70,7 @@ def show_window():
     def convert():
         value = selected.get()
         if str(root.file) != 'PY_VAR0':
+            convert_button.configure(text='Converting...')
             if value == 'Alpha':
                 a.main(str(root.file))
             elif value == 'Beta':
@@ -95,7 +96,8 @@ def show_window():
 
     button = ttk.Button(mainframe, text=re.sub('[\s\S]+/', '', str(root.file.get())), command=select_file)
     button.grid(column=2, row=1, sticky=(W, E))
-    ttk.Button(mainframe, text="Convert", command=convert).grid(column=2, row=2, sticky=W)
+    convert_button = ttk.Button(mainframe, text="Convert", command=convert)
+    convert_button.grid(column=2, row=2, sticky=W)
 
     ttk.Label(mainframe, text="File path:").grid(column=1, row=1, sticky=W)
 
