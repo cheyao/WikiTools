@@ -1,6 +1,9 @@
 import re
+import tkinter
 import webbrowser
 from tkinter.messagebox import showinfo
+
+import PIL.Image
 import pyperclip
 import time
 import pyautogui
@@ -10,6 +13,7 @@ from tkinter import ttk
 import WikiToolsA as a
 import WikiToolsB as b
 from tkinter import filedialog as fd
+from PIL import Image, ImageTk
 
 width, height = pyautogui.size()
 pyautogui.PAUSE = 1
@@ -81,7 +85,7 @@ def show_window():
     root = Tk()
     root.file = StringVar(None, 'Select')
     root.title("WikiTools")
-    root.geometry("300x100")
+    root.geometry("250x90")
     root.resizable(False, False)
     root.eval('tk::PlaceWindow . center')
 
