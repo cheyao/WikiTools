@@ -86,15 +86,12 @@ def show_window():
 
     def select_file():
         root.file = str(fd.askopenfilename(filetypes=file_type))
-        print(root.file)
         button.configure(text=re.sub('[\s\S]+/', '', str(root.file)))
 
     mainframe = ttk.Frame(root, padding="3 3 12 12")
     mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
     root.columnconfigure(0, weight=1)
     root.rowconfigure(0, weight=1)
-
-    print(root.file.get())
 
     button = ttk.Button(mainframe, text=re.sub('[\s\S]+/', '', str(root.file.get())), command=select_file)
     button.grid(column=2, row=1, sticky=(W, E))
