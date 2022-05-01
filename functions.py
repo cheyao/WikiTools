@@ -1,7 +1,6 @@
 import re
 import webbrowser
 from tkinter.messagebox import showinfo
-
 import pyperclip
 import time
 import pyautogui

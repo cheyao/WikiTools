@@ -1,4 +1,4 @@
-# WikiTools ![license](https://img.shields.io/github/license/cheyao/WikiTools?style=flat&logo=apache) ![size](https://img.shields.io/github/languages/code-size/cheyao/WikiTools) ![](https://img.shields.io/tokei/lines/github/cheyao/WikiTools)
+# WikiTools ![license](https://img.shields.io/github/license/cheyao/WikiTools?style=flat&logo=apache) ![size](https://img.shields.io/github/languages/code-size/cheyao/WikiTools)
 
 The tool for PVZ Wiki.
 
@@ -14,8 +14,8 @@ The tool for PVZ Wiki.
 4. Open Command prompt for Windows, terminal for macOS & Linux
 5. Navigate to the folder where the python file is, `cd ../` is to go up by one folder, `cd folder_name` is to navigate to the folder_name folder, ls is to see which folders/files are in the current folder.
 6. Type `python3 WikiTools.py` in the terminal (non-case sensitive)
-7. Do `pip install "name"` if the scrypt crashes saying "no module named "name""
-8. Follow the instructions that appear in the terminal
+7. Do `pip install "name"` if the scrypt crashes saying `no module named "name"`
+8. Follow the instructions that appear in the UI
 
 ## Add zombies
 Add the zombie into convert.txt, as `\(json_zombie_name\): ;<sup>0<sup>;arrangement_number;{{P|wiki_zombie_name|2}}`
