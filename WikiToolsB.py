@@ -4,15 +4,10 @@ from convert import convert
 import functions as f
 
 
-def main():
-    file_path = input("Type in file path, the current dir is where you placed the py file, and don't write \".json\": ")
-    if not exists(file_path + ".json"):
-        print("~/" + file_path + ".json does not exist")
-        quit()
+def main(file_path: str):
+    print(f"Transforming ~/{file_path}")
 
-    print(f"Transforming ~/{file_path}.json")
-
-    file_data = open(file_path + ".json", "r").read()
+    file_data = open(file_path, "r").read()
     tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     tmp2 = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
     tmp3 = re.search(
@@ -151,4 +146,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    f.show_window()

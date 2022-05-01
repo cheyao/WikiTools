@@ -1,19 +1,12 @@
-from os.path import exists
 import re
 from convert import convert
 import functions as f
 
 
-def main():
-    file_path = input("Type in file path, the current dir is where you placed the py file. Don't write \".json\": ")
+def main(file_path: str):
+    print(f"Transforming ~/{file_path}")
 
-    if not exists(file_path + ".json"):
-        print("~/" + file_path + ".json does not exist")
-        quit()
-
-    print(f"Transforming ~/{file_path}.json")
-
-    file_data = open(file_path + ".json", "r").read()
+    file_data = open(file_path, "r").read()
     level_name_tmp = re.search('\"Name\": \"(\\d+-\\d+).+\",\n', file_data)
     full_level_name_tmp = re.search('\"Name\": \"(\\d+-\\d+.+)\",\n', file_data)
     gi_tmp = re.search(
@@ -21,14 +14,13 @@ def main():
         file_data)
     flag_count_tmp = re.search('\"FlagCount\": (\\d+?),', file_data)
     wave_format_tmp = re.search('\"Waves\": \\[ (.+?) ]\\n', file_data)
+    waves_tmp = re.sub(', {\\n\\t+\\"aliases\\": \\[ \"RM\" ][\\s\\S]+} ', ' ', re.sub('\"DinoWaveDuration\": \"\\d\"', '', file_data))
+    waves_tmp2 = re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"*\\n\\t+} ]),*\n', waves_tmp).group(1)
     waves = re.sub("\\[|]", "|", re.sub("([^\\d])]", "\\1", re.sub(
         ",|:|Type:RTID|objclass|objdata|@ZombieTypes|Zombies|}|{|\\[{Row|aliases|Row|DinoWaveActionProps|DinoType:RTID|DinoRow|DinoWaveDuration|Dino|Type",
         "",
         re.sub(".+\\[]}},{aliases:|]}}],version:1}", "",
-               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps|DinoWaveActionProps", "",
-                      re.search('({\\n\\s+\"aliases\": \\[ \"Wave1\" ],\n[\\s|\\S]+\"*\\n\\t+} ]),*\n',
-                                re.sub(', {\\n\\t+\\"aliases\\": \\[ \"RM\" ][\\s\\S]+} ', ' ',
-                                       re.sub('\"DinoWaveDuration\": \"\\d\"', '', file_data))).group(1)))))).split("|")
+               re.sub("\\t|\\n| |\"|SpawnZombiesJitteredWaveActionProps|DinoWaveActionProps", "", waves_tmp2))))).split("|")
     waves.remove("")
 
     gi = ''
@@ -108,10 +100,10 @@ def main():
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    f.openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    # f.openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     # For debug use:
-    # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
 
     gravestone_count = gi.count("gravestone_egypt" or "gravestone_dark" or "gravestoneSunOnDestruction")
     no_numb_lvl_name = re.sub("\\d+?-\\d+: ", "", full_level_name)
@@ -152,4 +144,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    f.show_window()
