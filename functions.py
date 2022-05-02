@@ -1,8 +1,7 @@
 import re
-import tkinter
 import webbrowser
 from tkinter.messagebox import showinfo
-
+from PIL import ImageTk
 import PIL.Image
 import pyperclip
 import time
@@ -13,7 +12,6 @@ from tkinter import ttk
 import WikiToolsA as a
 import WikiToolsB as b
 from tkinter import filedialog as fd
-from PIL import Image, ImageTk
 
 width, height = pyautogui.size()
 pyautogui.PAUSE = 1
@@ -85,8 +83,8 @@ def show_window():
     root = Tk()
     root.file = StringVar(None, 'Select')
     root.title("WikiTools")
-    root.geometry("250x90")
-    root.resizable(False, False)
+    root.geometry("250x165")
+    #root.resizable(False, False)
     root.eval('tk::PlaceWindow . center')
 
     def select_file():
@@ -110,8 +108,5 @@ def show_window():
     r1.grid(column=3, row=1, sticky=W)
     r2 = ttk.Radiobutton(mainframe, text='Beta', value='Beta', variable=selected)
     r2.grid(column=3, row=2, sticky=W)
-
-    for child in mainframe.winfo_children():
-        child.grid_configure(padx=5, pady=5)
 
     root.mainloop()
