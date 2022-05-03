@@ -100,7 +100,7 @@ def main(file_path: str):
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    f.openUrl(f'https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
+    f.openUrl('https://project-eclise.fandom.com/wiki/{}(Alpha)?action=edit'.format(level_name))
 
     # For debug use:
     # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')

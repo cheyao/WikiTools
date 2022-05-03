@@ -1,3 +1,4 @@
+import json
 import re
 import webbrowser
 from tkinter.messagebox import showinfo
@@ -81,7 +82,7 @@ def show_window():
     root = Tk()
     root.file = StringVar(None, 'Select')
     root.title("WikiTools")
-    root.geometry("250x165")
+    root.geometry("350x150")
     # root.resizable(False, False)
     root.eval('tk::PlaceWindow . center')
 
@@ -91,6 +92,8 @@ def show_window():
 
     mainframe = ttk.Frame(root, padding="3 3 12 12")
     mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+    mainframe2 = ttk.Frame(root, padding="3 3 12 12")
+    mainframe2.grid(column=2, row=2, sticky=(N, W, E, S))
     root.columnconfigure(0, weight=1)
     root.rowconfigure(0, weight=1)
 
@@ -107,4 +110,44 @@ def show_window():
     r2 = ttk.Radiobutton(mainframe, text='Beta', value='Beta', variable=selected)
     r2.grid(column=3, row=2, sticky=W)
 
+    ttk.Button(mainframe2, text="Settings", command=setting).grid(column=1, row=1, sticky=W)
+
     root.mainloop()
+
+
+def setting():
+    root = Tk()
+    root.title("Setup")
+    root.geometry("470x200")
+    root.resizable(False, False)
+    root.eval('tk::PlaceWindow . center')
+
+    mainframe = ttk.Frame(root, padding="3 3 12 12")
+    mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+    mainframe2 = ttk.Frame(root, padding="3 3 12 12")
+    mainframe2.grid(column=0, row=2, sticky=(N, W, E, S))
+    root.columnconfigure(0, weight=1)
+    root.rowconfigure(0, weight=1)
+
+    ttk.Label(mainframe, text="Wiki edit link, use \"{}\" for level name").grid(column=1, row=1, sticky=W)
+    link = ttk.Entry(mainframe)
+    link.grid(column=1, row=3, sticky=(W, E))
+    ttk.Label(mainframe, text="Example: \"https://project-eclise.fandom.com/wiki/{}(Alpha)?action=edit\"").grid(column=1, row=2, sticky=W)
+
+    # ttk.Label(mainframe, text="").grid(column=1, row=4, sticky=W)
+    # ttk.Label(mainframe, text="Modifiers (like Alpha):").grid(column=1, row=5, sticky=W)
+    # modifiers = ttk.Entry(mainframe)
+    # modifiers.grid(column=1, row=6, sticky=(W, E))
+
+    def save_setup(link1):
+        with open('data.json', 'w') as f:
+            json.dump({'link': link1}, f)
+        root.destroy()
+
+    ttk.Button(mainframe2, text="Save", command=lambda: save_setup(link.get())).grid(column=1, row=1, sticky=W)
+
+    root.mainloop()
+
+
+if __name__ == '__main__':
+    show_window()
