@@ -39,6 +39,14 @@ if __name__ == '__main__':
             for i in item['objdata']["Waves"]:
                 wave_list.append([re.sub('RTID\\(([\s\S]+?)@CurrentLevel\\)', '\\1', i[0])])
 
+    for item in json_file_removed:
+        if item['aliases'] == ["WaveManager"]:
+            wave_count = item['objdata']["WaveCount"]
+            waves_per_flag = item['objdata']["FlagWaveInterval"]
+            flags = wave_count // waves_per_flag
+
+
+
     try:
         for i in json_file_removed:
             if i['aliases'] == ['GI']:

@@ -1,12 +1,12 @@
 # Use two curly brackets for a curly bracket
-# Values: name, name_number, after_name, before_name, num_items_on_map, plants
+# Values: name, name_number, after_name, before_name, num_items_on_map, plants, wave_count, waves_per_flag, flags
 {{{{BAHTabber|Level={name_number}}}}}
 {{{{Level Infobox
 |name = {name}
 |image = {name_number}Alpha.jpg
 |Type = Regular
 |EM = {num_items_on_map}
-|Flag = {}
+|Flag = {flags}
 |Plant = {plants}
 |Zombie = {}
 |FR =
@@ -14,7 +14,7 @@
 |before = {before_name} (Alpha)
 |after = {after_name} (Alpha)
 }}}}
-\'\'\'{}\'\'\', also known as \'\'\'{}\'\'\'
+\'\'\'{name_number}\'\'\', also known as \'\'\'{name}\'\'\'
 
 {{{{clear}}}}
 == Waves ==

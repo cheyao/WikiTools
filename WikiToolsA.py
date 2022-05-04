@@ -63,6 +63,7 @@ def main(file_path: str):
         tmp_list[i - 1] = re.sub('<sup>\\d</sup>', "", tmp_list[i - 1])
 
     zmb_set = set(tmp_list)
+
     wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
 
     print(new_waves)
