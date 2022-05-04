@@ -85,4 +85,14 @@ if __name__ == '__main__':
 
     sorted_list = fun.sort_zombies(unsorted_list)
 
+    zombies = set()
+    for item in range(len(sorted_list)):
+        if item % 2 == 0:
+            for i in sorted_list[item - 1][::2]:
+                zombies.add(re.sub('<sup>\\d</sup>', '', i))
+
+    zombies = ''.join(zombies)
+
+    print(zombies)
+
     print(sorted_list)
