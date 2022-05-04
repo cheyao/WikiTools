@@ -33,8 +33,8 @@ def sort_zombies(zombies: list):
     sorted_list = []
     for index in range(len(zombies)):
         if index % 2 == 0:
-            sorted_list.append(sorted([zombies[index - 1][i:i + 2] for i in range(0, len(zombies[index - 1]), 2)],
-                                      key=lambda x: x[1]))
+            ordered_list = [(x, int(y)) for x, y, in zip(zombies[index - 1][::2], zombies[index - 1][1::2])]
+            sorted_list.append(sum([[x, str(y)] for x, y, in sorted(ordered_list, key=lambda x:x[1])], []))
         else:
             sorted_list.append(zombies[index - 1])
 

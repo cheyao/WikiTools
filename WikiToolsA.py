@@ -65,6 +65,8 @@ def main(file_path: str):
     zmb_set = set(tmp_list)
     wave_format = re.sub('RTID|@CurrentLevel|\\)|\\(|Wave|]|\\[|\"| |\\n', "", wave_format).split(',')
 
+    print(new_waves)
+
     # Sorts the zombies
     sorted_list = f.sort_zombies(new_waves)
 
@@ -100,7 +102,7 @@ def main(file_path: str):
         final_string += f'|{tmp2}\n'
 
     # For dist use:
-    f.openUrl('https://project-eclise.fandom.com/wiki/{}(Alpha)?action=edit'.format(level_name))
+    # f.openUrl('https://project-eclise.fandom.com/wiki/{}(Alpha)?action=edit'.format(level_name))
 
     # For debug use:
     # print(f'opened https://project-eclise.fandom.com/wiki/{level_name}(Alpha)?action=edit')
@@ -144,4 +146,4 @@ def main(file_path: str):
 
 
 if __name__ == '__main__':
-    f.show_window()
+    main('tmp.json')

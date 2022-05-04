@@ -1,0 +1,30 @@
+# Use two curly brackets for a curly bracket
+# Values: name, name_number, after_name, before_name, num_items_on_map, plants
+{{{{BAHTabber|Level={name_number}}}}}
+{{{{Level Infobox
+|name = {name}
+|image = {name_number}Alpha.jpg
+|Type = Regular
+|EM = {num_items_on_map}
+|Flag = {}
+|Plant = {plants}
+|Zombie = {}
+|FR =
+|NR =
+|before = {before_name} (Alpha)
+|after = {after_name} (Alpha)
+}}}}
+\'\'\'{}\'\'\', also known as \'\'\'{}\'\'\'
+
+{{{{clear}}}}
+== Waves ==
+{{| class="article-table"
+!Waves
+!Non-dynamic zombies
+!Ambush zombies
+!Notes
+|-
+{}
+
+==Gallery==
+<br />{{LevelsA}}
