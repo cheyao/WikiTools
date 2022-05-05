@@ -9,13 +9,21 @@ if __name__ == '__main__':
     json_file = json.load(f)
     final_string = ''
 
+    template_list = open('template.txt', 'r').readlines()[3:]
+
+    template = """"""
+    for i in template_list:
+        template += i
+
     name = json_file['objects'][0]['objdata']['Name']
     name_number = json_file['#comment']
 
     first = int(name_number.split('-')[0])
     second = int(name_number.split('-')[1])
 
-    if second - 1 == 0 or 10 or 20:
+    print(first, second, str(first) + '-' + str(second - 1))
+
+    if second - 1 == 0 or second - 1 == 10 or second - 1 == 20:
         if second == 1:
             before_name = 'Null'
         elif first == 1:
@@ -39,14 +47,16 @@ if __name__ == '__main__':
             for i in item['objdata']["Waves"]:
                 wave_list.append([re.sub('RTID\\(([\s\S]+?)@CurrentLevel\\)', '\\1', i[0])])
 
+    flags = 1
+    waves_per_flag = 10
+    wave_count = 10
     for item in json_file_removed:
         if item['aliases'] == ["WaveManager"]:
             wave_count = item['objdata']["WaveCount"]
             waves_per_flag = item['objdata']["FlagWaveInterval"]
             flags = wave_count // waves_per_flag
 
-
-
+    num_items_on_map = 0
     try:
         for i in json_file_removed:
             if i['aliases'] == ['GI']:
@@ -85,14 +95,37 @@ if __name__ == '__main__':
 
     sorted_list = fun.sort_zombies(unsorted_list)
 
+    zombie_waves = ''
+    for i in range(len(sorted_list)):
+        if i % 2 != 0:
+            if re.match(r'Wave\d', sorted_list[i - 1]):
+                wave_number = int(re.sub('Wave(\\d+)', '\\1', sorted_list[i - 1]))
+                tmp = sorted_list[i][::2]
+                tmp = ' '.join(tmp)
+                zombie_waves += f'|{wave_number}\n|{tmp}\n'
+                if wave_number % waves_per_flag == 0:
+                    zombie_waves += '{{P|Flag Zombie|2}}'
+                zombie_waves += '|None\n'
+                if wave_number % waves_per_flag == 0:
+                    zombie_waves += '|Flag\n'
+                else:
+                    zombie_waves += '|<br />\n'
+                if wave_number == wave_count:
+                    zombie_waves += '|}\n'
+                else:
+                    zombie_waves += '|-\n'
+            else:
+                print('')
+
     zombies = set()
     for item in range(len(sorted_list)):
         if item % 2 == 0:
             for i in sorted_list[item - 1][::2]:
                 zombies.add(re.sub('<sup>\\d</sup>', '', i))
 
-    zombies = ''.join(zombies)
+    zombies = ''.join(zombies) + '{{P|Flag Zombie|2}}'
 
-    print(zombies)
+    final_string = template.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies, plants=plants, name_number=name_number, num_items_on_map=num_items_on_map, flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count, zombie_waves=zombie_waves)
+    print(final_string)
 
     print(sorted_list)

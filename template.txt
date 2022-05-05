@@ -1,5 +1,5 @@
 # Use two curly brackets for a curly bracket
-# Values: name, name_number, after_name, before_name, num_items_on_map, plants, wave_count, waves_per_flag, flags
+# Values: name, name_number, after_name, before_name, num_items_on_map, plants, wave_count, waves_per_flag, flags, zombies, zombie_waves
 {{{{BAHTabber|Level={name_number}}}}}
 {{{{Level Infobox
 |name = {name}
@@ -8,13 +8,13 @@
 |EM = {num_items_on_map}
 |Flag = {flags}
 |Plant = {plants}
-|Zombie = {}
+|Zombie = {zombies}
 |FR =
 |NR =
 |before = {before_name} (Alpha)
 |after = {after_name} (Alpha)
 }}}}
-\'\'\'{name_number}\'\'\', also known as \'\'\'{name}\'\'\'
+'''{name_number}''', also known as '''{name}'''
 
 {{{{clear}}}}
 == Waves ==
@@ -24,7 +24,7 @@
 !Ambush zombies
 !Notes
 |-
-{}
+{zombie_waves}
 
 ==Gallery==
 <br />{{LevelsA}}
