@@ -96,26 +96,30 @@ if __name__ == '__main__':
     sorted_list = fun.sort_zombies(unsorted_list)
 
     zombie_waves = ''
+    tmp_wave = 0
     for i in range(len(sorted_list)):
         if i % 2 != 0:
             if re.match(r'Wave\d', sorted_list[i - 1]):
-                wave_number = int(re.sub('Wave(\\d+)', '\\1', sorted_list[i - 1]))
+                tmp_wave += 1
                 tmp = sorted_list[i][::2]
                 tmp = ' '.join(tmp)
-                zombie_waves += f'|{wave_number}\n|{tmp}\n'
-                if wave_number % waves_per_flag == 0:
-                    zombie_waves += '{{P|Flag Zombie|2}}'
+                zombie_waves += f'|{tmp_wave}\n|{tmp}'
+                if tmp_wave % waves_per_flag == 0:
+                    zombie_waves += '{{P|Flag Zombie|2}}\n'
+                else:
+                    zombie_waves += '\n'
                 zombie_waves += '|None\n'
-                if wave_number % waves_per_flag == 0:
+                if tmp_wave % waves_per_flag == 0:
                     zombie_waves += '|Flag\n'
                 else:
                     zombie_waves += '|<br />\n'
-                if wave_number == wave_count:
+                if tmp_wave == wave_count:
                     zombie_waves += '|}\n'
                 else:
                     zombie_waves += '|-\n'
             else:
-                print('')
+                zombie_waves = re.sub('\\|None(\\n\\|(<br />)*(Flag)*\n\\|[-}])(?![\\S\\s]+\\|None\n\\|(<br />)*('
+                                      'Flag)*\n\\|[-}])', '|some\\1', zombie_waves)
 
     zombies = set()
     for item in range(len(sorted_list)):
@@ -125,7 +129,10 @@ if __name__ == '__main__':
 
     zombies = ''.join(zombies) + '{{P|Flag Zombie|2}}'
 
-    final_string = template.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies, plants=plants, name_number=name_number, num_items_on_map=num_items_on_map, flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count, zombie_waves=zombie_waves)
+    final_string = template.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies,
+                                   plants=plants, name_number=name_number, num_items_on_map=num_items_on_map,
+                                   flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
+                                   zombie_waves=zombie_waves)
     print(final_string)
 
     print(sorted_list)
