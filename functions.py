@@ -1,6 +1,6 @@
 import re
 import webbrowser
-from tkinter.messagebox import showinfo
+from tkinter.messagebox import showwarning, showerror
 import pyperclip
 import time
 import pyautogui
@@ -71,10 +71,13 @@ def show_window():
     def start_convert():
         if str(root.file) != 'PY_VAR0':
             convert_button.configure(text='Converting...')
-            wt.convert(root.file)
-            convert_button.configure(text='Converted!')
+            status = wt.convert(root.file)
+            if status:
+                convert_button.configure(text='Converted!')
+            else:
+                convert_button.configure(text='Error!')
         else:
-            showinfo(title='Error', message='Please select a file')
+            showwarning(title='Error', message='Please select a file')
 
     root = Tk()
     root.file = StringVar(None, 'Select')
@@ -165,6 +168,10 @@ def convert(string: str) -> str:
         string = re.sub(str(zombie[0]), str(zombie[1]), string)
 
     return string
+
+
+def error(error_message: str):
+    showerror("Error", error_message + "\n\n Please send this to cyao1234#2688")
 
 
 if __name__ == '__main__':

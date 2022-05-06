@@ -24,7 +24,7 @@ Add the zombie into convert.txt, as `\(json_zombie_name\): ;<sup>0<sup>;arrangem
 DM me on discord (cyao1234#2488) and I'll compile with it
 
 ## Bug report
-Open an Issue on GitHub or DM me on Discord (cyao1234#2488)
+Open an Issue on GitHub or DM the level name on Discord (cyao1234#2488)
 
 ## Contributing
 Feel free to contribute, open a branch on GitHub and send a pull request.
