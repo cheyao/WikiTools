@@ -1,5 +1,5 @@
 # Link:
-https://project-eclise.fandom.com/wiki/{name_number}(Alpha)?action=edit
+https://project-eclise.fandom.com/wiki/{name_number}_(Alpha)?action=edit
 # Use two curly brackets for a curly bracket
 # Values: name, name_number, after_name, before_name, num_items_on_map
 # plants, wave_count, waves_per_flag, flags, zombies, zombie_waves, first_reward
