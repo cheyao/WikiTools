@@ -81,16 +81,38 @@ def convert(file):
             if item_val == i:
                 unsorted_list.append(i)
                 tmp_list = []
-                if re.match(r'RP\d', item['aliases'][0]):
+                if re.match(r'RP\d+', item['aliases'][0]):
                     converted_zombie = ''
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['SwashbucklerCount']):
-                        converted_zombie += fun.convert("\(pirate_captain\)")
+                        converted_zombie += '55;{{P|Pirate Captain Zombie|2}}'
                     row = ''
+                if re.match(r'PR\d+', item['aliases'][0]):
+                    converted_zombie = ''
+                    for il in range(item['objdata']['GroupSize'] * item['objdata']['SpiderCount']):
+                        converted_zombie += '26;{{P|Lost Pilot Zombie|2}}'
+                    row = ''
+                if re.match(r'Tide\d+', item['aliases'][0]):
+                    converted_zombie = ''
+                    row = ''
+                if re.match(r'LT\d+', item['aliases'][0]):
+                    converted_zombie = ''
+                    for il in range(item['objdata']['GroupSize'] * item['objdata']['ZombieCount']):
+                        converted_zombie += '1;{{P|IDK|2}}'
+                    row = ''
+                if re.match(r'piano|ZombiePianoDefault|GR\d+|RascalsMessage|RM|DoubleWaveMessage|ModConveyor|Magmacream|TrapTileProps_1|TrapActivate|CHM|CHMessage', item['aliases'][0]):
+                    converted_zombie = ''
+                    row = ''
+                if re.match(r'Wave\d+P\d+', item['aliases'][0]):
+                    converted_zombie = '{{P|PortalFF|2}}'
+                    row = item['PortalRow'] + 1
+                if re.match(r'L\d+[LR]Wind', item['aliases'][0]):
+                    converted_zombie = 'Wind'
+                    row = item['objdata']['Winds']['Row'] + 1
                 else:
                     for zombie in item['objdata']['Zombies']:
-                        converted_zombie = fun.convert(re.sub('RTID\\(([\s\S]+?)@ZombieTypes\\)', '(\\1)', zombie['Type']))
+                        converted_zombie = fun.convert(re.sub('RTID\\(([\s\S]+?)@ZombieTypes\\)', '(\\1)', zombie['Type'] or zombie['DinoType']))
                         try:
-                            tmp = zombie['Row']
+                            tmp = zombie['Row'] or zombie['DinoRow']
                             row = f'<sup>{tmp}</sup>'
                         except KeyError:
                             row = ''
