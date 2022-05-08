@@ -170,8 +170,8 @@ def convert(string: str) -> str:
     return string
 
 
-def error(error_message: str):
-    showerror("Error", error_message + "\n\n Please send this to cyao1234#2688")
+def error(error_message: str, level: str):
+    showerror("Error", error_message + '\n' + level + "\n\n Please send this to cyao1234#2688")
 
 
 if __name__ == '__main__':
