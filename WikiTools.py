@@ -12,7 +12,7 @@ def convert(file):
         json_file = json.load(f)
 
         template = ''.join(open('template.txt', 'r').readlines()[7:])
-        link = ''.join(open('template.txt', 'r').readlines()[1:2])
+        link = ''.join(open('template.txt', 'r').readlines()[1:2])[:-1]
         name = json_file['objects'][0]['objdata']['Name']
         name_number = json_file['#comment']
         first_reward = json_file['objects'][0]['objdata']['FirstRewardParam'].capitalize()
@@ -50,9 +50,9 @@ def convert(file):
 
         num_items_on_map = 0
         try:
-                for i in json_file_removed:
-                    if i['aliases'] == ['GI']:
-                        num_items_on_map = len(i['objdata']['InitialGridItemPlacements'])
+            for i in json_file_removed:
+                if i['aliases'] == ['GI']:
+                    num_items_on_map = len(i['objdata']['InitialGridItemPlacements'])
         except KeyError:
             num_items_on_map = 0
         plants = []
@@ -72,37 +72,34 @@ def convert(file):
                     for item2 in i:
                         wave_list.append(re.sub('RTID\\(([\s\S]+?)@CurrentLevel\\)', '\\1', item2))
 
-        print(wave_list)
-
         unsorted_list = []
         converted_zombie = ''
         row = ''
+
         for i, item in itertools.product(wave_list, json_file_removed):
             item_val = item['aliases'][0]
             if item_val == i:
                 unsorted_list.append(i)
-
                 tmp_list = []
                 if re.match(r'RP\d', item['aliases'][0]):
                     converted_zombie = ''
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['SwashbucklerCount']):
                         converted_zombie += fun.convert("\(pirate_captain\)")
                     row = ''
-            else:
-                for zombie in item['objdata']['Zombies']:
-                    converted_zombie = fun.convert(re.sub('RTID\\(([\s\S]+?)@ZombieTypes\\)', '(\\1)', zombie['Type']))
-                    try:
-                        tmp = zombie['Row']
-                        row = f'<sup>{tmp}</sup>'
-                    except KeyError:
-                        row = ''
+                else:
+                    for zombie in item['objdata']['Zombies']:
+                        converted_zombie = fun.convert(re.sub('RTID\\(([\s\S]+?)@ZombieTypes\\)', '(\\1)', zombie['Type']))
+                        try:
+                            tmp = zombie['Row']
+                            row = f'<sup>{tmp}</sup>'
+                        except KeyError:
+                            row = ''
 
-                tmp_list2 = f'{converted_zombie}{row} '.split(";")
-                tmp_list.append(tmp_list2[1])
-                tmp_list.append(tmp_list2[0])
+                    tmp_list2 = f'{converted_zombie}{row} '.split(";")
+                    tmp_list.append(tmp_list2[1])
+                    tmp_list.append(tmp_list2[0])
 
-            unsorted_list.append(tmp_list)
-
+                unsorted_list.append(tmp_list)
         print(unsorted_list)
 
         sorted_list = fun.sort_zombies(unsorted_list)
@@ -111,7 +108,7 @@ def convert(file):
         tmp_wave = 0
         for i in range(len(sorted_list)):
             if i % 2 != 0:
-                if re.match(r'Wave\d', sorted_list[i - 1]):
+                if re.match('Wave\\d', sorted_list[i - 1]):
                     tmp_wave += 1
                     tmp = sorted_list[i][::2]
                     tmp = ' '.join(tmp)
@@ -138,7 +135,7 @@ def convert(file):
                     tmp = ' '.join(tmp)
 
                     zombie_waves = re.sub('\\|None(\\n\\|(<br />)*(Flag)*\n\\|[-}])(?![\\S\\s]+\\|None\n\\|(<br />)*('
-                                      'Flag)*\n\\|[-}])', f'|{tmp}\\1', zombie_waves)
+                                          'Flag)*\n\\|[-}])', f'|{tmp}\\1', zombie_waves)
 
         zombies = set()
         for item in range(len(sorted_list)):
@@ -149,14 +146,15 @@ def convert(file):
         zombies = '{{P|Flag Zombie|2}} ' + ''.join(zombies)
 
         final_string = template.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies,
-                                    plants=plants, name_number=name_number, num_items_on_map=num_items_on_map,
-                                    flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
-                                    zombie_waves=zombie_waves, first_reward=first_reward, replay_reward=replay_reward)
+                                       plants=plants, name_number=name_number, num_items_on_map=num_items_on_map,
+                                       flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
+                                       zombie_waves=zombie_waves, first_reward=first_reward,
+                                       replay_reward=replay_reward)
 
         link = link.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies,
-                       plants=plants, name_number=name_number, num_items_on_map=num_items_on_map,
-                        flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
-                       zombie_waves=zombie_waves, first_reward=first_reward, replay_reward=replay_reward)
+                           plants=plants, name_number=name_number, num_items_on_map=num_items_on_map,
+                           flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
+                           zombie_waves=zombie_waves, first_reward=first_reward, replay_reward=replay_reward)
 
         r = Tk()
         r.withdraw()
@@ -168,7 +166,7 @@ def convert(file):
 
         return True
     except:
-        fun.error(traceback.format_exc())
+        fun.error(traceback.format_exc(), file)
         print(traceback.format_exc())
         return False
 
