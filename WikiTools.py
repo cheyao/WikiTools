@@ -6,11 +6,13 @@ import itertools
 import functions as fun
 
 
-def convert(file):
+def convert(file="ALPHA3/adventure/Pirate16.json"):  # file is for debugging
     try:
+        # Loads the level file
         f = open(file, 'r')
         json_file = json.load(f)
 
+        # Gets a few vals from the level file
         template = ''.join(open('template.txt', 'r').readlines()[7:])
         link = ''.join(open('template.txt', 'r').readlines()[1:2])[:-1]
         name = json_file['objects'][0]['objdata']['Name']
@@ -20,6 +22,7 @@ def convert(file):
             first_reward = ""
         replay_reward = ''
 
+        # Gets the level's following and previous levels
         first = int(name_number.split('-')[0])
         second = int(name_number.split('-')[1])
         if second - 1 == 0 or second - 1 == 10 or second - 1 == 20:
@@ -36,28 +39,35 @@ def convert(file):
         else:
             after_name = str(first) + '-' + str(second + 1)
 
-        json_file_removed = json_file['objects']
-        json_file_removed.remove(json_file_removed[0])
+        # Removes first item from the jsonfile
+        json_file = json_file['objects']
+        json_file.remove(json_file[0])
 
+        # Some null safety values
         flags = 1
         waves_per_flag = 10
         wave_count = 10
-        for item in json_file_removed:
-            if item['aliases'] == [["WaveManager"]]:
+
+        # Gets the waves order from WaveManager
+        for item in json_file:
+            if item['aliases'] == ["WaveManager"]:
                 wave_count = len(item['objdata']["Waves"])
-                waves_per_flag = item['objdata']["FlagWaveInterval"]
+                try:
+                    waves_per_flag = item['objdata']["FlagWaveInterval"]
+                except KeyError:
+                    waves_per_flag = 10
                 flags = wave_count // waves_per_flag
 
         num_items_on_map = 0
         try:
-            for i in json_file_removed:
+            for i in json_file:
                 if i['aliases'] == ['GI']:
                     num_items_on_map = len(i['objdata']['InitialGridItemPlacements'])
         except KeyError:
             num_items_on_map = 0
         plants = []
         try:
-            for i in json_file_removed:
+            for i in json_file:
                 if i['aliases'] == ["SeedBank"]:
                     for plant in i['objdata']['PresetPlantList']:
                         plants.append(plant['PlantType'])
@@ -66,64 +76,59 @@ def convert(file):
             plants = 'Chooser'
 
         wave_list = []
-        for item in json_file_removed:
+        for item in json_file:
             if item['aliases'] == ["WaveManager"]:
                 for i in item['objdata']["Waves"]:
                     for item2 in i:
                         wave_list.append(re.sub('RTID\\(([\s\S]+?)@CurrentLevel\\)', '\\1', item2))
 
         unsorted_list = []
-        converted_zombie = ''
-        row = ''
-
-        for i, item in itertools.product(wave_list, json_file_removed):
+        for i, item in itertools.product(wave_list, json_file):
             item_val = item['aliases'][0]
             if item_val == i:
                 unsorted_list.append(i)
                 tmp_list = []
                 if re.match(r'RP\d+', item['aliases'][0]):
-                    converted_zombie = ''
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['SwashbucklerCount']):
-                        converted_zombie += '55;{{P|Pirate Captain Zombie|2}}'
-                    row = ''
-                if re.match(r'PR\d+', item['aliases'][0]):
-                    converted_zombie = ''
+                        tmp_list.append('{{P|Swashbuckler Zombie|2}}')
+                        tmp_list.append('55')
+                elif re.match(r'PR\d+', item['aliases'][0]):
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['SpiderCount']):
-                        converted_zombie += '26;{{P|Lost Pilot Zombie|2}}'
-                    row = ''
-                if re.match(r'Tide\d+', item['aliases'][0]):
-                    converted_zombie = ''
-                    row = ''
-                if re.match(r'LT\d+', item['aliases'][0]):
-                    converted_zombie = ''
+                        tmp_list.append('{{P|Lost Pilot Zombie|2}}')
+                        tmp_list.append('26')
+                elif re.match(r'Tide\d+', item['aliases'][0]):
+                    print('', end='')  # Null
+                elif re.match(r'LT\d+', item['aliases'][0]):
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['ZombieCount']):
-                        converted_zombie += '1;{{P|IDK|2}}'
-                    row = ''
-                if re.match(r'piano|ZombiePianoDefault|GR\d+|RascalsMessage|RM|DoubleWaveMessage|ModConveyor|Magmacream|TrapTileProps_1|TrapActivate|CHM|CHMessage', item['aliases'][0]):
-                    converted_zombie = ''
-                    row = ''
-                if re.match(r'Wave\d+P\d+', item['aliases'][0]):
-                    converted_zombie = '{{P|PortalFF|2}}'
-                    row = item['PortalRow'] + 1
-                if re.match(r'L\d+[LR]Wind', item['aliases'][0]):
-                    converted_zombie = 'Wind'
-                    row = item['objdata']['Winds']['Row'] + 1
+                        tmp_list.append('{{P|Some LT zomb|2}}')
+                        tmp_list.append('1')
+                elif re.match(
+                        r'piano|ZombiePianoDefault|GR\d+|RascalsMessage|RM|DoubleWaveMessage|ModConveyor|Magmacream'
+                        r'|TrapTileProps_1|TrapActivate|CHM|CHMessage',
+                        item['aliases'][0]):
+                    print('', end='')  # Null
+                elif re.match(r'Wave\d+P\d+', item['aliases'][0]):
+                    tmp_list.append('{{P|PortalFF|2}}')
+                    tmp_list.append(item['PortalRow'] + 1)
+                elif re.match(r'L\d+[LR]Wind', item['aliases'][0]):
+                    tmp_list.append('Wind')
+                    tmp_list.append(item['objdata']['Winds']['Row'] + 1)
                 else:
                     for zombie in item['objdata']['Zombies']:
-                        converted_zombie = fun.convert(re.sub('RTID\\(([\s\S]+?)@ZombieTypes\\)', '(\\1)', zombie['Type'] or zombie['DinoType']))
+                        converted_zombie1 = fun.convert(
+                            re.sub('RTID\\(([\s\S]+?)@ZombieTypes\\)', '(\\1)', zombie['Type'] or zombie['DinoType']))
                         try:
-                            tmp = zombie['Row'] or zombie['DinoRow']
-                            row = f'<sup>{tmp}</sup>'
+                            tmp1 = zombie['Row'] or zombie['DinoRow']
+                            row1 = f'<sup>{tmp1}</sup>'
                         except KeyError:
-                            row = ''
+                            row1 = ''
 
-                    tmp_list2 = f'{converted_zombie}{row} '.split(";")
-                    tmp_list.append(tmp_list2[1])
-                    tmp_list.append(tmp_list2[0])
+                        tmp_list21 = f'{converted_zombie1}{row1} '.split(";")
+                        tmp_list.append(tmp_list21[1])
+                        tmp_list.append(tmp_list21[0])
 
                 unsorted_list.append(tmp_list)
         print(unsorted_list)
-
         sorted_list = fun.sort_zombies(unsorted_list)
 
         zombie_waves = ''
@@ -151,11 +156,9 @@ def convert(file):
                         zombie_waves += '|}\n'
                     else:
                         zombie_waves += '|-\n'
-
                 else:
                     tmp = sorted_list[i][::2]
                     tmp = ' '.join(tmp)
-
                     zombie_waves = re.sub('\\|None(\\n\\|(<br />)*(Flag)*\n\\|[-}])(?![\\S\\s]+\\|None\n\\|(<br />)*('
                                           'Flag)*\n\\|[-}])', f'|{tmp}\\1', zombie_waves)
 
@@ -183,6 +186,7 @@ def convert(file):
         r.clipboard_clear()
         r.clipboard_append(final_string)
         r.update()
+        print(final_string)
 
         fun.openUrl(link)
 

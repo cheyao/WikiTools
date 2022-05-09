@@ -52,6 +52,7 @@
 \(swashbuckler\): 51;{{P|Swashbuckler Zombie|2}}
 \(barrelroller\): 52;{{P|Barrel Roller Zombie|2}}
 \(pirate_barrel\): 53;{{P|Pirate Barrel|2}}
+\(barrel_air\): 54;{{P|Empty Barrel|2}}
 \(seagull\): 54;{{P|Seagull Zombie|2}}
 \(pirate_captain\): 55;{{P|Pirate Captain Zombie|2}}
 \(cannon\): 56;{{P|Imp Cannon|2}}
@@ -80,6 +81,20 @@
 \(chicken_farmer\): 79;{{P|Chicken Wrangler Zombie|2}}
 \(poncho\): 80;{{P|Vegan Zombie|2}}
 \(poncho_no_plate\)|\(poncho_plate\): 81;{{P|Poncho Zombie|2}}
+\(beach\): 82;{{P|Pompadour Zombie|2}}
+\(beach_armor1\): 83;{{P|Pompadour Conehead|2}}
+\(beach_armor2\): 84;{{P|Pompadour Buckethead|2}}
+\(beach_flag\): 85;{{P|Beach Flag Zombie|2}}
+\(beach_fem\): 86;{{P|Bikini Zombie|2}}
+\(beach_fem_armor1\): 87;{{P|Bikini Conehead|2}}
+\(beach_fem_armor2\): 88;{{P|Bikini Buckethead|2}}
+\(beach_gargantuar\): 89;{{P|Deep Sea Gargantuar|2}}
+\(beach_imp\): 90;{{P|Imp Mermaid Zombie|2}}
+\(beach_snorkel\): 91;{{P|Snorkel Zombie|2}}
+\(beach_surfer\): 92;{{P|Surfer Zombie|2}}
+\(beach_octopus\): 93;{{P|Octo Zombie|2}}
+\(beach_fisherman\): 94;{{P|Fisherman Zombie|2}}
+\(beach_armor4\): 95;{{P|Coral Cage Zombie|2}}
 \(modern_balloon\)|\(tutorial_balloon\): 95;{{P|Balloon Zombie|2}}
 \(dino\): 96;{{P|Jurassic Zombie|2}}
 \(dino_armor1\): 97;{{P|Jurassic Conehead|2}}
@@ -91,11 +106,11 @@
 \(dino_bully\)|\(dino_bully_veteran\): 103;{{P|Jurassic Bully|2}}
 \(rascal_imp\): 104;{{P|Rapscallion Imp|2}}
 \(modern_superfanimp\): 104;{{P|Flint imp|2}}
-raptor\d*: 104.5;{{P|Raptor|2}}
-stego\d*: 104.5;{{P|Stegosaurus|2}}
-ptero\d*: 104.5;{{P|Pterodactyl|2}}
-tyranno\d*: 104.5;{{P|Tyrannosaurus Rex|2}}
-ankylo\d*: 104.5;{{P|Ankylosaurus|2}}
+raptor\d*: 104;{{P|Raptor|2}}
+stego\d*: 104;{{P|Stegosaurus|2}}
+ptero\d*: 104;{{P|Pterodactyl|2}}
+tyranno\d*: 104;{{P|Tyrannosaurus Rex|2}}
+ankylo\d*: 104;{{P|Ankylosaurus|2}}
 \(future\): 105;{{Future Zombie|2}}
 \(future_armor1\): 106;{{Future Conehead Zombie|2}}
 \(future_armor2\): 107;{{Future Buckethead Zombie|2}}
@@ -107,9 +122,6 @@ ankylo\d*: 104.5;{{P|Ankylosaurus|2}}
 \(disco_mech\): 113;{{Disco-tron 3000|2}}
 \(future_jetpack_disco\): 114;{{Disco Jetpack Zombie|2}}
 \(football_mech\): 115;{{Mecha-Football Zombie|2}}
-\(modern_newspaper\)|\(newspaper_veteran\): 131;{{P|Newspaper Zombie|2}}
-\(mega_gargantuar\)|\(gargantuar_mega\): 132;{{P|Mega Gargantuar|2}}
-\(conehead_imp\): 133;{{P|Conehead Imp|2}}
 \(eighties\): 116;{{P|Neon Zombie|2}}
 \(eighties_armor1\): 117;{{P|Neon Conehead|2}}
 \(eighties_armor2\): 118;{{P|Neon Buckethead|2}}
@@ -124,3 +136,6 @@ ankylo\d*: 104.5;{{P|Ankylosaurus|2}}
 \(eighties_8bit_armor1\): 127;{{P|8-Bit Conehead Zombie|2}}
 \(eighties_8bit_armor2\): 128;{{P|8-Bit Buckethead Zombie|2}}
 \(eighties_breakdancer\): 129;{{P|Breakdancer Zombie|2}}
+\(modern_newspaper\)|\(newspaper_veteran\): 131;{{P|Newspaper Zombie|2}}
+\(mega_gargantuar\)|\(gargantuar_mega\): 132;{{P|Mega Gargantuar|2}}
+\(conehead_imp\): 133;{{P|Conehead Imp|2}}

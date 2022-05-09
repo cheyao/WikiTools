@@ -51,6 +51,7 @@ def openUrl(fin_url: str):
         chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
     elif platform == "win32":
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+
     webbrowser.get(chrome_path).open(fin_url)
 
 
