@@ -1,9 +1,6 @@
 import re
 import webbrowser
 from tkinter.messagebox import showwarning, showerror
-import pyperclip
-import time
-import pyautogui
 from sys import platform
 from tkinter import *
 from tkinter import ttk
@@ -11,23 +8,8 @@ import WikiTools as wt
 from tkinter import filedialog as fd
 import linecache
 
-width, height = pyautogui.size()
-pyautogui.PAUSE = 1
 
-
-def final_click(copy: str):
-    pyperclip.copy(copy)
-
-    time.sleep(7)
-
-    pyautogui.moveTo(width / 2, height / 2, 1)
-    pyautogui.click()
-    if platform == "darwin":
-        pyautogui.hotkey('command', 'v')
-    elif platform == "win32":
-        pyautogui.hotkey('ctrl', 'v')
-
-
+# Sorts the zombies by their order in the wiki
 def sort_zombies(zombies: list):
     sorted_list = []
     for index in range(len(zombies)):
@@ -43,6 +25,7 @@ def sort_zombies(zombies: list):
     return sorted_list
 
 
+# Opens Chrome with the wiki URL
 def openUrl(fin_url: str):
     chrome_path = "null"
     if platform == "linux" or platform == "linux2":
@@ -66,6 +49,7 @@ def tmp_list(new_waves: list):
 
 
 # noinspection PyTypeChecker
+# Start window
 def show_window():
     file_type = [('json files', '*.json')]
 
@@ -73,10 +57,7 @@ def show_window():
         if str(root.file) != 'PY_VAR0':
             convert_button.configure(text='Converting...')
             status = wt.convert(root.file)
-            if status:
-                convert_button.configure(text='Converted!')
-            else:
-                convert_button.configure(text='Error!')
+            convert_button.configure(text='Converted!' if status else 'Error!')
         else:
             showwarning(title='Error', message='Please select a file')
 
@@ -111,6 +92,7 @@ def show_window():
 
 
 # noinspection PyTypeChecker
+# Settings window
 def setting():
     file = open('template.txt', 'r').readlines()
     template = ''.join(open('template.txt', 'r').readlines()[7:])
@@ -161,6 +143,7 @@ def setting():
     root.mainloop()
 
 
+# Converts the file to wiki format
 def convert(string: str) -> str:
     zombies_convert = open('convert.txt', 'r')
 
@@ -171,9 +154,11 @@ def convert(string: str) -> str:
     return string
 
 
+# Error dialogue
 def error(error_message: str, level: str):
     showerror("Error", error_message + '\n' + level + "\n\n Please send this to cyao1234#2688")
 
 
+# Just to make sure if the user runs this file directly
 if __name__ == '__main__':
     show_window()

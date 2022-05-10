@@ -6,7 +6,8 @@ import itertools
 import functions as fun
 
 
-def convert(file="ALPHA3/adventure/Pirate16.json"):  # file is for debugging
+def convert(file="ALPHA3/adventure/Pirate16.json"):  # filee value is for debugging
+    # Error handling
     try:
         # Loads the level file
         f = open(file, 'r')
@@ -25,7 +26,7 @@ def convert(file="ALPHA3/adventure/Pirate16.json"):  # file is for debugging
         # Gets the level's following and previous levels
         first = int(name_number.split('-')[0])
         second = int(name_number.split('-')[1])
-        if second - 1 == 0 or second - 1 == 10 or second - 1 == 20:
+        if second - 1 in (0, 10, 20):
             if second == 1:
                 before_name = 'Null'
             elif first == 1:
@@ -34,7 +35,7 @@ def convert(file="ALPHA3/adventure/Pirate16.json"):  # file is for debugging
                 before_name = str(first - 1) + '-' + str(second + 9)
         else:
             before_name = str(first) + '-' + str(second - 1)
-        if second + 1 == 10 or second + 1 == 20 or second + 1 == 30:
+        if second + 1 in (10, 20, 30):
             after_name = str(first + 1) + '-' + str(second - 8)
         else:
             after_name = str(first) + '-' + str(second + 1)
@@ -57,62 +58,81 @@ def convert(file="ALPHA3/adventure/Pirate16.json"):  # file is for debugging
                 except KeyError:
                     waves_per_flag = 10
                 flags = wave_count // waves_per_flag
+                break
 
+        # Gets number of items on map
         num_items_on_map = 0
         try:
             for i in json_file:
                 if i['aliases'] == ['GI']:
                     num_items_on_map = len(i['objdata']['InitialGridItemPlacements'])
+                    break
         except KeyError:
             num_items_on_map = 0
-        plants = []
+
+        # Gets the seedbank
+        seed_bank = []
         try:
             for i in json_file:
                 if i['aliases'] == ["SeedBank"]:
                     for plant in i['objdata']['PresetPlantList']:
-                        plants.append(plant['PlantType'])
-                    plants = ', '.join(plants)
+                        seed_bank.append(plant['PlantType'])
+                    seed_bank = ', '.join(seed_bank)
+                    break
         except KeyError:
-            plants = 'Chooser'
+            seed_bank = 'Chooser'
 
+        # Gets the waves from WaveManager
         wave_list = []
         for item in json_file:
             if item['aliases'] == ["WaveManager"]:
                 for i in item['objdata']["Waves"]:
                     for item2 in i:
                         wave_list.append(re.sub('RTID\\(([\s\S]+?)@CurrentLevel\\)', '\\1', item2))
+                break
 
+        # Converts the waves in the WaveManager to wiki format
         unsorted_list = []
         for i, item in itertools.product(wave_list, json_file):
+
             item_val = item['aliases'][0]
+
             if item_val == i:
+
                 unsorted_list.append(i)
                 tmp_list = []
+
                 if re.match(r'RP\d+', item['aliases'][0]):
+
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['SwashbucklerCount']):
-                        tmp_list.append('{{P|Swashbuckler Zombie|2}}')
-                        tmp_list.append('55')
+                        tmp_list.extend(['{{P|Swashbuckler Zombie|2}}', '55'])
+                    unsorted_list.append(tmp_list)
+                    continue
                 elif re.match(r'PR\d+', item['aliases'][0]):
+
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['SpiderCount']):
-                        tmp_list.append('{{P|Lost Pilot Zombie|2}}')
-                        tmp_list.append('26')
-                elif re.match(r'Tide\d+', item['aliases'][0]):
-                    print('', end='')  # Null
+                        tmp_list.extend(['{{P|Lost Pilot Zombie|2}}', '26'])
+                    unsorted_list.append(tmp_list)
+                    continue
                 elif re.match(r'LT\d+', item['aliases'][0]):
+
                     for il in range(item['objdata']['GroupSize'] * item['objdata']['ZombieCount']):
-                        tmp_list.append('{{P|Some LT zomb|2}}')
-                        tmp_list.append('1')
+                        tmp_list.extend(['{{P|Some LT zomb|2}}', '1'])
+                    unsorted_list.append(tmp_list)
+                    continue
                 elif re.match(
                         r'piano|ZombiePianoDefault|GR\d+|RascalsMessage|RM|DoubleWaveMessage|ModConveyor|Magmacream'
-                        r'|TrapTileProps_1|TrapActivate|CHM|CHMessage',
+                        r'|TrapTileProps_1|TrapActivate|CHM|CHMessage|Tide\d+',
                         item['aliases'][0]):
-                    print('', end='')  # Null
+                    continue
                 elif re.match(r'Wave\d+P\d+', item['aliases'][0]):
-                    tmp_list.append('{{P|PortalFF|2}}')
-                    tmp_list.append(item['PortalRow'] + 1)
+                    tmp_list.extend(['{{P|PortalFF|2}}', item['PortalRow'] + 1])
+                    unsorted_list.append(tmp_list)
+                    continue
                 elif re.match(r'L\d+[LR]Wind', item['aliases'][0]):
-                    tmp_list.append('Wind')
-                    tmp_list.append(item['objdata']['Winds']['Row'] + 1)
+                    tmp_list.extend(['Wind', item['objdata']['Winds']['Row'] + 1])
+                    unsorted_list.append(tmp_list)
+                    continue
                 else:
                     for zombie in item['objdata']['Zombies']:
                         converted_zombie1 = fun.convert(
@@ -126,60 +146,51 @@ def convert(file="ALPHA3/adventure/Pirate16.json"):  # file is for debugging
                         tmp_list21 = f'{converted_zombie1}{row1} '.split(";")
                         tmp_list.append(tmp_list21[1])
                         tmp_list.append(tmp_list21[0])
-
-                unsorted_list.append(tmp_list)
-        print(unsorted_list)
+                    unsorted_list.append(tmp_list)
+        # Sorts the waves
         sorted_list = fun.sort_zombies(unsorted_list)
 
+        # Converts the sorted waves to wiki format with the wiki template
         zombie_waves = ''
         tmp_wave = 0
-        for i in range(len(sorted_list)):
-            if i % 2 != 0:
-                if re.match('Wave\\d', sorted_list[i - 1]):
-                    tmp_wave += 1
-                    tmp = sorted_list[i][::2]
-                    tmp = ' '.join(tmp)
-                    zombie_waves += f'|{tmp_wave}\n|{tmp}'
+        for i in range(len(sorted_list))[::2]:
+            if re.match('Wave\\d', sorted_list[i - 1]):
 
-                    if tmp_wave % waves_per_flag == 0:
-                        zombie_waves += '{{P|Flag Zombie|2}}\n'
-                    else:
-                        zombie_waves += '\n'
-                        zombie_waves += '|None\n'
+                tmp_wave += 1
 
-                    if tmp_wave % waves_per_flag == 0:
-                        zombie_waves += '|Flag\n'
-                    else:
-                        zombie_waves += '|<br />\n'
+                tmp = ' '.join(sorted_list[i][::2])
 
-                    if tmp_wave == wave_count:
-                        zombie_waves += '|}\n'
-                    else:
-                        zombie_waves += '|-\n'
-                else:
-                    tmp = sorted_list[i][::2]
-                    tmp = ' '.join(tmp)
-                    zombie_waves = re.sub('\\|None(\\n\\|(<br />)*(Flag)*\n\\|[-}])(?![\\S\\s]+\\|None\n\\|(<br />)*('
-                                          'Flag)*\n\\|[-}])', f'|{tmp}\\1', zombie_waves)
+                zombie_waves += f'|{tmp_wave}\n|{tmp}'
 
+                zombie_waves += '{{P|Flag Zombie|2}}\n' if tmp_wave % waves_per_flag == 0 else '\n|None\n'
+
+                zombie_waves += '|Flag\n' if tmp_wave % waves_per_flag == 0 else '|<br />\n'
+
+                zombie_waves += '|}\n' if tmp_wave == wave_count else '|-\n'
+            else:
+                tmp = ' '.join(sorted_list[i][::2])
+                zombie_waves = re.sub('\\|None(\\n\\|(<br />)*(Flag)*\n\\|[-}])(?![\\S\\s]+\\|None\n\\|(<br />)*('
+                                      'Flag)*\n\\|[-}])', f'|{tmp}\\1', zombie_waves)
+
+        # Gets the num of zombies
         zombies = set()
-        for item in range(len(sorted_list)):
-            if item % 2 == 0:
-                for i in sorted_list[item - 1][::2]:
-                    zombies.add(re.sub('<sup>\\d</sup>', '', i))
+        for item in range(len(sorted_list))[::2]:
+            for i in sorted_list[item - 1][::2]:
+                zombies.add(re.sub('<sup>\\d</sup>', '', i))
 
         zombies = '{{P|Flag Zombie|2}} ' + ''.join(zombies)
 
+        # Formats the wiki template and link using the values
         final_string = template.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies,
-                                       plants=plants, name_number=name_number, num_items_on_map=num_items_on_map,
+                                       seed_bank=seed_bank, name_number=name_number, num_items_on_map=num_items_on_map,
                                        flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
                                        zombie_waves=zombie_waves, first_reward=first_reward,
                                        replay_reward=replay_reward)
 
-        link = link.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies,
-                           plants=plants, name_number=name_number, num_items_on_map=num_items_on_map,
-                           flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
-                           zombie_waves=zombie_waves, first_reward=first_reward, replay_reward=replay_reward)
+        link = link.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies, seed_bank=seed_bank,
+                           name_number=name_number, num_items_on_map=num_items_on_map, flags=flags,
+                           waves_per_flag=waves_per_flag, wave_count=wave_count, zombie_waves=zombie_waves,
+                           first_reward=first_reward, replay_reward=replay_reward)
 
         r = Tk()
         r.withdraw()
