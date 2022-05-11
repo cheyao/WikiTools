@@ -1,12 +1,12 @@
 import traceback
-from tkinter import *
 import json
 import re
 import itertools
 import functions as fun
+import pyperclip as copy
 
 
-def convert(file="ALPHA3/adventure/Pirate16.json"):  # filee value is for debugging
+def convert(file="ALPHA3/adventure/Egypt2.json"):  # filee value is for debugging
     # Error handling
     try:
         # Loads the level file
@@ -153,7 +153,7 @@ def convert(file="ALPHA3/adventure/Pirate16.json"):  # filee value is for debugg
         # Converts the sorted waves to wiki format with the wiki template
         zombie_waves = ''
         tmp_wave = 0
-        for i in range(len(sorted_list))[::2]:
+        for i in range(len(sorted_list))[1::2]:
             if re.match('Wave\\d', sorted_list[i - 1]):
 
                 tmp_wave += 1
@@ -192,12 +192,7 @@ def convert(file="ALPHA3/adventure/Pirate16.json"):  # filee value is for debugg
                            waves_per_flag=waves_per_flag, wave_count=wave_count, zombie_waves=zombie_waves,
                            first_reward=first_reward, replay_reward=replay_reward)
 
-        r = Tk()
-        r.withdraw()
-        r.clipboard_clear()
-        r.clipboard_append(final_string)
-        r.update()
-        print(final_string)
+        copy.copy(final_string)
 
         fun.openUrl(link)
 
@@ -210,3 +205,4 @@ def convert(file="ALPHA3/adventure/Pirate16.json"):  # filee value is for debugg
 
 if __name__ == '__main__':
     fun.show_window()
+    convert()
