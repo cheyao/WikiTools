@@ -1,208 +1,107 @@
-import traceback
 import json
 import re
-import itertools
-import functions as fun
+import webbrowser
+from sys import platform
 import pyperclip as copy
+import functions as f
 
 
-def convert(file="ALPHA3/adventure/Egypt2.json"):  # filee value is for debugging
-    # Error handling
+# Rewrite #5
+def convert(path="tmp.json"):  # file value is for debugging
+    # Boring stuff
+    template = ''.join(open('template.txt', 'r').readlines()[7:])
+    link = ''.join(open('template.txt', 'r').readlines()[1:2])[:-1]
+    convert_template = json.load(open('convert.json', 'r'))
+    file = json.load(open(path, 'r'))
+    name_number = file["#comment"]
+    objects = file["objects"]
+    level_info = objects[0]["objdata"]
+    name = level_info["Name"]
+    before_name = name_number[:2] + str(int(name_number[2]) - 1)
+    after_name = name_number[:2] + str(int(name_number[2]) + 1)
+    seed_bank = objects[1]["objdata"]["SelectionMethod"]
+    first_reward = level_info['FirstRewardParam']
     try:
-        # Loads the level file
-        f = open(file, 'r')
-        json_file = json.load(f)
-
-        # Gets a few vals from the level file
-        template = ''.join(open('template.txt', 'r').readlines()[7:])
-        link = ''.join(open('template.txt', 'r').readlines()[1:2])[:-1]
-        name = json_file['objects'][0]['objdata']['Name']
-        name_number = json_file['#comment']
-        first_reward = json_file['objects'][0]['objdata']['FirstRewardParam'].capitalize()
-        if first_reward == "big_moneybag":
-            first_reward = ""
-        replay_reward = ''
-
-        # Gets the level's following and previous levels
-        first = int(name_number.split('-')[0])
-        second = int(name_number.split('-')[1])
-        if second - 1 in (0, 10, 20):
-            if second == 1:
-                before_name = 'Null'
-            elif first == 1:
-                before_name = str(first + 11) + '-' + str(second - 10)
-            else:
-                before_name = str(first - 1) + '-' + str(second + 9)
-        else:
-            before_name = str(first) + '-' + str(second - 1)
-        if second + 1 in (10, 20, 30):
-            after_name = str(first + 1) + '-' + str(second - 8)
-        else:
-            after_name = str(first) + '-' + str(second + 1)
-
-        # Removes first item from the jsonfile
-        json_file = json_file['objects']
-        json_file.remove(json_file[0])
-
-        # Some null safety values
-        flags = 1
-        waves_per_flag = 10
-        wave_count = 10
-
-        # Gets the waves order from WaveManager
-        for item in json_file:
-            if item['aliases'] == ["WaveManager"]:
-                wave_count = len(item['objdata']["Waves"])
-                try:
-                    waves_per_flag = item['objdata']["FlagWaveInterval"]
-                except KeyError:
-                    waves_per_flag = 10
-                flags = wave_count // waves_per_flag
-                break
-
-        # Gets number of items on map
+        num_items_on_map = len(objects[2]["objdata"]["InitialGridItemPlacements"])
+    except KeyError:
         num_items_on_map = 0
+    objects = objects[1:]
+    indexes = []
+    for i in objects:
+        indexes.append(i["aliases"])
+    waves = objects[indexes.index(["WaveManager"])]['objdata']
+    waves_per_flag = waves['FlagWaveInterval']
+    wave_count = waves['WaveCount']
+    flags = wave_count / waves_per_flag
+    waves = waves['Waves']
+    for i in range(len(waves)):
+        waves[i - 1] = [re.sub('RTID\\((\\S*)@CurrentLevel\\)', '\\1', waves[i - 1][0])]
+
+    # Main stuff
+    _zombie_waves = []
+    for i in objects:
+        if i['aliases'] in waves:
+            ls = []
+            for j in i['objdata']['Zombies']:
+                try:
+                    ls.append('<sup>' + j['Row'] + '</sup>;' + re.sub('RTID\\(([\S\s]+?)@ZombieTypes\\)', '\\1',
+                                                                      j['Type']))
+                except KeyError:
+                    ls.append('<sup>0</sup>;' + re.sub('RTID\\(([\S\s]+?)@ZombieTypes\\)', '\\1', j['Type']))
+            _zombie_waves.append(ls)
+
+    for i in range(len(_zombie_waves)):
+        for j in range(len(_zombie_waves[i - 1])):
+            tmp = _zombie_waves[i - 1][j - 1].split(';')
+            _zombie_waves[i - 1][j - 1] = tmp[0] + ';' + convert_template[tmp[1]]
+        _zombie_waves[i - 1].sort(key=lambda x: int(x.split('|')[-1]))
+        for j in range(len(_zombie_waves[i - 1])):
+            _zombie_waves[i - 1][j - 1] = _zombie_waves[i - 1][j - 1].split('}|')[0] + '}'
+
+    zombies = []
+    for i in range(len(_zombie_waves)):
+        for j in _zombie_waves[i]:
+            tmp = j.split(';')
+            zombies.append(tmp[1])
+    zombies = ', '.join(list(set(zombies)))
+
+    zombie_waves = ''
+    for i, w in zip(_zombie_waves, waves):
+        tmp = re.sub('Wave', '', w[0])
+        zombie_waves += f'|{tmp}\n|'
         try:
-            for i in json_file:
-                if i['aliases'] == ['GI']:
-                    num_items_on_map = len(i['objdata']['InitialGridItemPlacements'])
-                    break
-        except KeyError:
-            num_items_on_map = 0
-
-        # Gets the seedbank
-        seed_bank = []
+            if int(tmp) % int(waves_per_flag) == 0:
+                zombie_waves += '{{P|Flag Zombie|2}} '
+        except ValueError:
+            pass
+        for j in i:
+            zombie_waves += j.split(';')[1] + j.split(';')[0] + ' '
         try:
-            for i in json_file:
-                if i['aliases'] == ["SeedBank"]:
-                    for plant in i['objdata']['PresetPlantList']:
-                        seed_bank.append(plant['PlantType'])
-                    seed_bank = ', '.join(seed_bank)
-                    break
-        except KeyError:
-            seed_bank = 'Chooser'
+            zombie_waves += '\n|None\n|Flag\n|-\n' if int(tmp) % int(waves_per_flag) == 0 else '\n|None\n|<br />\n|-\n'
+        except ValueError:
+            zombie_waves += '\n|None\n|<br />\n|-\n'
 
-        # Gets the waves from WaveManager
-        wave_list = []
-        for item in json_file:
-            if item['aliases'] == ["WaveManager"]:
-                for i in item['objdata']["Waves"]:
-                    for item2 in i:
-                        wave_list.append(re.sub('RTID\\(([\s\S]+?)@CurrentLevel\\)', '\\1', item2))
-                break
+    # Last formatting
+    final_string = template.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies,
+                                   seed_bank=seed_bank, name_number=name_number, num_items_on_map=num_items_on_map,
+                                   flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
+                                   zombie_waves=zombie_waves, first_reward=first_reward, wave_order=waves,
+                                   replay_reward='')
 
-        # Converts the waves in the WaveManager to wiki format
-        unsorted_list = []
-        for i, item in itertools.product(wave_list, json_file):
+    link = link.format(name=name, name_number=name_number)
 
-            item_val = item['aliases'][0]
+    chrome_path = "null"
+    if platform == "linux" or platform == "linux2":
+        chrome_path = '/usr/bin/google-chrome %s'
+    elif platform == "darwin":
+        chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+    elif platform == "win32":
+        chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
 
-            if item_val == i:
+    copy.copy(final_string)
 
-                unsorted_list.append(i)
-                tmp_list = []
-
-                if re.match(r'RP\d+', item['aliases'][0]):
-
-                    for il in range(item['objdata']['GroupSize'] * item['objdata']['SwashbucklerCount']):
-                        tmp_list.extend(['{{P|Swashbuckler Zombie|2}}', '55'])
-                    unsorted_list.append(tmp_list)
-                    continue
-                elif re.match(r'PR\d+', item['aliases'][0]):
-
-                    for il in range(item['objdata']['GroupSize'] * item['objdata']['SpiderCount']):
-                        tmp_list.extend(['{{P|Lost Pilot Zombie|2}}', '26'])
-                    unsorted_list.append(tmp_list)
-                    continue
-                elif re.match(r'LT\d+', item['aliases'][0]):
-
-                    for il in range(item['objdata']['GroupSize'] * item['objdata']['ZombieCount']):
-                        tmp_list.extend(['{{P|Some LT zomb|2}}', '1'])
-                    unsorted_list.append(tmp_list)
-                    continue
-                elif re.match(
-                        r'piano|ZombiePianoDefault|GR\d+|RascalsMessage|RM|DoubleWaveMessage|ModConveyor|Magmacream'
-                        r'|TrapTileProps_1|TrapActivate|CHM|CHMessage|Tide\d+',
-                        item['aliases'][0]):
-                    continue
-                elif re.match(r'Wave\d+P\d+', item['aliases'][0]):
-                    tmp_list.extend(['{{P|PortalFF|2}}', item['PortalRow'] + 1])
-                    unsorted_list.append(tmp_list)
-                    continue
-                elif re.match(r'L\d+[LR]Wind', item['aliases'][0]):
-                    tmp_list.extend(['Wind', item['objdata']['Winds']['Row'] + 1])
-                    unsorted_list.append(tmp_list)
-                    continue
-                else:
-                    for zombie in item['objdata']['Zombies']:
-                        converted_zombie1 = fun.convert(
-                            re.sub('RTID\\(([\s\S]+?)@ZombieTypes\\)', '(\\1)', zombie['Type'] or zombie['DinoType']))
-                        try:
-                            tmp1 = zombie['Row'] or zombie['DinoRow']
-                            row1 = f'<sup>{tmp1}</sup>'
-                        except KeyError:
-                            row1 = ''
-
-                        tmp_list21 = f'{converted_zombie1}{row1} '.split(";")
-                        tmp_list.append(tmp_list21[1])
-                        tmp_list.append(tmp_list21[0])
-                    unsorted_list.append(tmp_list)
-        # Sorts the waves
-        sorted_list = fun.sort_zombies(unsorted_list)
-
-        # Converts the sorted waves to wiki format with the wiki template
-        zombie_waves = ''
-        tmp_wave = 0
-        for i in range(len(sorted_list))[1::2]:
-            if re.match('Wave\\d', sorted_list[i - 1]):
-
-                tmp_wave += 1
-
-                tmp = ' '.join(sorted_list[i][::2])
-
-                zombie_waves += f'|{tmp_wave}\n|{tmp}'
-
-                zombie_waves += '{{P|Flag Zombie|2}}\n' if tmp_wave % waves_per_flag == 0 else '\n|None\n'
-
-                zombie_waves += '|Flag\n' if tmp_wave % waves_per_flag == 0 else '|<br />\n'
-
-                zombie_waves += '|}\n' if tmp_wave == wave_count else '|-\n'
-            else:
-                tmp = ' '.join(sorted_list[i][::2])
-                zombie_waves = re.sub('\\|None(\\n\\|(<br />)*(Flag)*\n\\|[-}])(?![\\S\\s]+\\|None\n\\|(<br />)*('
-                                      'Flag)*\n\\|[-}])', f'|{tmp}\\1', zombie_waves)
-
-        # Gets the num of zombies
-        zombies = set()
-        for item in range(len(sorted_list))[::2]:
-            for i in sorted_list[item - 1][::2]:
-                zombies.add(re.sub('<sup>\\d</sup>', '', i))
-
-        zombies = '{{P|Flag Zombie|2}} ' + ''.join(zombies)
-
-        # Formats the wiki template and link using the values
-        final_string = template.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies,
-                                       seed_bank=seed_bank, name_number=name_number, num_items_on_map=num_items_on_map,
-                                       flags=flags, waves_per_flag=waves_per_flag, wave_count=wave_count,
-                                       zombie_waves=zombie_waves, first_reward=first_reward,
-                                       replay_reward=replay_reward)
-
-        link = link.format(name=name, before_name=before_name, after_name=after_name, zombies=zombies, seed_bank=seed_bank,
-                           name_number=name_number, num_items_on_map=num_items_on_map, flags=flags,
-                           waves_per_flag=waves_per_flag, wave_count=wave_count, zombie_waves=zombie_waves,
-                           first_reward=first_reward, replay_reward=replay_reward)
-
-        copy.copy(final_string)
-
-        fun.openUrl(link)
-
-        return True
-    except:
-        fun.error(traceback.format_exc(), file)
-        print(traceback.format_exc())
-        return False
+    webbrowser.get(chrome_path).open(link)
 
 
 if __name__ == '__main__':
-    fun.show_window()
-    convert()
+    f.show_window()

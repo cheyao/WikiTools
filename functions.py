@@ -9,45 +9,6 @@ from tkinter import filedialog as fd
 import linecache
 
 
-# Sorts the zombies by their order in the wiki
-def sort_zombies(zombies: list):
-    sorted_list = []
-    for index in range(len(zombies)):
-        if index % 2 == 0:
-            ordered_list = [(x, int(y)) for x, y, in zip(zombies[index - 1][::2], zombies[index - 1][1::2])]
-            sorted_list.append(sum([[x, str(y)] for x, y, in sorted(ordered_list, key=lambda x:x[1])], []))
-        else:
-            sorted_list.append(zombies[index - 1])
-
-    sorted_list.append(sorted_list[0])
-    sorted_list.pop(0)
-
-    return sorted_list
-
-
-# Opens Chrome with the wiki URL
-def openUrl(fin_url: str):
-    chrome_path = "null"
-    if platform == "linux" or platform == "linux2":
-        chrome_path = '/usr/bin/google-chrome %s'
-    elif platform == "darwin":
-        chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
-    elif platform == "win32":
-        chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-
-    webbrowser.get(chrome_path).open(fin_url)
-
-
-def tmp_list(new_waves: list):
-    tmp_list_val = []
-    for index in range(len(new_waves)):
-        if index % 2 == 0:
-            for ind in range(len(new_waves[index - 1])):
-                if ind % 2 == 1:
-                    tmp_list_val.append(new_waves[index - 1][ind - 1])
-    return tmp_list_val
-
-
 # noinspection PyTypeChecker
 # Start window
 def show_window():
@@ -56,8 +17,12 @@ def show_window():
     def start_convert():
         if str(root.file) != 'PY_VAR0':
             convert_button.configure(text='Converting...')
-            status = wt.convert(root.file)
-            convert_button.configure(text='Converted!' if status else 'Error!')
+            try:
+                wt.convert(root.file)
+            except Exception as e:
+                if e:
+                    showerror('Error' + str(e))
+            convert_button.configure(text='Converted!')
         else:
             showwarning(title='Error', message='Please select a file')
 
@@ -141,22 +106,6 @@ def setting():
     ttk.Button(mainframe2, text="Save", command=lambda: save_setup(link.get())).grid(column=1, row=1, sticky=W)
 
     root.mainloop()
-
-
-# Converts the file to wiki format
-def convert(string: str) -> str:
-    zombies_convert = open('convert.txt', 'r')
-
-    for line in range(len([line.strip("\n") for line in zombies_convert if line != "\n"])):
-        zombie = re.sub('\n', '', linecache.getline('convert.txt', line + 1)).split(': ')
-        string = re.sub(str(zombie[0]), str(zombie[1]), string)
-
-    return string
-
-
-# Error dialogue
-def error(error_message: str, level: str):
-    showerror("Error", error_message + '\n' + level + "\n\n Please send this to cyao1234#2688")
 
 
 # Just to make sure if the user runs this file directly
