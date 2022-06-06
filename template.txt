@@ -1,0 +1,34 @@
+# Link:
+https://project-eclise.fandom.com/wiki/{name_number}_(Alpha)?action=edit
+# Use two curly brackets for a curly bracket
+# Values: name, name_number, after_name, before_name, num_items_on_map
+# seed_bank, wave_count, waves_per_flag, flags, zombies, zombie_waves, first_reward
+# replay_reward
+{{{{BAHTabber|Level={name_number}}}}}
+{{{{Level Infobox
+|name = {name}
+|image = {name_number}Alpha.jpg
+|Type = Regular
+|EM = {num_items_on_map}
+|Flag = {flags}
+|Plant = {seed_bank}
+|Zombie = {zombies}
+|FR = {first_reward}
+|NR = {replay_reward}
+|before = {before_name} (Alpha)
+|after = {after_name} (Alpha)
+}}}}
+'''{name_number}''', also known as '''{name}'''
+
+{{{{clear}}}}
+== Waves ==
+{{| class="article-table"
+!Waves
+!Non-dynamic zombies
+!Ambush zombies
+!Notes
+|-
+{zombie_waves}
+
+==Gallery==
+<br />{{LevelsA}}
